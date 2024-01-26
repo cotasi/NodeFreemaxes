@@ -1,0 +1,13 @@
+.funcwrap { width: 100%;}
+.funcwrap .functit { width: 100%; background-color:#e2e3df; padding: 26px 0; text-align: center; font-family: 'Pretendard' !important; }
+.funcwrap .functit > h2 { font-size: 15px; font-weight: 200 !important; letter-spacing: 0.05px;}
+.funcwrap .functit > h3 { font-size: 30px; font-weight: 600 !important; color: rgba(0,0,0,.6);}
+.funcwrap .funccon { background-color :#F5F6FA;}
+.funcwrap .funccon svg { width: 48px; height: 48px;}
+.funcwrap .funccon > ul { height: 100%; padding: 21px 0;}
+.funcwrap .funccon li a { margin: 0 15px; display: flex; justify-content: center; align-items: center; transition: all .4s;}
+.funcwrap .funccon li a .linkwrap { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 130px; height: 130px;}
+.funcwrap .funccon li p { font-family: 'Pretendard' !important; display: inline-block; padding-top: 15px; font-weight: 400 !important; transition: all .4s;}
+.funcwrap .funccon li a svg.whitefill {fill:white;}
+.funcwrap .funccon li a.clickback {background-color: #607283; border-radius: 13px;}
+.funcwrap .funccon li p.pathon {font-weight: 900 !important; color: white; text-shadow:0px 4px 4px rgba(0,0,0,.25); font-family: 'Pretendard' !important;}

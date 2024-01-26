@@ -1,0 +1,15 @@
+#busmain { background-color: #f5f5f5; padding-bottom: 100px;}
+#busmain .busmainwrap > h2 { font-family: 'Pretendard' !important; color: #45505b; font-size: 30px; font-weight: 300 !important; padding-top: 90px;}
+#busmain .busmainwrap > h2 span { font-weight: 600 !important;}
+#busmain .busmainwrap > p { font-family: 'Pretendard' !important; font-size: 15px; font-weight: 200 !important; padding-top: 20px; padding-bottom: 60px;}
+.colorwhite { color: white;}
+.hiddens { display: none !important;}
+.colorred { color: #f63636; font-weight: 800 !important;}
+#busmain .busmainwrap .smallinfo { height: 100%; display: inline-block; width: 120%;}
+#busmain .busmainwrap .largeinfo ul { position: relative;}
+#busmain .busmainwrap .largeinfo { height: 100%; align-self: flex-start; overflow-x: visible; overflow-x: hidden; overflow-y: auto; margin-left: 130px; padding-left: 10px; padding-right: 200px;}
+#busmain .busmainwrap .largeinfo ul::after {content: ''; display: block; width: 1px; height: 100%; background-color: #607283; position: absolute; left: 0; bottom: 0;}
+#busmain .busmainwrap .largeinfo > ul > li { position: relative; padding-left: 30px; }
+#busmain .busmainwrap .largeinfo > ul > li button {border: 1px solid #607283; padding: 10px 20px; margin-bottom: 30px; border-radius: 13px; text-align: left; transition: all .4s;}
+#busmain .busmainwrap .largeinfo > ul > li button:hover { background-color: #607283; color: white;}
+#busmain .busmainwrap .largeinfo > ul > li button::before { content: ''; display: inline-block; width: 15px; height: 15px; background-color: #607283; border-radius: 50%; position: absolute; top: 50%; left: 0; transform: translate(-50%,-50%)}

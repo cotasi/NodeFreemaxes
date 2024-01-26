@@ -1,0 +1,56 @@
+[
+    {
+        "companyname" : "시공간을 뛰어넘을 네이버",
+        "companythumb" : "https://i.imgur.com/pDTGgk2.jpg",
+        "companylogo": "https://i.imgur.com/M5a2DsX.png",
+        "c1" : ["https://i.imgur.com/UnaTnmN.jpg","자유로운 회사 분위기","네이버의 회사 정책"],
+        "c2" : ["https://i.imgur.com/aNkiya6.jpg","진정한 회사를 만나다"],
+        "c3" : ["https://i.imgur.com/4QbLtuu.jp","진정한 회사를 만나다"],
+        "c4" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"],
+        "c5" : ["https://i.imgur.com/4QbLtuu.jp","진정한 회사를 만나다"]
+    },
+    {
+        "companyname" : "Naver",
+        "companythumb" : "https://i.imgur.com/4QbLtuu.jpg",
+        "c1" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"],
+        "c2" : ["https://i.imgur.com/4QbLtuu.jpg","진정한 회사를 만나다"],
+        "c3" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"],
+        "c4" : ["https://i.imgur.com/4QbLtuu.jpg","진정한 회사를 만나다"],
+        "c5" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"]
+    },{
+        "companyname" : "Naver",
+        "companythumb" : "https://i.imgur.com/4QbLtuu.jpg",
+        "c1" : ["https://i.imgur.com/4QbLtuu.jpg","진정한 회사를 만나다"],
+        "c2" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"],
+        "c3" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"],
+        "c4" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"],
+        "c5" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"]
+    },
+    {
+        "companyname" : "Naver",
+        "companythumb" : "https://i.imgur.com/4QbLtuu.jpg",
+        "c1" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"],
+        "c2" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"],
+        "c3" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"],
+        "c4" : ["https://i.imgur.com/4QbLtuu.jpg","진정한 회사를 만나다"],
+        "c5" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"]
+    },
+    {
+        "companyname" : "Naver",
+        "companythumb" : "https://i.imgur.com/4QbLtuu.jpg",
+        "c1" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"],
+        "c2" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"],
+        "c3" : ["https://i.imgur.com/4QbLtuu.jpg","진정한 회사를 만나다"],
+        "c4" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"],
+        "c5" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"]
+    },
+    {
+        "companyname" : "Naver",
+        "companythumb" : "https://i.imgur.com/4QbLtuu.jpg",
+        "c1" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"],
+        "c2" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"],
+        "c3" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"],
+        "c4" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"],
+        "c5" : ["https://i.imgur.com/7p0pM82.jpg","진정한 회사를 만나다"]
+    }
+]

@@ -1,0 +1,30 @@
+
+  [
+    {
+      "swipernum": 1,
+      "swiper1img": "https://i.imgur.com/pKiJDFA.jpg",
+      "subject": "힘든 길 출근 길엔 아이돌만큼/꿀같은 예약제",
+      "cant": "지금 당장 예약 이벤트를 신청하세요!",
+      "slidetext": "지금 상담",
+      "dater": "01.01~02.01",
+      "bgc": "#e6e5e5"
+    },
+    {
+      "swipernum": 2,
+      "swiper1img": "https://i.imgur.com/0y51Z8q.jpg",
+      "subject": "다채로운/버스 즐기기",
+      "cant": "지금 당장 예약 이벤트를 신청하세요!",
+      "slidetext": "여행하러 가기",
+      "dater": "09.05~11.14",
+      "bgc": "#c2e04c"
+    },
+    {
+      "swipernum": 3,
+      "swiper1img": "https://i.imgur.com/0y51Z8q.jpg",
+      "subject": "다채로운/버스 즐기기",
+      "cant": "지금 당장 예약 이벤트를 신청하세요!",
+      "slidetext": "여행하러 가기",
+      "dater": "09.05~11.14",
+      "bgc": "#c2e04c"
+    }
+  ]

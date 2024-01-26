@@ -1,0 +1,37 @@
+[
+  {
+    "funcnum": 1,
+    "funcicon": "/images/bus-01.svg",
+    "funcname": "버스 예약"
+  },
+  {
+    "funcnum": 2,
+    "funcicon": "/images/subc.svg",
+    "funcname": "서비스 구독"
+  },
+  {
+    "funcnum": 3,
+    "funcicon": "/images/form.svg",
+    "funcname": "버스 신청"
+  },
+  {
+    "funcnum": 4,
+    "funcicon": "/images/check.svg",
+    "funcname": "좌석 확인"
+  },
+  {
+    "funcnum": 5,
+    "funcicon": "/images/store.svg",
+    "funcname": "스토어 신청"
+  },
+  {
+    "funcnum": 6,
+    "funcicon": "/images/storing.svg",
+    "funcname": "스토어 사용"
+  },
+  {
+    "funcnum": 7,
+    "funcicon": "/images/hotel.svg",
+    "funcname": "호텔 예약"
+  }
+]
