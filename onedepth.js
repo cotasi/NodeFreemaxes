@@ -24,25 +24,25 @@ const sqlquery2 = 'SELECT * FROM news_table';
 
 connection.query(sqlquery2,(error,results)=>{
     if(error) { throw error; }
-    const jsonresult = JSON.stringify(results,null,2);
-    console.log(jsonresult);
-
-    const fs = require('fs');
-    fs.writeFileSync('./front/src/Data/news.json',jsonresult,'utf-8');
-
-    
-});
-
-const sqlquery3 = 'SELECT * FROM func_table';
-
-connection.query(sqlquery3,(error,results)=>{
-    if(error) { throw error; }
     const jsonresult2 = JSON.stringify(results,null,2);
     console.log(jsonresult2);
 
     const fs = require('fs');
-    fs.writeFileSync('./front/src/Data/func.json',jsonresult2,'utf-8');
-})
+    fs.writeFileSync('./front/src/Data/news.json',jsonresult2,'utf-8');
+
+    
+});
+
+const sqlquery3 = 'SELECT * FROM aboutus';
+
+connection.query(sqlquery3,(error,results)=>{
+    if(error) { throw error; }
+    const jsonresult3 = JSON.stringify(results,null,2);
+    console.log(jsonresult3);
+
+    const fs = require('fs');
+    fs.writeFileSync('./front/src/Data/aboutus.json',jsonresult3,'utf-8');
+});
 
 connection.end();
 console.log('연결종료완료');

@@ -1,0 +1,16 @@
+.aboutwrap .mx-auto { padding-top: 30px;}
+.aboutwrap .mx-auto > h2 { font-family: 'Pretendard' !important; font-size: 32px; color: #45505b; letter-spacing: -1px; font-weight: 600 !important; padding-bottom: 5px;}
+.aboutwrap .mx-auto > p { font-family: 'Pretendard' !important; font-size: 14px; color: #45505b; font-weight: 300 !important; padding-bottom: 15px;}
+.aboutwrap .mx-auto ul { height: 160px; margin: 30px 0;}
+.aboutwrap .mx-auto ul li { width: 90px; height: 100%; margin-right: 50px;}
+.aboutwrap .mx-auto ul a { display: block; width: 100%; height: 100%; }
+.aboutwrap .mx-auto ul a .imgwr { width: 100%; height: 90px; display: flex; justify-content: center; align-items: center; border: 1px solid rgba(0,0,0,.2); border-radius: 50%;}
+.aboutwrap .mx-auto ul a .imgwr img { width: 70%; height: 70%; object-fit:contain;}
+.aboutwrap .mx-auto ul a .texts { padding-top: 20px; text-align: center; font-size: 12px; font-weight: 500 !important;}
+.aboutwrap .mx-auto .subtit { margin-left: 70px; padding-bottom: 30px; }
+.aboutwrap .mx-auto .subtit > h2 { font-family: 'Pretendard' !important; font-size: 25px; font-weight: 600 !important; margin-bottom: 15px; position: relative;}
+.aboutwrap .mx-auto .subtit > h2::after { content: ''; position: absolute; display: block; bottom: -15px; left: 0; width: 100px; height: 3px; background-color: #cb1616;}
+.aboutwrap .mx-auto .subtit > h2 span { margin-right: 10px; display: inline-block;}
+.aboutwrap .mx-auto .subtit > h2 span::first-letter { color: #cb1616;}
+.aboutwrap .mx-auto .subtit > p { font-family: 'Pretendard' !important; color: black; font-weight: 200 !important; font-size: 12px; padding-top: 20px;}
+.aboutwrap .mx-auto .subtit > p span { color: #cb1616; font-weight: 700 !important;}

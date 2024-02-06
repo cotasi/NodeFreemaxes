@@ -22,7 +22,7 @@ export default function HeaderAll() {
   return (
     <header className="bg-white">
       <div className="first-menu">
-        <nav className="mx-auto flex max-w-screen-xl items-center justify-between" aria-label="firstmenu">
+        <nav className="mx-auto flex max-w-screen-2xl items-center justify-between" aria-label="firstmenu">
           <div className="logowrap"><h1 className="logo"><Link to="/kr"><img src="/images/freemax.svg" alt="main_logo" /></Link></h1></div>
           <ul className="loginmenu flex">
             <li>
@@ -44,7 +44,7 @@ export default function HeaderAll() {
         </nav>
       </div>
       <div className="second-menu relative z-50">
-        <nav className="mx-auto max-w-screen-xl flex justify-between items-center relative">
+        <nav className="mx-auto max-w-screen-2xl flex justify-between items-center relative">
           <div className="menuwrap flex items-center">
             <div className="allbtn"><button className="flex flex-row-reverse"><span>전체 메뉴</span><NotesIcon /></button></div>
               <div className="mainmenu">

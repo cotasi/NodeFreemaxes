@@ -1,0 +1,5 @@
+#taps ul li button { font-family: 'Pretendard' !important; margin-bottom: 30px; font-size: 20px; letter-spacing: -0.8px; font-weight: 600 !important; color: rgba(0,0,0,.3);}
+#taps ul li button.activeon { color: black; position: relative;}
+#taps ul li button.activeon::after { content: ''; display: block; width: 100%; height: 1px; background-color: black; position: absolute; bottom: -10px; left: 0;}
+#taps { width: 15%;}
+#contents { width: 85%;}

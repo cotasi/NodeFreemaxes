@@ -4,12 +4,8 @@
   "description": "",
   "main": "web.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon ./web.js",
-    "front": "cd front && npm start",
-    "json2": "nodemon ./twodepth.js",
-    "json1": "nodemon ./onedepth.js",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run front\" "
+    "start": "node ./web.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -18,25 +14,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ant-design/icons": "^5.2.6",
-    "axios": "^1.6.5",
-    "body-parser": "^1.20.2",
-    "concurrently": "^8.2.2",
-    "cors": "^2.8.5",
-    "csv-parser": "^3.0.0",
-    "csvtojson": "^2.0.10",
     "express": "^4.18.2",
-    "fast-csv": "^5.0.0",
-    "http": "^0.0.1-security",
-    "knex": "^3.1.0",
     "mysql": "^2.18.1",
-    "mysql2": "^3.7.0",
-    "path": "^0.12.7",
-    "rc-slider": "^10.5.0",
-    "react-hook-form": "^7.49.3",
-    "styled-component": "^2.8.0"
+    "path": "^0.12.7"
   },
-  "devDependencies": {
-    "nodemon": "^3.0.2"
-  }
+  "devDependencies": {}
 }
