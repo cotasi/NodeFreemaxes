@@ -3,27 +3,27 @@
     "menu_id": 1,
     "menu1": "회사 소개",
     "menuen": "Company",
-    "href1": "/kr/company",
+    "href1": "/company",
     "menu2": [
       {
         "submenu_id": 1,
         "name": "서비스 소개",
-        "href": "/kr/company/service"
+        "href": "/company/service"
       },
       {
         "submenu_id": 2,
         "name": "회사 개요",
-        "href": "/kr/company/story"
+        "href": "/company/story"
       },
       {
         "submenu_id": 3,
         "name": "구독 서비스",
-        "href": "/kr/company/subcri"
+        "href": "/company/subcri"
       },
       {
         "submenu_id": 4,
         "name": "파트너사 소개",
-        "href": "/kr/company/partners"
+        "href": "/company/partners"
       }
     ]
   },
@@ -31,27 +31,27 @@
     "menu_id": 2,
     "menu1": "예약/등록하기",
     "menuen": "Reservation",
-    "href1": "/kr/reser",
+    "href1": "/reser",
     "menu2": [
       {
         "submenu_id": 5,
         "name": "버스 예약",
-        "href": "/kr/reser/busres"
+        "href": "/reser/busres"
       },
       {
         "submenu_id": 6,
         "name": "My 좌석 조회",
-        "href": "/kr/reser/seatselect"
+        "href": "/reser/seatselect"
       },
       {
         "submenu_id": 7,
         "name": "기사 및 버스 등록",
-        "href": "/kr/reser/buscheck"
+        "href": "/reser/buscheck"
       },
       {
         "submenu_id": 8,
         "name": "My 버스찾기",
-        "href": "/kr/reser/findbus"
+        "href": "/reser/findbus"
       }
     ]
   },
@@ -59,27 +59,27 @@
     "menu_id": 3,
     "menu1": "스토어",
     "menuen": "Stores",
-    "href1": "/kr/stores",
+    "href1": "/stores",
     "menu2": [
       {
         "submenu_id": 9,
         "name": "스토어 등록",
-        "href": "/kr/stores/makestore"
+        "href": "/stores/makestore"
       },
       {
         "submenu_id": 10,
         "name": "커피 스토어",
-        "href": "/kr/stores/coffee"
+        "href": "/stores/coffee"
       },
       {
         "submenu_id": 11,
         "name": "패션 스토어",
-        "href": "/kr/stores/fassion"
+        "href": "/stores/fassion"
       },
       {
         "submenu_id": 12,
         "name": "여행거리 스토어",
-        "href": "/kr/stores/trip"
+        "href": "/stores/trip"
       }
     ]
   },
@@ -87,22 +87,22 @@
     "menu_id": 4,
     "menu1": "여행 이벤트",
     "menuen": "Travels",
-    "href1": "/kr/travels",
+    "href1": "/travels",
     "menu2": [
       {
         "submenu_id": 13,
         "name": "VIP TICKET",
-        "href": "/kr/travels/vipticker"
+        "href": "/travels/vipticker"
       },
       {
         "submenu_id": 14,
         "name": "호텔 등록",
-        "href": "/kr/travels/hotel"
+        "href": "/travels/hotel"
       },
       {
         "submenu_id": 15,
         "name": "포인트",
-        "href": "/kr/travels/points"
+        "href": "/travels/points"
       }
     ]
   },
@@ -110,17 +110,17 @@
     "menu_id": 5,
     "menu1": "프로모션",
     "menuen": "Promotion",
-    "href1": "/kr/prom",
+    "href1": "/prom",
     "menu2": [
       {
         "submenu_id": 16,
         "name": "지난 이벤트",
-        "href": "/kr/prom/past"
+        "href": "/prom/past"
       },
       {
         "submenu_id": 17,
         "name": "현재 이벤트",
-        "href": "/kr/prom/present"
+        "href": "/prom/present"
       }
     ]
   },
@@ -128,27 +128,32 @@
     "menu_id": 6,
     "menu1": "커뮤니티",
     "menuen": "Community",
-    "href1": "/kr/commu",
+    "href1": "/commu",
     "menu2": [
       {
         "submenu_id": 18,
         "name": "문의하기",
-        "href": "/kr/custom/custom"
+        "href": "/custom/custom"
       },
       {
         "submenu_id": 19,
         "name": "FAQ",
-        "href": "/kr/custom/faq"
+        "href": "/custom/faq"
       },
       {
         "submenu_id": 20,
         "name": "공지사항",
-        "href": "/kr/custom/notice"
+        "href": "/custom/notice"
       },
       {
         "submenu_id": 21,
         "name": "Our News",
-        "href": "/kr/custom/ournews"
+        "href": "/custom/ournews"
+      },
+      {
+        "submenu_id": 22,
+        "name": "자유게시판",
+        "href": "/custom/freeboard"
       }
     ]
   }

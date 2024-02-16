@@ -9,19 +9,22 @@
                 "types": "지선",
                 "busnumber": "1020",
                 "addr": "정릉북한산 ~ 종로구 경복궁",
-                "com": "대진여객"
+                "com": "대진여객",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
+                "types": "간선",
                 "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "addr": "한성여객종점 ~ 용산구청",
+                "com": "한성여객",
+                "bg": "#3d5dab"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "103",
+                "addr": "월계 2교 ~ 서울역",
+                "com": "삼화상운",
+                "bg": "#3d5dab"
             }
         ]
     },
@@ -32,22 +35,25 @@
         "text": "중구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "140",
+                "addr": "도봉산역 ~ 양재꽃시장",
+                "com": "한국BRT",
+                "bg": "#3d5dab"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "147",
+                "addr": "월계동 ~ 한티역",
+                "com": "진아교통",
+                "bg": "#3d5dab"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "심야",
+                "busnumber": "N73",
+                "addr": "복정역 ~ 구산역",
+                "com": "선진운수",
+                "bg": "#3d5dab"
             }
         ]
     },
@@ -58,22 +64,25 @@
         "text":"용산구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "0017",
+                "addr": "청암자이 ~ 포르쉐센터 용산",
+                "com": "보광교통",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "0411",
+                "addr": "용산역 ~ 양재꽃시장",
+                "com": "대원여객",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "공항",
+                "busnumber": "6001",
+                "addr": "동대문 ~ 서울역",
+                "com": "화성여객",
+                "bg": "#8b4513"
             }
         ]
     },
@@ -84,22 +93,25 @@
         "text": "성동구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "110A",
+                "addr": "정릉북한산공원 ~ 효창공원",
+                "com": "대진여객",
+                "bg": "#3d5dab"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "2014",
+                "addr": "성수동차고지 ~ 동대문역사문화공원",
+                "com": "태진운수",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "262",
+                "addr": "신내역 ~ 여의도환승센터",
+                "com": "북부운수",
+                "bg": "#3d5dab"
             }
         ]
     },
@@ -110,22 +122,25 @@
         "text": "광진구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "2221",
+                "addr": "신자초등학교 ~ 신설동역",
+                "com": "신흥운수",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "공항",
+                "busnumber": "6013",
+                "addr": "장한평역 ~ 인천공항",
+                "com": "공항리무진",
+                "bg": "#8b4513"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "마을",
+                "busnumber": "04",
+                "addr": "중곡아파트 ~ 강변역",
+                "com": "구의교통",
+                "bg": "#6db83c"
             }
         ]
     },
@@ -136,22 +151,25 @@
         "text": "동대문구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "120",
+                "addr": "북한산우이역 ~ 청량리역",
+                "com": "영신여객",
+                "bg": "#3d5dab"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "2221",
+                "addr": "신자초등학교 ~ 신설동역",
+                "com": "신흥운수",
+                "bg": "#6db83c"
             },
             {
                 "types": "광역",
                 "busnumber": "110",
                 "addr": "홍대입구",
-                "com": "대진여객"
+                "com": "대진여객",
+                "bg": "#6db83c"
             }
         ]
     },
@@ -162,22 +180,25 @@
         "text": "중랑구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "1122",
+                "addr": "상진운수종점 ~ 화랑대역",
+                "com": "상진운수",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "241",
+                "addr": "중랑공영차고지 ~ 신논현역",
+                "com": "대원교통",
+                "bg": "#3d5dab"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "108",
+                "addr": "덕정역 ~ 혜화역",
+                "com": "대원여객",
+                "bg": "#3d5dab"
             }
         ]
     },
@@ -188,22 +209,25 @@
         "text": "성북구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "1014",
+                "addr": "성북생태체험관 ~ 보문역",
+                "com": "대진여객",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
+                "types": "간선",
                 "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "addr": "북한산우이역 ~ 청량리역",
+                "com": "영신여객",
+                "bg": "#3d5dab"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "142",
+                "addr": "도봉역 ~ 방배역",
+                "com": "아진교통",
+                "bg": "#3d5dab"
             }
         ]
 
@@ -215,22 +239,25 @@
         "text": "강북구",
         "detail" : [
             {
-                "types": "일반",
+                "types": "지선",
+                "busnumber": "1119",
+                "addr": "강북청소년수련관 ~ 녹천역",
+                "com": "선일교통",
+                "bg": "#6db83c"
+            },
+            {
+                "types": "지선",
+                "busnumber": "1128",
+                "addr": "도봉역 ~ 성가복지병원",
+                "com": "아진교통",
+                "bg": "#6db83c"
+            },
+            {
+                "types": "간선",
                 "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
-            },
-            {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
-            },
-            {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "addr": "우이동차고지 ~ 강동역",
+                "com": "삼양교통",
+                "bg": "#3d5dab"
             }
         ]
     },
@@ -241,22 +268,25 @@
         "text": "도봉구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "101",
+                "addr": "북한산우이역 ~ 종로1가",
+                "com": "동아운수",
+                "bg": "#3d5dab"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "마을",
+                "busnumber": "노원14",
+                "addr": "청백아파트1단지 ~ 창동고등학교",
+                "com": "번창교통",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "마을",
+                "busnumber": "도봉09",
+                "addr": "창동역동측 ~ 도봉산역",
+                "com": "진양교통",
+                "bg": "#6db83c"
             }
         ]
     },
@@ -267,22 +297,25 @@
         "text": "노원구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "105",
+                "addr": "노원역 ~ 동대문역사문화공원",
+                "com": "흥안운수",
+                "bg": "#3d5dab"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "1144",
+                "addr": "하계역 ~ 방학3동주민센터",
+                "com": "한성여객",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "공항",
+                "busnumber": "6101",
+                "addr": "노원역 ~ 김포공항",
+                "com": "공항리무진",
+                "bg": "#8b4513"
             }
         ]
     },
@@ -293,22 +326,25 @@
         "text": "은평구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "0017",
+                "addr": "청암자이아파트 ~ 포르쉐센터 용산",
+                "com": "보광교통",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "순환",
+                "busnumber": "01A",
+                "addr": "충무로역 ~ 청와대역",
+                "com": "북부운수",
+                "bg": "#f99d1c"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "0411",
+                "addr": "용산차고지 ~ 양재꽃시장",
+                "com": "대원여객",
+                "bg": "#6db83c"
             }
         ]
     },
@@ -319,22 +355,25 @@
         "text": "서대문구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "163",
+                "addr": "북한산우이역 ~ 대방역",
+                "com": "동아운수",
+                "bg": "#3d5dab"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "7713",
+                "addr": "서울명지대 ~ 신촌역",
+                "com": "현대교통",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "8774",
+                "addr": "구산사거리 ~ 서대문구청",
+                "com": "선진운수",
+                "bg": "#6db83c"
             }
         ]
     },
@@ -345,22 +384,25 @@
         "text": "양천구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "5630",
+                "addr": "광명공영차고지 ~ 갈산초등학교",
+                "com": "보영운수",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "마을",
+                "busnumber": "양천03",
+                "addr": "신정이펜하우스 1단지 ~ 목동역",
+                "com": "신목교통",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "571",
+                "addr": "가산디지털단지역 ~ 구파발역",
+                "com": "신인운수",
+                "bg": "#6db83c"
             }
         ]
     },
@@ -371,22 +413,25 @@
         "text": "강서구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "5712",
+                "addr": "가산디지털단지역 ~ 홍대입구역",
+                "com": "한남여객운수",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "606",
+                "addr": "부천역 ~ 경복궁",
+                "com": "신길교통",
+                "bg": "#3d5dab"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "6514",
+                "addr": "양천공영차고지 ~ 신림역",
+                "com": "도원교통",
+                "bg": "#3d5dab"
             }
         ]
     },
@@ -397,22 +442,25 @@
         "text": "구로구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "5619",
+                "addr": "범일운수종점 ~ 신도림역",
+                "com": "범일운수",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "마을",
+                "busnumber": "구로09",
+                "addr": "신도림역 ~ 구로디지털단지역",
+                "com": "서북교통",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "공항",
+                "busnumber": "6003",
+                "addr": "동대문 ~ 서울역",
+                "com": "공항리무진",
+                "bg": "#8b4513"
             }
         ]
     },
@@ -423,22 +471,25 @@
         "text": "금천구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "150",
+                "addr": "도봉역 ~ 구로디지털단지역",
+                "com": "서울교통네트워크",
+                "bg": "#3d5dab"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "5617",
+                "addr": "시흥사거리 ~ 구로디지털단지역",
+                "com": "범일운수",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "5626",
+                "addr": "안양종합운동장 ~ 온수역",
+                "com": "서울매일버스",
+                "bg": "#6db83c"
             }
         ]
     },
@@ -449,22 +500,25 @@
         "text": "영등포구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "7612",
+                "addr": "서울명지대 ~ 선유도공원",
+                "com": "현대교통",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "6637",
+                "addr": "광명사거리역 ~ 영등포구청",
+                "com": "범일운수",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "6631",
+                "addr": "개화산역 ~ 영등포시장",
+                "com": "공항버스",
+                "bg": "#6db83c"
             }
         ]
     },
@@ -475,22 +529,25 @@
         "text": "동작구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "152",
+                "addr": "화계사입구 ~ 노량진역",
+                "com": "동아운수",
+                "bg": "#3d5dab"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "654",
+                "addr": "방화역 ~ 노량진역",
+                "com": "김포교통",
+                "bg": "#3d5dab"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "5516",
+                "addr": "대학고시촌입구 ~ 노들역",
+                "com": "한남여객운수",
+                "bg": "#6db83c"
             }
         ]
     },
@@ -501,22 +558,25 @@
         "text": "관악구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "500",
+                "addr": "석수역 ~ 서울역",
+                "com": "서울교통네트워크",
+                "bg": "#3d5dab"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "5530",
+                "addr": "군포공영차고지 ~ 사당역",
+                "com": "우신버스",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "5616",
+                "addr": "가산디지털단지역 ~ 영등포역",
+                "com": "한남여객운수",
+                "bg": "#6db83c"
             }
         ]
     },
@@ -527,22 +587,25 @@
         "text": "서초구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "405",
+                "addr": "염곡공영차고지 ~ 서울역",
+                "com": "삼성여객",
+                "bg": "#3d5dab"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "마을",
+                "busnumber": "서초21",
+                "addr": "염곡공영차고지 ~ 서초역",
+                "com": "선흥상운",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "3420",
+                "addr": "복정역환승센터 ~ 신반포역",
+                "com": "남성버스",
+                "bg": "#3d5dab"
             }
         ]
     },
@@ -553,22 +616,25 @@
         "text": "강남구",
         "detail" : [
             {
-                "types": "일반",
-                "busnumber": "130",
-                "addr": "강남역",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "143",
+                "addr": "북한산보국문역 ~ 대치역",
+                "com": "대진여객",
+                "bg": "#3d5dab"
             },
             {
-                "types": "광역",
-                "busnumber": "120",
-                "addr": "서울역",
-                "com": "대진여객"
+                "types": "지선",
+                "busnumber": "3011",
+                "addr": "장지공영차고지 ~ 강남구청",
+                "com": "서울버스",
+                "bg": "#6db83c"
             },
             {
-                "types": "광역",
-                "busnumber": "110",
-                "addr": "홍대입구",
-                "com": "대진여객"
+                "types": "간선",
+                "busnumber": "342",
+                "addr": "강동공영차고지 ~ 압구정로데오역",
+                "com": "서울승합",
+                "bg": "#3d5dab"
             }
         ]
     },
@@ -582,19 +648,22 @@
                 "types": "일반",
                 "busnumber": "130",
                 "addr": "강남역",
-                "com": "대진여객"
+                "com": "대진여객",
+                "bg": "#6db83c"
             },
             {
                 "types": "광역",
                 "busnumber": "120",
                 "addr": "서울역",
-                "com": "대진여객"
+                "com": "대진여객",
+                "bg": "#6db83c"
             },
             {
                 "types": "광역",
                 "busnumber": "110",
                 "addr": "홍대입구",
-                "com": "대진여객"
+                "com": "대진여객",
+                "bg": "#6db83c"
             }
         ]
     },
@@ -608,19 +677,22 @@
                 "types": "일반",
                 "busnumber": "130",
                 "addr": "강남역",
-                "com": "대진여객"
+                "com": "대진여객",
+                "bg": "#6db83c"
             },
             {
                 "types": "광역",
                 "busnumber": "120",
                 "addr": "서울역",
-                "com": "대진여객"
+                "com": "대진여객",
+                "bg": "#6db83c"
             },
             {
                 "types": "광역",
                 "busnumber": "110",
                 "addr": "홍대입구",
-                "com": "대진여객"
+                "com": "대진여객",
+                "bg": "#6db83c"
             }
         ]
     } 

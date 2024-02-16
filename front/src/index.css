@@ -64,7 +64,7 @@
 }
 
 body {
-    font-family: 'Minguk-Regular' !important;
+    font-family: 'NanumSquareRound' !important;
     font-weight: 400 !important;
     z-index: auto !important;
     overflow-x: hidden;
@@ -80,7 +80,15 @@ body.dimmed::after {
     left: 0;
     right: 0;
     background-color: rgba(0,0,0,.4);
-    z-index: 50;
+    z-index: 20;
+}
+
+.max-w-screen-1280 {
+    max-width: 1280px;
+}
+
+.j-center {
+    justify-content: center !important;
 }
 
 

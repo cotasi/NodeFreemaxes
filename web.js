@@ -16,6 +16,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'front/build/index.html'));
 });
 
+app.use('/data',navidata);
+
 const sqlconnection = mysql.createPool(dbdata);
 
 app.get("/:dbtable",(req,res)=>{ // 목록 전체

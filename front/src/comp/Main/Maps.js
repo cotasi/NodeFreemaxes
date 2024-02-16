@@ -35,7 +35,7 @@ const Tabscon = styled.ul`
             background-color: black;
             border-bottom: 1px solid white;
             .types {
-                background-color: white;
+                background-color: white !important;
                 color: black;
             }
             .infowraps {
@@ -44,7 +44,7 @@ const Tabscon = styled.ul`
                 }
             }
             .rotate { 
-                background-color: white;
+                background-color: white !important;
                 .rotatenumber {
                     color: black;
                 }
@@ -89,7 +89,6 @@ const Tabscon = styled.ul`
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 1px solid rgba(0,0,0,.5);
             border-radius: 50%;
             .rotatenumber {
                 color: white;
@@ -152,13 +151,13 @@ const Maps = () => {
                             Mapif.map((ifs,idd)=>(<Tabscon className={`${pathnum === idd && ispath ? 'dok' : ''}`}>
                                 {
                                     ifs.detail.map((det)=>(<li>
-                                        <div className="types">{det.types}</div>
+                                        <div className="types" style={{backgroundColor: `${det.bg}`}}>{det.types}</div>
                                         <div className="infowraps">
                                             <h2>{det.busnumber}</h2>
                                             <h3>{det.addr}</h3>
                                             <p>{det.com}</p>
                                         </div>
-                                        <div className="rotate">
+                                        <div className="rotate" style={{backgroundColor: det.bg}}>
                                             <div className="rotatenumber">{det.busnumber}</div>
                                         </div>
                                     </li>))

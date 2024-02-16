@@ -9,8 +9,8 @@ const connects = mysql2.createConnection({
 });
 
 const menuquery = 'Select submenu_table.*,menu_table.* from menu_table inner join submenu_table on menu_table.menu_id = submenu_table.menu_id';
-const regquery = 'Select reservation_main.*,reservation_sub.* from reservation_main inner join reservation_sub on reservation_main.main_id = reservation_sub.main_id';
 const tabquery = 'select tabs.*,subtabs.*,tabcon.* from tabs left join subtabs on tabs.maintabnum = subtabs.maintabnum left join tabcon on subtabs.subtabnum = tabcon.subtabnum;';
+const productquery = 'select products_table.*,products_detail.* from products_table left join products_detail on products_table.products_id = products_detail.products_id';
 
 connects.query(menuquery,(error,results1,fields)=>{
     if(error) {
@@ -49,77 +49,45 @@ connects.query(menuquery,(error,results1,fields)=>{
 
 });
 
-connects.query(regquery,(error,results2,fields)=>{
+
+connects.query(productquery,(error,results4,fields)=>{
     if(error) {
         console.log('에러 메시지:',error);
         throw error;
     }
 
-    const data2 = results2.reduce((acc2,item)=>{
-        const { main_id, regions, sub_id, com } = item;
+    const data4 = results4.reduce((acc4,item)=>{
+        const { products_id,product_category, models, detail_id, products_name, products_path, products_com, products_price } = item;
 
-        if(!acc2[main_id]) {
-            acc2[main_id]= {
-                main_id,
-                regions,
-                detail: [],
+        if(!acc4[products_id]) {
+            acc4[products_id]= {
+                products_id,
+                product_category,
+                models,
+                pdetail: []
             };
         }
 
-        acc2[main_id].detail.push({
-            sub_id,
-            com
+        acc4[products_id].pdetail.push({
+            products_id,
+            detail_id,
+            products_name,
+            products_path,
+            products_com,
+            products_price
         });
 
-        return acc2;
+        return acc4;
     },[]);
 
-    const final2result = Object.values(data2);
+    const final4result = Object.values(data4);
 
-    const json2 = './front/src/Data/businfo.json';
-    fs.writeFileSync(json2,JSON.stringify(final2result,null,2));
+    const json4 = './front/src/Data/products.json';
+    fs.writeFileSync(json4,JSON.stringify(final4result,null,2));
 
     console.log('JSON DATA');
 
-
-});
-
-connects.query(tabquery,(error,results3,fields)=>{
-    if(error) {
-        console.log('에러 메시지:',error);
-        throw error;
-    }
-
-    const data3 = results3.reduce((acc3,item)=>{
-        const { maintabnum,maintabname, subtabnum,category,tabimg,tag,concluder } = item;
-
-        if(!acc3[maintabnum]) {
-            acc3[maintabnum]= {
-                maintabnum,
-                maintabname,
-                reg: [],
-            };
-        }
-
-        acc3[maintabnum].reg.push({
-            subtabnum,
-            category,
-            tabimg,
-            tag,
-            concluder
-        });
-
-        return acc3;
-    },[]);
-
-    const final3result = Object.values(data3);
-
-    const json3 = './front/src/Data/tabs.json';
-    fs.writeFileSync(json3,JSON.stringify(final3result,null,3));
-
-  /*   console.log('JSON DATA');
-
-    connects.end(); */
+    connects.end();
 });
 
 
