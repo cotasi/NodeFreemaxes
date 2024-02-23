@@ -1,19 +1,34 @@
 .first-menu { padding: 35px 0; border-bottom: 1px solid rgba(0,0,0,.2);}
 .sns li a { display: flex; justify-content: center; align-items: center; background-color: rgba(18,65,107,.5); width: 30px; height: 30px; margin-right: 12px; border-radius: 50%;}
-.sns li a img { display: block;}
+.sns li a svg { display: block;}
+.sns li a:hover { background-color: white; }
+.sns li a:hover svg { transform: scale(1.2);}
+.sns li a:hover svg path { fill: #889fb4;}
+.sns li:first-child a svg { margin-right: 1px;}
 .logo { left: 50%; transform: translateX(-50%);}
 .logo a { display: block; padding: 40px 0;}
 .icons li a { display: flex; width: 40px; height: 40px; background-color: #fbfcfc; justify-content: center; align-items:center; border-radius: 50%; margin-right: 16px;}
-.icons li a img { display: block;}
-.icons li form { margin-right: 12px;}
-.icons li form input { display: block; width: 185px; height: 30px; background-color: #f4f6f8; border-radius: 20px; padding: 10px 20px;}
+.icons li a svg { display: block;}
+.icons li a:hover { background-color: #12416b;}
+.icons li a:hover svg path { fill: white; }
+.icons li form { margin-right: 12px; position: relative;}
+.icons li form input { display: block; width: 185px; height: 30px; background-color: #f4f6f8; border-radius: 20px; padding: 10px 20px; font-family: 'Pretendard' !important; font-size: 13px; font-weight: 200 !important;}
+.icons li form input:focus { outline: none; }
 .icons li form input::placeholder { font-family: 'Pretendard' !important; font-size: 12px; color: rgba(18,65,107,.5); font-weight: 300 !important; letter-spacing: -0.84px;}
-.second-menu { position: relative;}
+.icons li form button { position: absolute; width: 28px; height: 28px; background-color: #12416b; border-radius: 50%; right: 5px; top: 50%; transform: translateY(-50%);}
+.icons li form button span { display: block; text-indent: -9999em; width: 0; height: 0;}
+.icons li form button svg { width: 16px; height: 16px;}
+.icons li form button svg path { fill: white;}
+.second-menu { position: relative; z-index: 30;}
 .second-menu { box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25); background-color: white; display: flex; justify-content: center;}
 .second-menu > ul { display: inline-flex !important; }
-.second-menu > ul::after { content: ''; display: block; position: absolute; top: 100%; left: 0; right: 0; height: 0; overflow: hidden; background-color: white; z-index: 50; transition: all .4s; box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);}
+.second-menu > ul::after { content: ''; display: block; position: absolute; top: 100%; left: 0; right: 0; height: 0; overflow: hidden; background-color: white; z-index: 50; box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);}
 .second-menu > ul:hover::after { height: 290px; }
 .second-menu > ul:hover .smenu { height: 290px; }
-.second-menu > ul > li > a {font-family: 'Pretendard' !important; padding: 30px 35px; display: block; font-size: 18px; font-weight: 600 !important; color: #5297d3;}
-.second-menu > ul > li .smenu { left: 0; right: 0; top: 100%; z-index: 60; height: 0; overflow: hidden; transition: all .4s;}
-.second-menu > ul > li .smenu li a { font-size: 16px; display: block; font-weight: 500 !important; color: #858585; padding: 0; text-align: center; padding-bottom: 35px;}
+.second-menu > ul > li:hover { background-color: #12416b;}
+.second-menu > ul > li:hover > a { color: white;}
+.second-menu > ul > li > a {font-family: 'Pretendard' !important; padding: 30px 35px; display: block; font-size: 18px; font-weight: 500 !important; color: #5297d3;}
+.second-menu > ul > li .smenu { left: 0; right: 0; top: 100%; z-index: 60; height: 0; overflow: hidden; }
+.second-menu > ul > li .smenu li a { font-size: 15px; display: block; font-weight: 300 !important; color: #858585; padding: 0; text-align: center; padding-bottom: 35px;}
+.second-menu > ul > li:hover .smenu { background-color: #12416b;}
+.second-menu > ul > li:hover .smenu a { color: white;}

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Kings from './Kings.jsx';
+import Kings from './Kings.tsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 

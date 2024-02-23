@@ -1,15 +1,9 @@
-#busmain { background-color: #f5f5f5; padding-bottom: 100px;}
-#busmain .busmainwrap > h2 { font-family: 'Pretendard' !important; color: #45505b; font-size: 30px; font-weight: 300 !important; padding-top: 90px;}
-#busmain .busmainwrap > h2 span { font-weight: 600 !important;}
-#busmain .busmainwrap > p { font-family: 'Pretendard' !important; font-size: 15px; font-weight: 200 !important; padding-top: 20px; padding-bottom: 60px;}
-.colorwhite { color: white;}
-.hiddens { display: none !important;}
-.colorred { color: #f63636; font-weight: 800 !important;}
-#busmain .busmainwrap .smallinfo { height: 100%; display: inline-block; width: 120%;}
-#busmain .busmainwrap .largeinfo ul { position: relative;}
-#busmain .busmainwrap .largeinfo { height: 100%; align-self: flex-start; overflow-x: visible; overflow-x: hidden; overflow-y: auto; margin-left: 130px; padding-left: 10px; padding-right: 200px;}
-#busmain .busmainwrap .largeinfo ul::after {content: ''; display: block; width: 1px; height: 100%; background-color: #607283; position: absolute; left: 0; bottom: 0;}
-#busmain .busmainwrap .largeinfo > ul > li { position: relative; padding-left: 30px; }
-#busmain .busmainwrap .largeinfo > ul > li button {border: 1px solid #607283; padding: 10px 20px; margin-bottom: 30px; border-radius: 13px; text-align: left; transition: all .4s;}
-#busmain .busmainwrap .largeinfo > ul > li button:hover { background-color: #607283; color: white;}
-#busmain .busmainwrap .largeinfo > ul > li button::before { content: ''; display: inline-block; width: 15px; height: 15px; background-color: #607283; border-radius: 50%; position: absolute; top: 50%; left: 0; transform: translate(-50%,-50%)}
+.resbus { position: relative; transform: translateY(-50%); z-index: 50; }
+.resbus .resbus_wrap { background-color: white; padding: 0.85rem 3.7rem; box-shadow: 0 4px 4px 0 rgba(0,0,0,.25); border-radius: 60px; }
+.resbus .resbus_wrap > form > h2 { font-size: 1.1rem; margin-right: 4rem; letter-spacing: -1px; font-weight: 500 !important; }
+.resbus .resbus_wrap > form .checks { width: 15%; border-radius: 4px; border: 1px solid rgba(0,0,0,.2); overflow: hidden; margin-right: 4.8rem; }
+.resbus .resbus_wrap > form .checks > div { width: 50%; }
+.resbus .resbus_wrap > form .checks input[type="checkbox"] { display: none; }
+.resbus .resbus_wrap > form .checks input[type="checkbox"] + label { display: inline-block; width: 100%; text-align: center; font-size: 0.95rem; letter-spacing: -0.5px; padding: .5rem 0; background-color: #fafafa; }
+.resbus .resbus_wrap > form .checks input[type="checkbox"]:checked + label { background-color: black; color: white; }
+.resbus .resbus_wrap > form button[type="submit"] { background-color: #da293b; color: white; font-size: 1rem; padding: .75rem 1rem; border-radius: 4px; line-height: 1.1;}
