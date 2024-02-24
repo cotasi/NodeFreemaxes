@@ -1,0 +1,19 @@
+.distri h2 { padding-top: 3.3rem; font-size: 1.4rem; letter-spacing: -1px; padding-bottom: 1rem;}
+.distri p { color: rgba(46, 46, 46, 0.4); padding-bottom: 2rem; }
+.distri .districon { padding-bottom: 3rem; }
+.distri .districon .shows { width: 40%;}
+.distri .districon .shows .regionshows { display: flex; flex-wrap: wrap; margin-bottom: 4rem; }
+.distri .districon .shows .regionshows li { margin-right: .9rem; width: 15%; margin-bottom: 1rem; }
+.distri .districon .shows .regionshows li.buttoncolor button { color: #ce5567; border-bottom: 2px solid #ce5567; }
+.distri .districon .shows .regionshows li button { width: 100%; border-bottom: 2px solid rgba(0,0,0,.6); color: rgba(0,0,0,.6); font-size: .8rem; padding: .5rem 0; }
+.distri .districon .shows .info .infoshow { width: 100%; border-top: 2px solid black; display: none; }
+.distri .districon .shows .info .infoshow.showing { display: block !important;}
+.distri .districon .shows .info .infoshow li { border-bottom: 1px solid black; padding: 5%;}
+.distri .districon .shows .info .infoshow li:last-child { border: none; }
+.distri .districon .shows .info .infoshow li > div:first-child { font-size: .75rem; display: inline-flex; justify-content: center; align-items: center; height: 1.5rem; line-height: 1.1; padding: .6rem .9rem; background-color: black; color: white; border-radius: 1rem; margin-right: 2rem; }
+.distri .districon .shows .info .infoshow li > .busr div { margin-bottom: 10px; }
+.distri .districon .shows .info .infoshow li > .busr div:first-child { font-weight: 800 !important; font-size: 1.1rem; }
+.distri .districon .map svg g#firsts path { fill: #353535;}
+.distri .districon .map svg g#firsts path.mapcolor { fill: white; }
+.distri .districon .map svg g#seconds text { fill: white; font-size: 0.9rem; }
+.distri .districon .map svg g#seconds text.textcolor { fill: #353535; }

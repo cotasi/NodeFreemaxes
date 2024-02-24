@@ -7,3 +7,14 @@
 .resbus .resbus_wrap > form .checks input[type="checkbox"] + label { display: inline-block; width: 100%; text-align: center; font-size: 0.95rem; letter-spacing: -0.5px; padding: .5rem 0; background-color: #fafafa; }
 .resbus .resbus_wrap > form .checks input[type="checkbox"]:checked + label { background-color: black; color: white; }
 .resbus .resbus_wrap > form button[type="submit"] { background-color: #da293b; color: white; font-size: 1rem; padding: .75rem 1rem; border-radius: 4px; line-height: 1.1;}
+
+.resbustab .bustab { margin-top: 1rem;}
+.resbustab .bustab li button { width: 125px; height: 125px; background-color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 4px 0 rgba(0,0,0,.25); margin-right: 2.3rem; border-radius: 12px; }
+.resbustab .bustab li button.btnon { background-color: #ff2f06; position: relative;}
+.resbustab .bustab li button.btnon .svgwrap img:first-child { display: none;}
+.resbustab .bustab li button.btnon .svgwrap img:last-child { display: inline;}
+.resbustab .bustab li button.btnon .namewrap { color: white; font-weight: 600 !important; }
+.resbustab .bustab li button.btnon::after { content: ''; width: 50px; height: 50px; clip-path:polygon(50% 0,0 100%,100% 100%); background-color:#ff2f06; position: absolute; bottom: 80%; z-index: -1;}
+.resbustab .bustab li button .svgwrap { width: 45%; height: 45%; margin-bottom: 1rem; position: relative; }
+.resbustab .bustab li button .svgwrap img { width: 100%; height: 100%; object-fit: contain; position: absolute; top: 0; left: 0;}
+.resbustab .bustab li button .svgwrap img:last-child { display: none;}

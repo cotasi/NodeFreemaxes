@@ -64,7 +64,7 @@ export default function HeaderAll() {
               </a></li>
         </ul>
         <h1 className="logo absolute"><Link to="/"><img src="/images/logo.svg" alt="logo" /></Link></h1>
-        <ul className="icons flex items-center">
+        <ul className="icons xl:flex hidden items-center">
           <li>
             <Link to="/">
               <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -141,16 +141,19 @@ export default function HeaderAll() {
               </g>
               <defs>
               <clipPath id="clip0_473_841">
-              <rect width="17" height="17" fill="white"/>
+                <rect width="17" height="17" fill="white"/>
               </clipPath>
               </defs>
             </svg>
             </Link>
           </li>
         </ul>
+        <div className="hambtn xl:hidden flex items-center">
+          <button><span></span><span></span><span></span></button>
+        </div>
        </nav>
       </div>
-      <div className="second-menu">
+      <div className="second-menu hidden xl:flex">
         <ul className="mx-auto max-w-screen-1280 flex j-center items-center">
           {
             Menu.map((menues)=>(<li><Link to={menues.href1} className="relative">{menues.menu1}

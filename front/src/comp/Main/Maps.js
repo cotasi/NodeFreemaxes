@@ -2,7 +2,7 @@ import React, { useState, useEffect }from 'react';
 import { Link } from 'react-router-dom';
 
 import '../../scss/maps.scss';
-import Graphics from './Graphics';
+import Graphics from './Gbus';
 import Mapif from '../../Data/mapinfo.json';
 import styled from 'styled-components';
 

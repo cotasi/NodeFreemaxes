@@ -1,0 +1,92 @@
+[
+  {
+    "region_num": 1,
+    "region_name": "남양주시",
+    "region_bus_num": 1,
+    "bus_name": "8001",
+    "bus_type": "광역",
+    "bus_com": "대원운수",
+    "bus_stop": "[대성리,https://i.imgur.com/6cQvR76.jpg,경기도 가평군 청평면 경춘로 88]|[구암동산응암마을,https://i.imgur.com/oHlGA59.jpg,경기도 남양주시 경춘로 264 7번길 7]|[진벌마을,https://i.imgur.com/vehHXdO.jpg,경기도 남양주시 경춘로 2514]|[답내초교입구,https://i.imgur.com/p8e4CJ2.jpg,경기 남양주시 화도읍 경춘로2347번길 44-7 답내초등학교]|[월산지구부영단지,https://i.imgur.com/JRWChHT.jpg,경기 남양주시 화도읍 월산리 1528]|[화광중학교,https://i.imgur.com/QhHDjN1.jpg,경기도 남양주시 화도읍 경춘로 2226]|[남양주고등학교,https://i.imgur.com/0n4MGC0.jpg,경기도 남양주시 화도읍 경춘로2192번길 25]|[마석역,https://i.imgur.com/DctgjFv.jpg,경기도 남양주시 화도읍 마석중앙로 107]|[중흥아파트,https://i.imgur.com/lXC0tmj.jpg,경기도 남양주시 호평동 61 KR]|[신명아파트,https://i.imgur.com/uvWDIhH.jpg,경기도 남양주시 화도읍 창현로 60]|[창현초등학교,https://i.imgur.com/2roZuG1.jpg,경기도 남양주시 화도읍 녹촌로 12]|[잠실역,https://i.imgur.com/mPedKCN.jpg,서울특별시 잠실6동]|[잠실트리지움아파트,https://i.imgur.com/FxoxuHq.jpg,서울특별시 송파구 잠실로 62]|[잠실새내역,https://i.imgur.com/Gv71h2u.jpg,서울특별시 송파구 올림픽로 지하140]|[잠실종합운동장,https://i.imgur.com/8pAX6Vx.png,서울특별시 송파구 올림픽로 25]|[삼성역,https://i.imgur.com/23upL6e.jpg,서울특별시 강남구 테헤란로 지하538]|[선릉역,https://i.imgur.com/UeWqOl9.jpg,서울특별시 강남구 삼성동 선릉로 580]|[역삼역,https://i.imgur.com/7zjrdvo.png,서울특별시 강남구 테헤란로 지하156]|[강남역,https://i.imgur.com/Lat3uMs.jpg,서울특별시 강남구 강남대로 지하396]|[논현역,https://i.imgur.com/WtygMZM.jpg,서울특별시 강남구 학동로 지하102]|[신사역3번출구,https://i.imgur.com/mxvxxlh.png,서울특별시 강남구 도산대로 지하102]"
+  },
+  {
+    "region_num": 1,
+    "region_name": "남양주시",
+    "region_bus_num": 2,
+    "bus_name": "1200",
+    "bus_type": "광역",
+    "bus_com": "대원운수",
+    "bus_stop": "[차산리,https://i.imgur.com/LgUCwwn.jpg,경기도 남양주시 화도읍 차산리]|[창현초등학교,https://i.imgur.com/2roZuG1.jpg,경기도 남양주시 화도읍 녹촌로 12]|[화도읍사무소,https://i.imgur.com/O33eJFh.jpg,경기도 남양주시 화도읍 비룡로 59]|[묵현교차로,https://i.imgur.com/N533Xsm.jpg,경기도 남양주시 맷돌로 7]|[천마산휴게소,https://i.imgur.com/0HoqqTG.jpg,경기도 남양주시 화도읍 묵현리 411-21]|[경성아파트,https://i.imgur.com/FpIirVm.jpg,경기도 남양주시 화도읍 묵현리 603-3]|[구룡터,https://i.imgur.com/aTIJy6o.jpg,남양주시 호평동]|[평내호평역,https://i.imgur.com/jkgvpgU.jpg,경기도 남양주시 경춘로 1375]|[평내동행정복지센터,https://i.imgur.com/fe4HCjS.jpg,경기도 남양주시 호평로68번길 21 호평동]|[남양주시청1청사,https://i.imgur.com/hXkbfKh.jpg,경기도 남양주시 경춘로 1037]|[금곡동구종점,https://i.imgur.com/Oh2yYlS.jpg,경기도 남양주시]|[진안사거리,https://i.imgur.com/CWVvvn9.jpg,경기도 남양주시 양진로 3]|[남양주시청2청사,https://i.imgur.com/hXkbfKh.jpg,경기도 남양주시 경춘로 522]|[도농역,https://i.imgur.com/8mWsc6B.jpg,경기도 남양주시 경춘로 433]|[구리영업소,https://i.imgur.com/on4TVZn.jpg,경기도 구리시 검배로 167]|[잠실역버스환승센터,https://i.imgur.com/bEQdGTK.jpg,서울특별시 송파구 잠실로 지하156]"
+  },
+  {
+    "region_num": 1,
+    "region_name": "남양주시",
+    "region_bus_num": 3,
+    "bus_name": "7-4",
+    "bus_type": "일반형",
+    "bus_com": "경기버스",
+    "bus_stop": "[사릉역,https://i.imgur.com/DgdsD7m.jpg,경기도 남양주시 진건읍 진건우회로 63]|[진건읍사무소,https://i.imgur.com/qSw7KVl.jpg,경기도 남양주시 진건읍 사능리 645-1]|[용정사거리,https://i.imgur.com/BHJUlR4.jpg,경기도 남양주시 진건오남로 57]|[사능공업사,https://i.imgur.com/rFdeGxP.jpg,경기도 남양주시 진건읍 사릉로 433]|[용신초등학교,https://i.imgur.com/p8yJux5.jpg,경기도 남양주시 진건읍 사릉로 474]|[신월2리마을회관,https://i.imgur.com/fWrK4Mi.jpg,경기도 남양주시]|[솟골낚시터,https://i.imgur.com/md2POYp.jpg,경기도 남양주시 진건읍 사릉로 642-65]|[신월2리,https://i.imgur.com/shFaqeu.jpg,경기도 남양주시]|[연평2리마을회관,https://i.imgur.com/3Xk6hB4.jpg,경기도 남양주시]|[중포마을,https://i.imgur.com/jBm6rl7.jpg,경기도 남양주시 연평리입구]|[연평대교,https://i.imgur.com/fa6OPsM.jpg,경기도 남양주시 진접읍 연평리]|[남양주북부경찰서,https://i.imgur.com/XKQv1Ys.jpg,경기도 남양주시 진접읍 진건오남로 1019]|[봉현마을,https://i.imgur.com/lQKpvxy.jpg,경기도 남양주시 진접읍 장현리 659-2]|[장현초등학교,https://i.imgur.com/qc4Ofwf.jpg,경기도 남양주시 진접읍 장현천로 37]|[진접농협,https://i.imgur.com/QfMvNrW.jpg,경기도 남양주시 진접읍 연평리 114-1]|[금곡리입구,https://i.imgur.com/CuYVfVh.jpg,경기도 남양주시 장현로 82]|[반도유보라아파트,https://i.imgur.com/RiBkQMI.jpg,경기도 남양주시]|[원일플로라아파트,https://i.imgur.com/baePNqp.jpg,경기도 남양주시]|[신도브래뉴아파트,https://i.imgur.com/TqiIaWt.jpg,경기도 남양주시]|[주곡초중교,https://i.imgur.com/P6QSWdK.jpg,경기도 남양주시]|[경복대학교,https://i.imgur.com/7uZpbTx.jpg,경기도 남양주시 진접읍 경복대로 425]"
+  },
+  {
+    "region_num": 1,
+    "region_name": "남양주시",
+    "region_bus_num": 4,
+    "bus_name": "201",
+    "bus_type": "간선",
+    "bus_com": "대원여객",
+    "bus_stop": "[구리수택차고지,https://i.imgur.com/sTIfsoY.jpg,경기도 남양주시]|[환경관리사업소,https://i.imgur.com/yCCt7FC.jpg,경기도 구리시 아차산로 439]|[수택고교,https://i.imgur.com/XnTj4c9.jpg,경기도 구리시 검배로 145]|[구리여중교,https://i.imgur.com/DMy5kvx.jpg,경기도 구리시 벌말로 168]|[벌말삼거리,https://i.imgur.com/hIqoV9G.jpg,경기도 남양주시 벌말삼거리]|[상록아파트,https://i.imgur.com/LpLg5V1.jpg,경기도 남양주시]|[장자호수공원,https://i.imgur.com/LHcpLnw.jpg,경기도 구리시 교문동 593-1]|[새마을금고,https://i.imgur.com/pDiiw4s.jpg,경기도 구리시 검배로 23]|[밀알교회,https://i.imgur.com/bgmD1uh.jpg,경기도 구리시 코스모스길215번길 9]|[구리여중고,https://i.imgur.com/xTrC14N.jpg,경기도 구리시]|[수택1동행정복지센터,https://i.imgur.com/dyOjsSB.jpg,경기도 구리시]|[구리시장입구,https://i.imgur.com/jAnRmYq.jpg,경기도 구리시]|[한양대구리병원,https://i.imgur.com/vm7jEc5.jpg,경기도 구리시 경춘로 153]|[망우리역사문화공원,https://i.imgur.com/YrLvr3z.jpg,서울특별시 중랑구 망우로91길2]|[망우지구대,https://i.imgur.com/bcb4LAr.jpg,서울특별시 망우동]|[상봉역,https://i.imgur.com/0snkuot.jpg,서울특별시 중랑구 망우로 297]|[중랑역,https://i.imgur.com/MOnQsjj.jpg,서울특별시 중랑구 중랑역로 9]|[삼육서울병원,https://i.imgur.com/SR8GlDV.jpg,서울시 동대문구 망우로 82]|[경희대입구,https://i.imgur.com/DznFbpI.jpg,서울시 경희대]|[세종대왕기념관,https://i.imgur.com/RppWGgy.jpg,서울시 세종대왕기념관]|[동대문경찰서,https://i.imgur.com/tiHc5NA.jpg,서울시 동대문구 약령시로21길 29]|[세종코아,https://i.imgur.com/YfdemRo.jpg,경기도 동대문구 세종코아]|[제기동역,https://i.imgur.com/EFEK0Nv.jpg,서울특별시 동대문구 왕산로 지하93]|[신설동역,https://i.imgur.com/Ryq5MvO.jpg,서울 신설동]|[동대문역,https://i.imgur.com/NheNcMr.jpg,서울시 신설동]|[서울역버스환승센터,https://i.imgur.com/qFv5yML.jpg,서울역]"
+  },
+  {
+    "region_num": 2,
+    "region_name": "군포시",
+    "region_bus_num": 5,
+    "bus_name": "541",
+    "bus_type": "간선",
+    "bus_com": "우신버스",
+    "bus_stop": "[군포공영차고지,https://i.imgur.com/Y4ejlKy.jpg,경기도 군포시 번영로 179-46]|[수리산역,https://i.imgur.com/S7JiLOn.jpg,경기도 군포시 번영로 385]|[도장중학교,https://i.imgur.com/o0lMtV8.jpg,경기 군포시 고산로 460]|[군포문화예술회관,https://i.imgur.com/X3rrMt7.jpg,경기도 군포시 고산로 599]|[산본래미안아파트,https://i.ibb.co/D7XKNmf/image.jpg,경기도 군포시 산본동]|[금정역,https://i.ibb.co/V9H8LFK/image.jpg,금정역]|[명학역,https://i.ibb.co/c19C4Km/image.jpg,명학역]|[서안양우체국,https://i.ibb.co/Pc3scnj/image.jpg,서안양우체국]|[비산사거리,https://i.ibb.co/dD1kQkB/image.jpg,비산사거리]|[인덕원역,https://i.ibb.co/hDM2YDY/image.jpg,인덕원역]|[정부과천청사역,https://i.ibb.co/rw38QDk/image.jpg,정부과천청사]|[과천성당,https://i.ibb.co/f9j1LKR/image.jpg,과천성당]|[선바위역,https://i.ibb.co/dWgYP41/image.jpg,선바위역]|[서초역,https://i.ibb.co/zhf3ckN/image.jpg,서울시 서초구]|[교대역,https://i.ibb.co/1JDM2HY/image.jpg,교대역]|[강남역,https://i.imgur.com/Lat3uMs.jpg,서울특별시 강남구 강남대로 지하396]"
+  },
+  {
+    "region_num": 2,
+    "region_name": "군포시",
+    "region_bus_num": 6,
+    "bus_name": "65",
+    "bus_type": "일반형",
+    "bus_com": "대원고속",
+    "bus_stop": "[광교차고지,https://i.ibb.co/F71p0yc/image.jpg,광교차고지]|[흥덕지구,https://i.ibb.co/RQwjbbK/image.jpg,흥덕지구]|[홈플러스원천점,https://i.ibb.co/THK3VQw/image.jpg,원천동 홈플러스]|[아주대입구,https://i.ibb.co/YQDzVdT/image.jpg,아주대학교]|[성빈센트병원,https://i.ibb.co/gWfLWXv/image.jpg,수원 성빈센트]|[팔달문,https://i.ibb.co/yfQjCVZ/image.jpg,수원팔달문]|[금정역,https://i.ibb.co/V9H8LFK/image.jpg,금정역]|[명학역,https://i.ibb.co/c19C4Km/image.jpg,명학역]|[안양역,https://i.ibb.co/V2Xy3nb/image.jpg,안양역]"
+  },
+  {
+    "region_num": 3,
+    "region_name": "용인시",
+    "region_bus_num": 7,
+    "bus_name": "5001",
+    "bus_type": "광역",
+    "bus_com": "경남여객",
+    "bus_stop": "[명지대,https://i.ibb.co/6Ynt6dg/image.jpg,용인 명지대]|[동진마을,https://i.ibb.co/YtpMtzv/image.jpg,용인 동진마을]|[보보스타운,https://i.ibb.co/Q8fPw4g/image.jpg,용인 보보스 타운]|[태성중고교,https://i.ibb.co/YDHT2WS/image.jpg,태성중고등학교]|[용인터미널,https://i.ibb.co/CBhLm8z/image.jpg,용인터미널]|[용인시장,https://i.ibb.co/FwcPdZh/image.jpg,용인시장입구]|[처인구청,https://i.ibb.co/VDdr4vH/image.jpg,용인처인구청]|[중앙지구대,https://i.ibb.co/rvhfLvN/image.jpg,중앙지구대]|[역북초등학교,https://i.ibb.co/4sVTJ4y/image.jpg,역북초등학교]|[명지대입구,https://i.ibb.co/gFtZ2cr/image.jpg,용인 명지대 사거리]|[동원로얄듀크,https://i.ibb.co/9N3hyYz/image.jpg,동원로얄듀크]|[용인시청,https://i.ibb.co/QDTw8r9/image.jpg,용인시청]|[삼가역,https://i.ibb.co/DRqbMp9/image.jpg,삼가역]|[효자고개,https://i.ibb.co/bKBcPrM/image.jpg,효자고개]|[수원동쌍용아파트,https://i.ibb.co/B4wXvVb/image.jpg,쌍용아파트]|[상지석,https://i.ibb.co/8MZ29Rf/image.jpg,상지석 고인돌]|[강남대역,https://i.ibb.co/2SVdfGT/image.jpg,용인 강남대 삼거리]|[기흥역,https://i.ibb.co/GQRrY3G/image.jpg,기흥역]|[상미마을,https://i.ibb.co/JHB4fdY/image.jpg,상미마을]|[신논현역,https://i.ibb.co/9tVS2t3/image.jpg,신논현역]"
+  },
+  {
+    "region_num": 3,
+    "region_name": "용인시",
+    "region_bus_num": 8,
+    "bus_name": "M4101",
+    "bus_type": "광역급행",
+    "bus_com": "경기고속",
+    "bus_stop": "[상현역,https://i.imgur.com/WvyYfvL.jpg,수지 상현역]|[수지지역난방공사,https://i.imgur.com/mSoPFDn.jpg,수지지역난방공사]|[풍덕천2동주민센터,https://i.imgur.com/gQ67nUt.jpg,풍덕천2동주민센터]|[동천동현대홈타운2차,https://i.imgur.com/AjxrGkL.jpg,동천동 현대홈타운]|[머내기업은행,https://i.imgur.com/4dq9Jjr.jpg,IBK 기업은행]|[남대문세무서,https://i.imgur.com/twfpaUc.jpg,남대문세무서]|[종로2가사거리,https://i.imgur.com/z0BboNt.jpg,종로2가사거리]|[을지로입구역,https://i.imgur.com/YFg3bBG.jpg,을지로입구역]|[남대문시장,https://i.imgur.com/vDCbf1l.jpg]|[명동국민은행,https://i.imgur.com/FRolJTz.jpg,명동국민은행]"
+  },
+  {
+    "region_num": 4,
+    "region_name": "평택시",
+    "region_bus_num": 9,
+    "bus_name": "8471",
+    "bus_type": "직행좌석",
+    "bus_com": "경진여객",
+    "bus_stop": "[안중버스터미널,https://i.imgur.com/DfA9NB1.jpg,안중버스터미널]|[안중오거리,https://i.imgur.com/1kG9N5D.jpg,안중오거리]|[반룡한의원,https://i.imgur.com/RD7VX1X.jpg,반룡한의원]|[향남제약공단,https://i.imgur.com/jQiATX7.jpg,향남제약공단]|[화성시보건소,https://i.ibb.co/zSzNWs3/image.jpg,화성시보건소]|[발안만세시장,https://i.ibb.co/024FNcM/image.jpg,발안만세시장]|[장안대학교,https://i.ibb.co/S0x9TDk/image.jpg,장안대학교]|[오목천역,https://i.ibb.co/gytw0MW/image.jpg]|[수원역https://i.ibb.co/gytw0MW/image.jpg,수원역"
+  },
+  {
+    "region_num": 5,
+    "region_name": "수원시",
+    "region_bus_num": 10,
+    "bus_name": "M5107",
+    "bus_type": "광역급행",
+    "bus_com": "경기고속",
+    "bus_stop": "[경희대학교,https://i.ibb.co/wLd0ZdB/image.jpg,수원 경희대학교]|[서광아파트,https://i.ibb.co/myK6tSq/image.jpg,영통 서광아파트]|[영통역,https://i.ibb.co/PQczwCz/image.jpg,영통역]|[청명역,https://i.ibb.co/dKCvXK7/image.jpg,청명역]|[서울역버스환승센터,https://i.imgur.com/qFv5yML.jpg,서울역]"
+  }
+]

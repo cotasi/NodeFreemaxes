@@ -1,0 +1,14 @@
+.gbus h2 { padding-top: 6rem; font-size: 1.4rem; padding-bottom: 1rem; }
+.gbus p {color: rgba(46, 46, 46, 0.4); padding-bottom: 2rem; }
+.gbus .gbuscon { height: 1000px;}
+.gbus .gbuscon .regioncheck { width: 25%;}
+.gbus .gbuscon .regioncheck .rolldown { width: 85%;}
+.gbus .gbuscon .regioncheck .rolldown > button { width: 100%; text-align: left; padding: 1rem; border-bottom: 2px solid black; position: relative; }
+.gbus .gbuscon .regioncheck .rolldown > button::after {content: ''; width: 10px; height: 6px; background: url('../images/chev.svg') no-repeat; position: absolute; top: 50%; transform: translateY(-50%); right: 1rem; }
+.gbus .gbuscon .regioncheck .rolldown .smallmenu { top: 100%; left: 0; right: 0; text-align: center; background-color: black; height: 0; overflow: hidden; transition: all .4s; }
+.gbus .gbuscon .regioncheck .rolldown .smallmenu.smallon { height: 560px; }
+.gbus .gbuscon .regioncheck .rolldown .smallmenu li button { padding: 1rem 0; color: white; }
+.gbus .gbuscon .bustab { width: 75%;}
+.gbus .gbuscon .bustab .tabone li { margin-right: 5rem; }
+.gbus .gbuscon .bustab .tabone li button { width: 150px; display: flex; justify-content: space-between; padding: 0.75rem 1rem; border: 1px solid black; font-size: .85rem; border-radius: 1.5rem;}
+.gbus .gbuscon .bustab .tabone li button.taboneons { background-color: black; color: white;}

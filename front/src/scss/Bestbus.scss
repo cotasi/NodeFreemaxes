@@ -1,0 +1,27 @@
+.bestbus h2 { padding-top: 15rem; font-size: 1.4rem; letter-spacing: -1px; }
+.bestbus p { padding-top: 10px; color: rgba(46,46,46,.4); padding-bottom: 2rem;}
+#bestswiper .swiper-slide { height: 500px; border-radius:1rem; overflow: hidden;}
+#bestswiper .swiper-slide .busimg { height: 50%; background-color: #fffbe9; position: relative;}
+#bestswiper .swiper-slide .busimg .imgwrap { background-color: white; position: absolute; display: flex; justify-content: center; align-items: center; top: 10%; left: 50%; transform: translateX(-50%); border-radius: 50%; width: 200px; height: 200px;}
+#bestswiper .swiper-slide .busimg .imgwrap img { width: 60%; object-fit: contain;}
+#bestswiper .swiper-slide .busimg .bustype { position: absolute; bottom: 5%; left: 5%;}
+#bestswiper .swiper-slide .busimg .bustype div { display: inline-block; font-size: .75rem; margin-right: .75rem; padding: .4rem .8rem; color: white; border-radius: 1.2rem;}
+#bestswiper .swiper-slide .busimg .bustype div:first-child { background-color: #ce5567;}
+#bestswiper .swiper-slide .busimg .bustype div:last-child { background-color: #44520e;}
+#bestswiper .swiper-slide .businfo { height: 30%; padding: .9rem;}
+#bestswiper .swiper-slide .businfo div:first-child span {font-size: 1.1rem; color: #ce5567; margin-right: .5rem;}
+#bestswiper .swiper-slide .businfo div:first-child { font-size: .95rem; display: flex; align-items: center; padding-bottom: .6rem; }
+#bestswiper .swiper-slide .businfo div:nth-child(2) { color: #a7a3a3; padding-bottom: .9rem; }
+#bestswiper .swiper-slide .businfo .paid { display: flex; align-items: center; padding-bottom: .7rem; }
+#bestswiper .swiper-slide .businfo .paid span:first-child svg path { opacity: .1;}
+#bestswiper .swiper-slide .businfo .paid span:first-child { margin-right: .5rem; }
+#bestswiper .swiper-slide .businfo .paid span:last-child { font-size: .95rem; }
+#bestswiper .swiper-slide .businfo .subway { display: flex; align-items: center; width: 100%; white-space: nowrap;}
+#bestswiper .swiper-slide .businfo .subway span:first-child svg path { opacity: .1;}
+#bestswiper .swiper-slide .businfo .subway span:first-child { margin-right: .5rem; display: inline-flex; align-items: center; }
+#bestswiper .swiper-slide .businfo .subway> span:last-child span { margin-right: .6rem; }
+#bestswiper .swiper-slide .businfo .subway> span:last-child span:last-child { text-overflow: ellipsis; overflow: hidden; }
+#bestswiper .swiper-slide .reserpart { height: 10%; padding-top: 1.2rem; padding: 2% 5%;}
+#bestswiper .swiper-slide .reserpart button { font-size: .95rem; color: white; background-color: #666666; margin-right: .9rem; padding: .4rem .7rem; border-radius: 3px;  }
+#bestswiper .swiper-scrollbar { bottom: 5%; }
+#bestswiper .swiper-scrollbar .swiper-scrollbar-drag { background-color: #ce5567; }
