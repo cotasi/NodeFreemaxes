@@ -30,7 +30,7 @@ const ContactForm = () => {
                 <h2>Contact us</h2>
                 <p>문의사항은 아래 양식으로 보내주세요.</p>
                 <div className="contactcon">
-                    <div className="mapwrap"><div id="map" style={{width: '400px', height: '400px'}}></div></div>
+                    <div className="mapwrap"><div id="map" style={{width: '100%', height: '100%', objectFit: 'cover'}}></div></div>
                 </div>
             </div>
         </div>
