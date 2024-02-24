@@ -1,0 +1,42 @@
+[
+  {
+    "fassion_id": 1,
+    "fassion_name": "[NEW]파라슈트 팬츠",
+    "fassion_price": 128000,
+    "fassion_sale": 118000,
+    "fassion_isSale": 1,
+    "fassion_path": "[https://i.imgur.com/kftJKSO.png,https://i.imgur.com/I1mZQyZ.jpg]"
+  },
+  {
+    "fassion_id": 2,
+    "fassion_name": "[NEW]캡슐로고 아노락",
+    "fassion_price": 158000,
+    "fassion_sale": 140000,
+    "fassion_isSale": 1,
+    "fassion_path": "[https://i.imgur.com/xHFdtsU.png,https://i.imgur.com/gLrplI9.png]"
+  },
+  {
+    "fassion_id": 3,
+    "fassion_name": "[NEW]릴렉스 팬츠",
+    "fassion_price": 168000,
+    "fassion_sale": 140000,
+    "fassion_isSale": 1,
+    "fassion_path": "[https://i.imgur.com/mmxGUVZ.png,https://i.imgur.com/fyIGBHv.jpg]"
+  },
+  {
+    "fassion_id": 4,
+    "fassion_name": "[NEW]여성 판다와 윈드 브레이커",
+    "fassion_price": 138000,
+    "fassion_sale": 120000,
+    "fassion_isSale": 1,
+    "fassion_path": "[https://i.imgur.com/tSm0mnI.png,https://i.imgur.com/CI5K0ZD.jpg]"
+  },
+  {
+    "fassion_id": 5,
+    "fassion_name": "[NEW]롱 슬리브 티셔츠",
+    "fassion_price": 178000,
+    "fassion_sale": 140000,
+    "fassion_isSale": 1,
+    "fassion_path": "[https://i.imgur.com/CM6Tosa.png,https://i.imgur.com/UJkZVKV.jpg]"
+  }
+]

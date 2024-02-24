@@ -13,6 +13,7 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const Bestbus = () => {
+    const number = 1;
     return (
         <div className="bestbus">
             <div className="mx-auto max-w-screen-1280">
@@ -25,6 +26,7 @@ const Bestbus = () => {
                         {
                             Busregion.map((breg)=>(
                                 <SwiperSlide>
+                                    
                                     <div className="busimg">
                                         <div className="imgwrap">
                                             <img src="/images/Gwang.svg" alt="광역버스" />
@@ -43,7 +45,11 @@ const Bestbus = () => {
                                         </div>
                                         <div className="subway">
                                             <span><SubwayIcon /></span>
-                                            <span><span>{breg.bus_stop.split('/')[0]}</span><span><ArrowRightAltIcon /></span><span>{breg.bus_stop.split('/').slice(-1)[0]}</span></span>
+                                            <span>
+                                               <span>{breg.bus_stop.split('|')[0].substring(1,breg.bus_stop.split('|')[0].length - 1).split(',')[3*number - 3]}</span>
+                                               <span><ArrowRightAltIcon /></span>
+                                               <span>{breg.bus_stop.split('|').slice(-1)[0].substring(1,breg.bus_stop.split('|')[0].length - 1).split(',')[3*number - 3]}</span>
+                                            </span>
                                         </div>
                                     </div>
                                     <div className="reserpart">

@@ -24,6 +24,13 @@ const Pointer = styled.div`
         background-color: black;
         color: white;
         font-size: .95rem;
+        padding: 0 .5rem;
+        > div {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 `;
 
@@ -128,7 +135,7 @@ const Resbus = () => {
         })
       
     })
-
+    const num = 1;
     return (
     <div className="resbusall">
         <div className="resbus">
@@ -148,7 +155,7 @@ const Resbus = () => {
                         </div>
                         <Pointer className="flex relative pointer1">
                             <h2>출발지</h2>
-                            <button>{regionbtn.regioncon}</button>
+                            <button><div><span>{regionbtn.regioncon}</span></div></button>
                             <Subpointer className="absolute subpointer1">
                                 <ul className="pointer">
                                     {
@@ -157,8 +164,8 @@ const Resbus = () => {
                                                 <div>
                                                     <dd>{reg.region_name}</dd>
                                                     {
-                                                        reg.bus_stop.split('/').map((spl,idxs)=>(
-                                                            <dt className="dtdt">{spl}</dt>
+                                                        reg.bus_stop.split('|').map((spl,idxs)=>(
+                                                            <dt className="dtdt">{spl.substring(1,spl.length -1).split(',')[3*num - 3]}</dt>
                                                         ))
                                                     }
                                                 </div>

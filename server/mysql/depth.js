@@ -24,7 +24,46 @@ connection.query(busquery, (err, results, fields) => {
             }
             console.log('JSON 파일이 성공적으로 생성되었습니다.');
         });
+    });
 
-        // 데이터베이스 연결 종료
+    const cafequery = 'Select * from cafe_store';
+    connection.query(cafequery,(err,results)=>{
+        if(err) {
+            console.error('Error executing SQL query:', err);
+            return;
+        }
+
+        const caferesult = JSON.stringify(results,null,2);
+
+        fs.writeFile('../../front/src/Data/Cafestore.json', caferesult, 'utf8', (err) => {
+            if (err) {
+                console.error('Error writing JSON file:', err);
+                return;
+            }
+            console.log('JSON 파일이 성공적으로 생성되었습니다.');
+        });
+
+        
+    });
+
+    const fassionquery = 'Select * from fassion_store';
+
+    connection.query(fassionquery,(err,results)=>{
+        if(err) {
+            console.error('Error executing SQL query:', err);
+            return;
+        }
+
+        const fassionresult = JSON.stringify(results,null,2);
+
+        fs.writeFile('../../front/src/Data/Fassionstore.json', fassionresult, 'utf8', (err) => {
+            if (err) {
+                console.error('Error writing JSON file:', err);
+                return;
+            }
+            console.log('JSON 파일이 성공적으로 생성되었습니다.');
+        });
+
         connection.end();
     });
+

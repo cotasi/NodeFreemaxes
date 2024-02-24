@@ -1,6 +1,5 @@
 .gbus h2 { padding-top: 6rem; font-size: 1.4rem; padding-bottom: 1rem; }
 .gbus p {color: rgba(46, 46, 46, 0.4); padding-bottom: 2rem; }
-.gbus .gbuscon { height: 1000px;}
 .gbus .gbuscon .regioncheck { width: 25%;}
 .gbus .gbuscon .regioncheck .rolldown { width: 85%;}
 .gbus .gbuscon .regioncheck .rolldown > button { width: 100%; text-align: left; padding: 1rem; border-bottom: 2px solid black; position: relative; }
@@ -8,7 +7,18 @@
 .gbus .gbuscon .regioncheck .rolldown .smallmenu { top: 100%; left: 0; right: 0; text-align: center; background-color: black; height: 0; overflow: hidden; transition: all .4s; }
 .gbus .gbuscon .regioncheck .rolldown .smallmenu.smallon { height: 560px; }
 .gbus .gbuscon .regioncheck .rolldown .smallmenu li button { padding: 1rem 0; color: white; }
+.gbus .gbuscon { height: 350px; }
 .gbus .gbuscon .bustab { width: 75%;}
-.gbus .gbuscon .bustab .tabone li { margin-right: 5rem; }
+.gbus .gbuscon .bustab .tabone li { margin-right: 1rem;  width: 25%; display: flex; justify-content: center; }
+.gbus .gbuscon .bustab .tabone li:last-child { margin-right: 0; }
 .gbus .gbuscon .bustab .tabone li button { width: 150px; display: flex; justify-content: space-between; padding: 0.75rem 1rem; border: 1px solid black; font-size: .85rem; border-radius: 1.5rem;}
 .gbus .gbuscon .bustab .tabone li button.taboneons { background-color: black; color: white;}
+.gbus .gbuscon .bustab .tabtwo #tabswiper { display: none; margin-top: 2rem; padding: 1rem 0; border-top: 1px solid black; border-bottom: 1px solid black; }
+.gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-wrapper { animation: steps 60s ease-in-out infinite; }
+.gbus .gbuscon .bustab .tabtwo #tabswiper.blocks { display: flex !important;}
+.gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgpart .imgwrap { position: relative; width: 150px; height: 150px; border: 1px solid black; margin-bottom: 1rem; }
+.gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgpart .imgwrap::after { content: ''; display: block; width: 10px; height: 10px; background-color: #434343; border: 1px solid white; box-sizing: content-box; position: absolute; top: 50%; transform: translateY(-50%) translateX(50%); right: 0; border-radius: 50%;}
+.gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgpart .imgwrap img { width: 100%; height: 100%; object-fit: cover; }
+.gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgpart .textregion { font-size: 0.95rem; font-weight: 600 !important; }
+.gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgpart .textadd { font-size: .65rem;}
+@keyframes steps { from{ transform: translateX(0px);} to {transform: translateX(-3000px)}}

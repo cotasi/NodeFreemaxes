@@ -12,8 +12,8 @@ const Distribtion = () => {
 
     const [mapreg,setmapreg] = useState<maps>({
         mapon: false,
-        mapidx: -1
-    })
+        mapidx: 1
+    });
 
     return (
         <div className="distri">

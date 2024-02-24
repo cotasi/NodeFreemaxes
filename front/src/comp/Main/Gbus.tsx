@@ -23,6 +23,11 @@ const Gbus = () => {
         taboneidx: number
     }
 
+    type tabtwo = {
+        tabtwoon: boolean,
+        tabtwoidx: number
+    }
+
     const [regionbtn,setregionbtn] = useState<btnreg>({
         region: false,
         regiidx: -1,
@@ -32,11 +37,19 @@ const Gbus = () => {
     const [tabone,settabone] = useState<tabone>(
         {
             taboneon: false,
-            taboneidx: -1
+            taboneidx: 1
         }
     )
 
-    const changearr = Busregion.filter((items)=>(items.region_name === regionbtn.regicon))
+    const [tabtwo,settabtwo] = useState<tabtwo>(
+        {
+            tabtwoon: false,
+            tabtwoidx: 1
+        }
+    )
+
+    const changearr = Busregion.filter((items)=>(items.region_name === regionbtn.regicon));
+    const number1 = 1;
     return (
         <div className="gbus">
            <div className="mx-auto max-w-screen-1280">
@@ -61,7 +74,7 @@ const Gbus = () => {
                                 {
                                     changearr.map((busion,iiiii)=>(
                                         <li>
-                                            <button className={`${tabone.taboneon && tabone.taboneidx === iiiii ? 'taboneons': ''}`} onClick={()=>{settabone({taboneidx:iiiii,taboneon: !tabone.taboneon })}}>
+                                            <button className={`${tabone.taboneon && tabone.taboneidx === iiiii ? 'taboneons': ''}`} onClick={()=>{settabone({taboneidx:iiiii,taboneon: !tabone.taboneon }); settabtwo({tabtwoon: !tabtwo.tabtwoon, tabtwoidx: iiiii})}}>
                                                 <span>{busion.bus_com}</span>
                                                 <span>{busion.bus_name}</span>
                                             </button>
@@ -73,15 +86,22 @@ const Gbus = () => {
                         <div className="tabtwo">
                             {
                                 changearr.map((carr,arridx)=>(
-                                    <Swiper slidesPerView={4} spaceBetween={50}>
+                                    <Swiper slidesPerView={4} spaceBetween={50} id="tabswiper" className={`${tabtwo.tabtwoon && tabtwo.tabtwoidx === arridx ? 'blocks': ''}`}>
                                         {
-                                            carr.bus_stop.split('/').map((sl)=>(
-                                                <SwiperSlide>
-                                                    <div className="imgpart">
-                                                        <div className="imgwrap">{sl}</div>
-                                                    </div>
-                                                    <div className="timepart"></div>
-                                                </SwiperSlide>
+                                            carr.bus_stop.split('|').map((sl,dd)=>(
+                                                <>
+                                                    {
+                                                        /* sl.substring(1,sl.length - 1).split(',')[3*number1 - 3] */
+                                                        <SwiperSlide key={dd}>
+                                                            <div className="imgpart">
+                                                                <div className="imgwrap"><img src={sl.substring(1,sl.length - 1).split(',')[3*number1 - 2]} alt="" /></div>
+                                                                <div className="textregion">{sl.substring(1,sl.length - 1).split(',')[3*number1 - 3]}</div>
+                                                                <div className="textadd">{sl.substring(1,sl.length - 1).split(',')[3*number1 - 1]}</div>
+                                                            </div>
+                                                            <div className="timepart"></div>
+                                                        </SwiperSlide>
+                                                    }
+                                                </>
                                             ))
                                         }
                                     </Swiper>
