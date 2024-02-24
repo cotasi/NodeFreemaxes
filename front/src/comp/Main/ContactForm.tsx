@@ -6,7 +6,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Busregion from '../../Data/busregion.json';
 
 const ContactForm = () => {
-    /* useEffect(()=>{
+    useEffect(()=>{
        // 네이버 지도 생성
         const mapOptions = {
             center: new window.naver.maps.LatLng(37.3595704, 127.105399),
@@ -25,7 +25,7 @@ const ContactForm = () => {
         return () => {
             marker.setMap(null);
         };
-    }) */
+    })
 
     const [submit,setsubmit] = useState('');
     const onChange = (e:any) => {
@@ -40,7 +40,7 @@ const ContactForm = () => {
                 <p>문의사항은 아래 양식으로 보내주세요.</p>
                 <div className="contactcon">
                     <div className="mapwrap">
-                        {/* <div id="map" style={{width: '100%', height: '100%', objectFit: 'cover'}}></div> */}
+                        <div id="map" style={{width: '100%', height: '100%', objectFit: 'cover'}}></div>
                         <div className="forms">
                             <form>
                                 <input type="text" placeholder="검색어를 입력해주세요." value={submit} onChange={onChange}/>
