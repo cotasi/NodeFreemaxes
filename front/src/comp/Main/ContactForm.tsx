@@ -9,14 +9,14 @@ const ContactForm = () => {
 useEffect(()=>{
        // 네이버 지도 생성
         const mapOptions = {
-            center: new window.naver.maps.LatLng(37.3595704, 127.105399),
+            center: new window.naver.maps.LatLng(parseInt(centerbutton.center1), parseInt(centerbutton.center2)),
             zoom: 10
         };
         const map = new window.naver.maps.Map('map', mapOptions);
 
         // 마커 추가
         const markerOptions = {
-            position: new window.naver.maps.LatLng(37.3595704, 127.105399),
+            position: new window.naver.maps.LatLng(parseInt(centerbutton.center1), parseInt(centerbutton.center2)),
             map: map
         };
         const marker = new window.naver.maps.Marker(markerOptions);
@@ -28,13 +28,26 @@ useEffect(()=>{
     })
 
     const [submit,setsubmit] = useState('');
+    const [centerbutton,setcenterbutton] = useState({
+        "center1": "37.3595704",
+        "center2": "127.105399"
+    })
     const onChange = (e:any) => {
         setsubmit(e.target.value);
     }
+    const number = 5;
+    Busregion.map((reg) => (
+        reg.bus_stop.split('|').map((splt) => {
+            // '|' 기호로 문자열을 나누고, 그 결과로 나온 배열에 map 함수를 적용합니다.
+            // 여기서 splt는 문자열을 나타냅니다.
+            // 이어서 각 문자열을 다시 쉼표로 나누어 배열을 만듭니다.
+            const splitArray = splt.substring(1, splt.length - 1).split(',');
+            console.log(splitArray[4]);
+        })
+    ));
 
-    console.log(Busregion.map((reg)=>(reg.bus_stop.split('|').map((splt)=>(splt.substring(1,splt.length - 1).split(',')[2])))))
 
-    const search_result = Busregion.filter((items)=>(items.bus_stop.split('|').map((spll)=>(spll.substring(1,spll.length - 1).split(',')[2] !== submit))))
+    const search_result = Busregion.filter((items)=>(items.bus_stop.split('|').map((splll)=>{splll.substring(1,splll.length - 1).split(',')[0].includes(submit)})));
 
     return (
         <div className="contact">
@@ -60,7 +73,7 @@ useEffect(()=>{
                                                         buses.substring(1,buses.length - 1).split(',')[2]
                                                     }
                                                 </div>
-                                                <div><button> 더 보기</button></div>
+                                                <div><button onClick={()=>{setcenterbutton({center1:buses.substring(1,buses.length - 1).split(',')[3],center2:buses.substring(1,buses.length - 1).split(',')[4]})}}>확인하기</button></div>
                                             </div>))
                                         }
                                     </>
