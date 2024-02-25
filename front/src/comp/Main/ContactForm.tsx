@@ -6,7 +6,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Busregion from '../../Data/busregion.json';
 
 const ContactForm = () => {
-useEffect(()=>{
+/* useEffect(()=>{
        // 네이버 지도 생성
         const mapOptions = {
             center: new window.naver.maps.LatLng(parseInt(centerbutton.center1), parseInt(centerbutton.center2)),
@@ -25,7 +25,7 @@ useEffect(()=>{
         return () => {
             marker.setMap(null);
         };
-    })
+    }) */
 
     const [submit,setsubmit] = useState('');
     const [centerbutton,setcenterbutton] = useState({
@@ -35,7 +35,7 @@ useEffect(()=>{
     const onChange = (e:any) => {
         setsubmit(e.target.value);
     }
-    const number = 5;
+    console.log(centerbutton.center1);
     Busregion.map((reg) => (
         reg.bus_stop.split('|').map((splt) => {
             // '|' 기호로 문자열을 나누고, 그 결과로 나온 배열에 map 함수를 적용합니다.
@@ -73,7 +73,7 @@ useEffect(()=>{
                                                         buses.substring(1,buses.length - 1).split(',')[2]
                                                     }
                                                 </div>
-                                                <div><button onClick={()=>{setcenterbutton({center1:buses.substring(1,buses.length - 1).split(',')[3],center2:buses.substring(1,buses.length - 1).split(',')[4]})}}>확인하기</button></div>
+                                                <div><button onClick={()=>{setcenterbutton({center1:buses.substring(1,buses.length - 1).split(',')[3],center2:buses.substring(1,buses.length - 1).split(',')[4]}); console.log('dd'); }}>확인하기</button></div>
                                             </div>))
                                         }
                                     </>
