@@ -6,7 +6,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Busregion from '../../Data/busregion.json';
 
 const ContactForm = () => {
-/* useEffect(()=>{
+useEffect(()=>{
        // 네이버 지도 생성
         const mapOptions = {
             center: new window.naver.maps.LatLng(parseInt(centerbutton.center1), parseInt(centerbutton.center2)),
@@ -25,7 +25,7 @@ const ContactForm = () => {
         return () => {
             marker.setMap(null);
         };
-    }) */
+    })
 
     const [submit,setsubmit] = useState('');
     const [centerbutton,setcenterbutton] = useState({
