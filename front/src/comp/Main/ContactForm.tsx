@@ -6,7 +6,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Busregion from '../../Data/busregion.json';
 
 const ContactForm = () => {
-    useEffect(()=>{
+useEffect(()=>{
        // 네이버 지도 생성
         const mapOptions = {
             center: new window.naver.maps.LatLng(37.3595704, 127.105399),
@@ -31,14 +31,17 @@ const ContactForm = () => {
     const onChange = (e:any) => {
         setsubmit(e.target.value);
     }
-    const searchresult = Busregion.filter((item)=>(item.region_name.includes(submit)));
+
+    console.log(Busregion.map((reg)=>(reg.bus_stop.split('|').map((splt)=>(splt.substring(1,splt.length - 1).split(',')[2])))))
+
+    const search_result = Busregion.filter((items)=>(items.bus_stop.split('|').map((spll)=>(spll.substring(1,spll.length - 1).split(',')[2] !== submit))))
 
     return (
         <div className="contact">
             <div className="mx-auto max-w-screen-xl">
                 <h2>Contact us</h2>
                 <p>문의사항은 아래 양식으로 보내주세요.</p>
-                <div className="contactcon">
+                <div className="contactcon flex">
                     <div className="mapwrap">
                         <div id="map" style={{width: '100%', height: '100%', objectFit: 'cover'}}></div>
                         <div className="forms">
@@ -48,15 +51,32 @@ const ContactForm = () => {
                             </form>
                             <div className="searchresult">
                             {
-                                searchresult.map((resu)=>(
-                                    <div className="result_list flex justify-between">
-                                        <div>{resu.bus_name}</div>
-                                        <div><button>위치확인</button></div>
-                                    </div>
+                                search_result.map((resu)=>(
+                                    <>
+                                        {
+                                            resu.bus_stop.split('|').map((buses)=>(<div className="result_list flex justify-between">
+                                                <div>
+                                                    {
+                                                        buses.substring(1,buses.length - 1).split(',')[2]
+                                                    }
+                                                </div>
+                                                <div><button> 더 보기</button></div>
+                                            </div>))
+                                        }
+                                    </>
                                 ))
                             }
                             </div>
                         </div>
+                    </div>
+                    <div className="realform">
+                        <form>
+                            <input type="text" placeholder="이름"/>
+                            <input type="text" placeholder="연락처"/>
+                            <input type="text" placeholder="이메일"/>
+                            <textarea name="" id=""></textarea>
+                            <button type="submit">연락하기</button>
+                        </form>
                     </div>
                 </div>
             </div>
