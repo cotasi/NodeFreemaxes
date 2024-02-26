@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { serverapi } from '../../api/serverapi';
+import { busts } from '../../ts/common';
 
 
 import '../../scss/Resbus.scss';
@@ -87,6 +89,23 @@ const Resbus = () => {
         regioncon: '출발지 선택'
     })
 
+    const [content,setcontent] = useState<busts | null>(null);
+
+    const FetchDataState = async (): Promise<void> =>{
+        try {
+            const busresp = await serverapi("region_2");
+            if(busresp instanceof Error) {
+                throw busresp;
+            } 
+            console.log(busresp);
+        }catch(error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(()=>{
+        FetchDataState();
+    })
 
     useEffect(()=>{
         const tabbtn = document.querySelectorAll('.resbustab .bustab button');
