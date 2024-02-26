@@ -59,16 +59,17 @@ const Store = () => {
                     </ul>
                 </div>
                 <div className="storecon">
-                    <Swiper slidesPerView={4} spaceBetween={30} id="cafeswiper">
+                    <Swiper slidesPerView={4} spaceBetween={30} navigation={true} id="cafeswiper">
                         {
-                            Cafe.map((cafes)=>(
+                            Cafe.map((cafes,cafeidx)=>(
                                 <SwiperSlide>
                                     <button>
+                                    <div className="numbers">{cafeidx+1}</div>
                                     <div className="imgpart"><img src={cafes.product_path} alt="cafe" /></div>
                                     <div className="textpart">
                                         <div className="cafename">{cafes.product_name}</div>
                                         <div className="price">
-                                            <div>{Intl.NumberFormat().format(cafes.product_isSale ? cafes.product_sale : cafes.product_price)} 원</div>
+                                            <div>{Intl.NumberFormat().format(cafes.product_isSale ? cafes.product_sale : cafes.product_price)}원</div>
                                             {cafes.product_isSale && <div>{Math.floor((cafes.product_price - cafes.product_sale )/ (cafes.product_price) * 100)}%</div>}
                                         </div>
                                     </div>

@@ -7,20 +7,26 @@
 .stores .storetabs ul li button.storeon { color: #dd0711; border-bottom: 1px solid #dd0711; }
 .stores .storecon .swiper-container { display: none;}
 .stores .storecon .swiper-container.swiperon { display: block !important; }
-.stores .storecon .swiper-wrapper .swiper-slide { height: 400px; margin-bottom: 5rem; }
+.stores .storecon .swiper-container .swiper-button-prev,
+.stores .storecon .swiper-container .swiper-button-next { width: 40px; height: 40px; background-color: white; border-radius: 50%; box-shadow: 0 4px 4px 0 rgba(0,0,0,.25); }
+.stores .storecon .swiper-container .swiper-button-prev::after,
+.stores .storecon .swiper-container .swiper-button-next::after { font-size: 1rem; color: black; }
+.stores .storecon .swiper-wrapper .swiper-slide { height: 650px; margin-bottom: 5rem; }
 .stores .storecon .swiper-wrapper .swiper-slide button { display: block; width: 100%; height: 100%; }
+.stores .storecon .swiper-wrapper .swiper-slide .numbers { position: absolute; width: 50px; height: 50px; color: white; background-color: rgba(0,0,0,.25); display: flex; justify-content: center; align-items: center; }
 .stores .storecon .swiper-wrapper .swiper-slide .imgpart { width: 100%; height: 70%; background-color: #f0f0ef; }
 .stores .storecon .swiper-wrapper .swiper-slide .imgpart img { width: 100%; height: 100%; object-fit: contain; }
 .stores .storecon .swiper-wrapper .swiper-slide:nth-child(3) .imgpart img { transform: translateY(-10px);}
-.stores .storecon .swiper-wrapper .swiper-slide .textpart { padding: 1.4rem; }
-.stores .storecon .swiper-wrapper .swiper-slide .textpart .cafename { padding-bottom: 1.2rem; font-size: 1.1rem;  }
+.stores .storecon .swiper-wrapper .swiper-slide .textpart { padding: .9rem; }
+.stores .storecon .swiper-wrapper .swiper-slide .textpart .cafename { padding-bottom: .7rem; font-size: 1.1rem; text-align: left; }
+.stores .storecon .swiper-wrapper .swiper-slide .textpart .price { text-align: left; }
 .stores .storecon .swiper-wrapper .swiper-slide .textpart .price div { display: inline-block; font-size: 1.1rem; }
-.stores .storecon .swiper-wrapper .swiper-slide .textpart .price div:first-child { margin-right: 1.1rem; }
+.stores .storecon .swiper-wrapper .swiper-slide .textpart .price div:first-child { margin-right: 1.1rem; font-weight: 700 !important; }
 .stores .storecon .swiper-wrapper .swiper-slide .textpart .price div:nth-child(2) { color: #dd0711; }
 .stores .storecon #fassionswiper .swiper-slide .imgpart { position: relative; overflow: hidden; }
 .stores .storecon #fassionswiper .swiper-slide .imgpart img { position: absolute; top:50%; left:50%; transform: translate(-50%,-50%); }
 .stores .storecon #fassionswiper .swiper-slide .imgpart img:last-child { display: none; }
 .stores .storecon #fassionswiper .swiper-slide .imgpart:hover img:first-child { display: none !important; }
-.stores .storecon #fassionswiper .swiper-slide .imgpart:hover img:last-child { display: inline !important; width: 140%; height: 140%; }
-.stores .storecon #fassionswiper .swiper-slide .textpart .fassionname { padding-bottom: 1.2rem; font-size: 1.1rem;  }
+.stores .storecon #fassionswiper .swiper-slide .imgpart:hover img:last-child { display: inline !important; width: 340%; height: 340%; }
+.stores .storecon #fassionswiper .swiper-slide .textpart .fassionname { padding-bottom: 1.2rem; font-size: 1.1rem; text-align: left; }
 

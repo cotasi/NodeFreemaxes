@@ -1,0 +1,13 @@
+.footer { background-color: black; padding: 5rem; }
+.footer .left_side { width: 40%;}
+.footer .left_side .subject { padding-top: 2rem; font-size: 1rem; font-family: 'Pretendard' !important; color: white;}
+.footer .left_side .telwrap { font-family: 'Pretendard' !important; color: white; padding-top: 1rem; font-size: .9rem; }
+.footer .left_side .telwrap > div {margin-bottom: .8rem; }
+.footer .left_side .telwrap > div > span:first-child {letter-spacing: -2px; margin-right: 2rem; }
+.footer .left_side .telwrap > div > span:last-child { opacity: .4; }
+.footer .right_side { width: 60%; font-family: 'Pretendard' !important; color: white; }
+.footer .right_side .mainmenu > ul > li > a { font-size: 1.2rem; padding: .9rem 2.7rem; display: block; }
+.footer .right_side .mainmenu > ul > li > a:hover { text-decoration: underline; }
+.footer .right_side .mainmenu > ul > li .smallmenu { top: 100%; left: 0; right: 0; text-align: center;}
+.footer .right_side .mainmenu > ul > li .smallmenu a { padding-bottom: 1rem; display: block; font-size: .9rem; font-weight: 200 !important; }
+.footer .right_side .mainmenu > ul > li .smallmenu li:first-child a { padding-top: 1rem; }

@@ -98,7 +98,9 @@ const Gbus = () => {
                                                                 <div className="textregion">{sl.substring(1,sl.length - 1).split(',')[3*number1 - 3]}</div>
                                                                 <div className="textadd">{sl.substring(1,sl.length - 1).split(',')[3*number1 - 1]}</div>
                                                             </div>
-                                                            <div className="timepart"></div>
+                                                            <div className="timepart">
+                                                                
+                                                            </div>
                                                         </SwiperSlide>
                                                     }
                                                 </>
