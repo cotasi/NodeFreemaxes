@@ -59,7 +59,7 @@ const Distribtion = () => {
                     </div>
                     <div className="mapwrap">
                         <div className="map">
-                            <svg height="656" width="800" xmlns="http://www.w3.org/2000/svg">
+                            <svg xmlns="http://www.w3.org/2000/svg">
                             <g stroke="white" id="firsts">{Mapinfo.map((maps,idx)=>(<path className={`OUTLINE ${mapreg.mapon && mapreg.mapidx === idx ? 'mapcolor': ''}`} d={maps.d} onClick={()=>{setmapreg({mapon:true, mapidx:idx})}}></path>))}</g>
                             <g id="seconds">{Mapinfo.map((maped,idxx)=>(<text className={`text ${mapreg.mapon && mapreg.mapidx === idxx ? 'textcolor': ''}`} x={maped.x} y={maped.y}>{maped.text}</text>))}</g>
                             </svg>
