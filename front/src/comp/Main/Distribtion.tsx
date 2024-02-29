@@ -4,21 +4,25 @@ import { useState, useEffect } from 'react';
 import '../../scss/Distribtion.scss';
 import '../../scss/media.css';
 import Mapinfo from '../../Data/mapinfo.json';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const Distribtion = () => {
     type maps = {
         mapon: boolean,
-        mapidx: number
+        mapidx: number,
+        mapcon: string
     }
 
     const [mapreg,setmapreg] = useState<maps>({
         mapon: true,
-        mapidx: 1
+        mapidx: 1,
+        mapcon: Mapinfo[1].text
     });
 
     useEffect(()=>{
         setmapreg({ mapon: true,
-            mapidx: 2})
+            mapidx: 2,
+            mapcon: Mapinfo[2].text})
     },[])
 
     return (
@@ -28,14 +32,24 @@ const Distribtion = () => {
                 <p>실제 서울 지역을 예시로 어떤 버스들이 구성되어 있는지 살펴보았습니다.</p>
                 <div className="districon flex">
                     <div className="shows">
-                        <ul className="regionshows">
+                        <div className="regionshows">
+                            <ul className="xl:flex hidden">
                             {
                                 Mapinfo.map((el,idxes)=>(
                                     <li className={`${mapreg.mapon && mapreg.mapidx === idxes ? 'buttoncolor': ''}`}>
-                                        <button onClick={()=>{setmapreg({mapon:true,mapidx: idxes})}}>{el.text}</button></li>
+                                        <button onClick={()=>{setmapreg({...mapreg,mapon:true,mapidx: idxes,})}}>{el.text}</button></li>
                                 ))
                             }
-                        </ul>
+                            </ul>
+                            <div className="togbtn xl:hidden block relative">
+                                <button><span>{mapreg.mapcon}</span><KeyboardArrowDownIcon /></button>
+                                <ul className="togsub absolute top-full">
+                                    {
+                                        Mapinfo.map((eel)=>(<li><button>{eel.text}</button></li>))
+                                    }
+                                </ul>
+                            </div>
+                        </div>
                         <div className="info">
                             {
                                 Mapinfo.map((ell,ellidx)=>(
@@ -57,9 +71,9 @@ const Distribtion = () => {
                             }
                         </div>
                     </div>
-                    <div className="mapwrap">
-                        <div className="map">
-                            <svg xmlns="http://www.w3.org/2000/svg">
+                    <div className="mapwrap" style={{width: '60%'}}>
+                        <div className="map" style={{height:'100%'}}>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox='0 0 768 800'>
                             <g stroke="white" id="firsts">{Mapinfo.map((maps,idx)=>(<path className={`OUTLINE ${mapreg.mapon && mapreg.mapidx === idx ? 'mapcolor': ''}`} d={maps.d} onClick={()=>{setmapreg({mapon:true, mapidx:idx})}}></path>))}</g>
                             <g id="seconds">{Mapinfo.map((maped,idxx)=>(<text className={`text ${mapreg.mapon && mapreg.mapidx === idxx ? 'textcolor': ''}`} x={maped.x} y={maped.y}>{maped.text}</text>))}</g>
                             </svg>
