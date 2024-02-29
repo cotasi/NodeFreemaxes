@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { serverapi } from '../../api/serverapi';
-import { busts } from '../../ts/common';
+
 
 
 import '../../scss/Resbus.scss';
-import Busregion from'../../Data/busregion.json'
+import Busregion from'../../Data/busregion.json';
+import '../../scss/media.css'
 
 const Pointer = styled.div`
     width: 15%;
@@ -14,14 +14,32 @@ const Pointer = styled.div`
     border-radius: 4px;
     border: 1px solid rgba(0,0,0,.2);
     margin-right: 3rem;
+    @media (max-width: 768px) {
+        margin: 0;
+        width: 100% !important;
+    }
+    &.pointeronon {
+        border-radius: 4px 4px 0 0;
+    }
     h2 {
         width: 40%;
         padding: .5rem;
         text-align: center;
         font-size: 1rem;
+        @media (max-width: 1280px) {
+            display: none;
+        }
     }
     > button {
         width: 60%;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        @media (max-width: 1280px) {
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
         text-align: center;
         background-color: black;
         color: white;
@@ -38,13 +56,20 @@ const Pointer = styled.div`
 
 const Subpointer = styled.div`
     background-color: white;
-    height: 330px;
+    height: 0;
     overflow-y: scroll;
-    bottom: calc(100% + 2rem);
-    left: 0; right: -2rem;
+    overflow: hidden;
+    top: 100%;
+    left: 0; right: 0;
     border: 1px solid rgba(0,0,0,.15);
-    display: none;
-    &.pointeron { display: block !important;}
+    border: none;
+    z-index: 70;
+    transition: all .4s;
+    @media (max-width: 1280px) {
+        right: -20px;
+    }
+
+    &.pointeron { height: 330px; overflow-y:scroll; border: 1px solid rgba(0,0,0,.15); }
     > .pointer {
         padding: 1rem;
         li {
@@ -55,137 +80,50 @@ const Subpointer = styled.div`
             dd {
             padding-bottom: .7rem;
             font-size: 1.1rem;
+            &:hover {
+                text-decoration: underline;
+            }
             }
             dt {
                 padding-bottom: .5rem;
                 font-size: .9rem;
                 cursor: pointer;
+                &:hover {
+                text-decoration: underline;
+            }
             }
         }
     }
 `;
 
-type tab =  {
-    tabon: boolean,
-    tabidx: number
-}
-
-type region = {
-    regionon: boolean,
-    regionidx: number,
-    regioncon: any
-}
-
 const Resbus = () => {
 
-    const [tabs,settabs] = useState<tab>({
-        tabon: false,
-        tabidx: 0
+    const [Bustabon,setbustabon] = useState(false);
+    const [starton,setstarton] = useState({
+        startons: false,
+        startidx: -1,
+        startcon: '출발지 선택'
     });
 
-    const [regionbtn,setregionbtn] = useState<region>({
-        regionon: false,
-        regionidx: -1,
-        regioncon: '출발지 선택'
-    })
-
-    const [content,setcontent] = useState<busts | null>(null);
-
-    const FetchDataState = async (): Promise<void> =>{
-        try {
-            const busresp = await serverapi("region_2");
-            if(busresp instanceof Error) {
-                throw busresp;
-            } 
-            console.log(busresp);
-        }catch(error) {
-            console.log(error);
-        }
-    }
-
-    useEffect(()=>{
-        FetchDataState();
-    })
-
-    useEffect(()=>{
-        const tabbtn = document.querySelectorAll('.resbustab .bustab button');
-        const pointerbtn = document.querySelector('.pointer1 > button');
-        const pointeron = document.querySelector('.subpointer1');
-        const dtdt = document.querySelectorAll('.dtdt');
-        tabbtn.forEach((ele,idx)=>{
-            ele.addEventListener('click',()=>{
-                tabbtn.forEach((eles)=>{
-                    eles.classList.remove('btnon');
-                });
-                settabs({
-                    tabon: true,
-                    tabidx: idx
-                })
-                if(tabs.tabon && tabs.tabidx === idx) {
-                    tabbtn[idx].classList.add('btnon');
-                }
-            })
-        })
-        pointerbtn?.addEventListener('click',(e)=>{
-            e.preventDefault();
-            setregionbtn({
-                ...regionbtn,
-                regionon: !regionbtn.regionon
-            })
-            if(regionbtn.regionon) {
-                pointeron?.classList.add('pointeron');
-            } else {
-                pointeron?.classList.remove('pointeron');
-            }
-        })
-
-        dtdt.forEach((eless,idxss)=>{
-            eless.addEventListener('click',()=>{
-                setregionbtn({
-                    regionon:false,
-                    regionidx:idxss,
-                    regioncon: dtdt[idxss].textContent
-                })
-                console.log(regionbtn.regioncon);
-                if(!regionbtn.regionon) {
-                    pointeron?.classList.remove('pointeron');
-                }
-            })
-        })
-      
-    })
-    const num = 1;
     return (
     <div className="resbusall">
-        <div className="resbus">
-            <div className="mx-auto max-w-screen-1280">
+        <div className={`resbus ${Bustabon ? 'formon': ''}`}>
+            <div className="lg:mx-auto m-0 w-full xl:max-w-screen-xl lg:max-w-screen-lg">
                 <div className="resbus_wrap">
-                    <form className="flex items-center">
+                    <form className="flex items-center justify-around">
                         <h2>궁금한 버스 찾기</h2>
-                        <div className="checks flex">
-                            <div id="check1" className="flex j-center">
-                                <input type="checkbox" id="checkone"/>
-                                <label htmlFor="checkone">광역/공항</label>
-                            </div>
-                            <div id="check2" className="flex j-center">
-                                <input type="checkbox" id="checktwo"/>
-                                <label htmlFor="checktwo">지선/간선</label>
-                            </div>
-                        </div>
-                        <Pointer className="flex relative pointer1">
+                        <Pointer className={`flex relative pointer1 ${starton.startons ? 'pointeronon': ''}`}>
                             <h2>출발지</h2>
-                            <button><div><span>{regionbtn.regioncon}</span></div></button>
-                            <Subpointer className="absolute subpointer1">
+                            <button onClick={(e)=>{e.preventDefault(); const updatedStarton = { ...starton, startons: !starton.startons }; setstarton(updatedStarton); }}><div><span>{starton.startcon}</span></div></button>
+                            <Subpointer className={`absolute subpointer1 ${starton.startons ? 'pointeron': ''}`}>
                                 <ul className="pointer">
                                     {
-                                        Busregion.map((reg)=>(
+                                        Busregion.map((reg,idx)=>(
                                             <li>
                                                 <div>
                                                     <dd>{reg.region_name}</dd>
                                                     {
-                                                        reg.bus_stop.split('|').map((spl,idxs)=>(
-                                                            <dt className="dtdt">{spl.substring(1,spl.length -1).split(',')[3*num - 3]}</dt>
-                                                        ))
+                                                        reg.bus_stop.split('|').map((regb:any,idx:number)=>(<dt onClick = {()=>{setstarton({startons:false,startidx:idx,startcon:regb.substring(1,regb.length - 1).split(',')[0]})}}>{regb.substring(1,regb.length - 1).split(',')[0]}</dt>))
                                                     }
                                                 </div>
                                             </li>
@@ -206,7 +144,7 @@ const Resbus = () => {
         <div className="resbustab">
             <div className="mx-auto max-w-screen-1280">
                 <ul className="bustab flex j-center">
-                    <li><button className="btnon">
+                    <li><button onClick={()=>{setbustabon(!Bustabon);}} className={`${Bustabon ? 'btnon': ''}`}>
                            <div className="svgwrap">
                              <img src="/images/busicon_1_off.svg" alt="svgoff" />
                              <img src="/images/busicon_1_on.svg" alt="svgon" />
@@ -214,25 +152,7 @@ const Resbus = () => {
                            <div className="namewrap">
                             버스 찾기
                            </div>
-                        </button></li>
-                    <li><button>
-                            <div className="svgwrap">
-                                <img src="/images/bedicon.svg" alt="svgoff" />
-                                <img src="/images/bedicon_on.svg" alt="svgon" />
-                            </div>
-                            <div className="namewrap">
-                                호텔 검색
-                            </div>
-                        </button></li>
-                    <li><button>
-                            <div className="svgwrap">
-                                <img src="/images/cafeicon-02.svg" alt="svgoff" />
-                                <img src="/images/cafeicon-02_on.svg" alt="svgon" />
-                            </div>
-                            <div className="namewrap">
-                                카페 검색
-                            </div>
-                        </button></li>
+                    </button></li>
                 </ul>
             </div>
         </div>

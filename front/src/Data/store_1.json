@@ -1,0 +1,14 @@
+[
+  {
+    "store_id": 1,
+    "store_type": "카페 스토어"
+  },
+  {
+    "store_id": 2,
+    "store_type": "패션 스토어"
+  },
+  {
+    "store_id": 3,
+    "store_type": "여행거리 스토어"
+  }
+]

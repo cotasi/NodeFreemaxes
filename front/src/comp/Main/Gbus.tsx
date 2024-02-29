@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 import '../../scss/Gbus.scss';
 import Busregion from '../../Data/busregion.json';
@@ -30,7 +30,7 @@ const Gbus = () => {
 
     const [regionbtn,setregionbtn] = useState<btnreg>({
         region: false,
-        regiidx: -1,
+        regiidx: 1,
         regicon: '지역 선택'
     });
 
@@ -50,6 +50,24 @@ const Gbus = () => {
 
     const changearr = Busregion.filter((items)=>(items.region_name === regionbtn.regicon));
     const number1 = 1;
+
+    useEffect(()=>{
+        setregionbtn({
+            region: false,
+            regiidx: 1,
+            regicon: Busregion[1].region_name
+        });
+
+        settabone({
+            taboneon: true,
+            taboneidx: 1
+        });
+
+        settabtwo({
+            tabtwoon: true,
+            tabtwoidx: 1
+        })
+    },[])
     return (
         <div className="gbus">
            <div className="mx-auto max-w-screen-1280">

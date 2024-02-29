@@ -8,12 +8,17 @@ import { Swiper,SwiperSlide } from 'swiper/react';
 import SwiperCore, { EffectFade, Navigation} from 'swiper';
 import 'swiper/swiper-bundle.css';
 
+import '../../scss/media.css';
+
 SwiperCore.use([EffectFade, Navigation])
+
+
 
 
 
 const Slider = () => {
 
+  
     return (
        <div className="Allslider relative">
          <Swiper id="mainslide">
@@ -21,22 +26,20 @@ const Slider = () => {
               <div className="mx-auto max-w-screen-1280 hfull relative">
                     <div className="textwrap">
                             <div className="imgwrap"><img src="/images/logo_white.svg" alt="logo_white" /></div>
-                            <h2>프리맥스는 버스 예약과 구독 서비스를 제공합니다.</h2>
+                            <h2>프리맥스는 버스 예약과 <span className="br_768">구독 서비스를 제공합니다.</span></h2>
                             <p>
                                 편한 출퇴근을 위한 예약 서비스 <br />
                                 예약 서비스 누적을 통해 구독 서비스 혜택 <br />
                                 여행 및 호텔 회사의 협업을 통해 여행 서비스 제공
                             </p>
                     </div>
-                    <img src="/images/ch_ani-02.svg" alt="slide1_img" />
+                    <img src="/images/ch_ani-02.svg" alt="slide1_img" className="zdown"/>
               </div>
             </SwiperSlide>
             <SwiperSlide className="mainslide2">
-                <img src="/images/cloud.svg" alt="cloud" />
-                <img src="/images/realbus.svg" alt="realbus" />
                 <img src="/images/info.svg" alt="info" />
                 <div className="textwrap">
-                  <h2>매번 확인하는 예약은 그만!</h2>
+                  <h2>매번 확인하는 <span className="br_768">예약은 그만!</span></h2>
                   <p>
                   자신의 좌석을 직접 확인하고!<br />
                   근처의 MY BUS 찾기를 통해 <br />
@@ -45,8 +48,7 @@ const Slider = () => {
                 </div>
             </SwiperSlide>
             <SwiperSlide className="mainslide3">
-              <div className="mx-auto max-w-screen-1280 hfull relative">
-                <div className="textwrap">
+            <div className="textwrap">
                   <h2><span>무슨 혜택을</span> 제공할까?</h2>
                   <p>
                     구독 서비스 이용자에 한해서 여행 및 호텔 서비스를 <br />
@@ -55,6 +57,7 @@ const Slider = () => {
                   </p>
                   <button>문서 보기</button>
                 </div>
+              <div className="mx-auto max-w-screen-1280 hfull relative">
                 <img src="/images/mapbg.svg" alt="mapbg" />
                 <img src="/images/flyingchar.svg" alt="flyingchar" />
                 <img src="/images/tickets.svg" alt="tickets" />

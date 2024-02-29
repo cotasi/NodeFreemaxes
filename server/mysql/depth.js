@@ -26,16 +26,16 @@ connection.query(busquery, (err, results, fields) => {
         });
     });
 
-    const cafequery = 'Select * from cafe_store';
-    connection.query(cafequery,(err,results)=>{
+    const storequery1 = 'Select * from store_1';
+    connection.query(storequery1,(err,results)=>{
         if(err) {
             console.error('Error executing SQL query:', err);
             return;
         }
 
-        const caferesult = JSON.stringify(results,null,2);
+        const storeresult1 = JSON.stringify(results,null,2);
 
-        fs.writeFile('../../front/src/Data/Cafestore.json', caferesult, 'utf8', (err) => {
+        fs.writeFile('../../front/src/Data/store_1.json', storeresult1, 'utf8', (err) => {
             if (err) {
                 console.error('Error writing JSON file:', err);
                 return;
@@ -46,17 +46,16 @@ connection.query(busquery, (err, results, fields) => {
         
     });
 
-    const fassionquery = 'Select * from fassion_store';
-
-    connection.query(fassionquery,(err,results)=>{
+    const storequery2 = 'Select * from store_2';
+    connection.query(storequery2,(err,results)=>{
         if(err) {
             console.error('Error executing SQL query:', err);
             return;
         }
 
-        const fassionresult = JSON.stringify(results,null,2);
+        const storeresult2 = JSON.stringify(results,null,2);
 
-        fs.writeFile('../../front/src/Data/Fassionstore.json', fassionresult, 'utf8', (err) => {
+        fs.writeFile('../../front/src/Data/store_2.json', storeresult2, 'utf8', (err) => {
             if (err) {
                 console.error('Error writing JSON file:', err);
                 return;
@@ -64,6 +63,7 @@ connection.query(busquery, (err, results, fields) => {
             console.log('JSON 파일이 성공적으로 생성되었습니다.');
         });
 
-        connection.end();
+        
     });
+
 

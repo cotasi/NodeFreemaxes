@@ -2,8 +2,10 @@ import * as React from 'react';
 import { useState,useEffect } from 'react';
 
 import '../../scss/Store.scss';
-import Cafe from '../../Data/Cafestore.json';
-import Fassion from '../../Data/Fassionstore.json';
+import { Store1 } from '../../ts/common';
+import { Store2 } from '../../ts/common';
+import { Storeall } from '../../ts/common';
+import { serverapi } from 'api/serverapi';
 
 import { Swiper,SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
@@ -11,40 +13,74 @@ import 'swiper/swiper-bundle.css';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const Store = () => {
-    type stab = {
-        storetabon: boolean,
-        storetabidx: number
-    }
-    
-    const [storetab,setstoretab] = useState<stab>(
-        {
-            storetabon: false,
-            storetabidx: 0
-        }
-    )
+interface Props {
+    mergedData?: Storeall[] | null; // mergedData가 MergedData 배열 또는 null일 수 있음
+  }
 
+const Store: React.FC<Props> = () => {
+
+    const [storeone,setstoreone] = useState<Store1[] | null>(null);
+    const [storetwo,setstoretwo] = useState<Store2[] | null>(null);
+    const [tabs,settabs] = useState({
+        tabson: false,
+        tabsidx: 0
+    })
+
+    const FetchStoreOne = async (): Promise<void> => {
+        try {
+            const storedata1 = await serverapi('store_1');
+            if(storedata1 instanceof Error) {
+                throw storedata1;
+            }
+            if(storedata1 === undefined) {
+                console.log('response is undefined');
+                return;
+            }
+            if(Array.isArray(storedata1?.data)) {
+                setstoreone([...(storedata1?.data || [])])
+            }
+            
+        }catch(error) {
+            console.log('에러'+ error);
+        }
+    }  
+
+    const FetchStoreTwo = async (): Promise<void> => {
+        try {
+            const storedata2 = await serverapi('store_2');
+            if(storedata2 instanceof Error) {
+                throw storedata2;
+            }
+            if(storedata2 === undefined) {
+                console.log('response is undefined');
+                return;
+            }
+            if(Array.isArray(storedata2?.data)) {
+                setstoretwo([...(storedata2?.data || [])])
+            }
+            
+        }catch(error) {
+            console.log('에러'+ error);
+        }
+    }  
+    
     useEffect(()=>{
-        const tabbutton = document.querySelectorAll('.storetabs ul li button');
-        const swiperon = document.querySelectorAll('.storecon .swiper-container');
-        tabbutton.forEach((ele,idx)=>{
-            ele.addEventListener('click',()=>{
-                tabbutton.forEach((eles)=>{
-                    eles.classList.remove('storeon');
-                })
-                swiperon.forEach((eee)=>{
-                    eee.classList.remove('swiperon');
-                })
-                setstoretab({storetabon:true,storetabidx:idx});
-                if(storetab.storetabon && storetab.storetabidx === idx) {
-                    tabbutton[idx].classList.add('storeon');
-                    swiperon[idx].classList.add('swiperon');
-                }
-            })
-            
-            
+        FetchStoreOne();
+        FetchStoreTwo();
+        settabs({
+            tabson: true,
+            tabsidx: 0
         })
-    },[storetab]);
+    },[])
+
+    console.log(storetwo);
+
+    const mergedData = storeone?.map(storeo => ({
+        ...storeo,
+        store_detail: storetwo?.filter(storet => storet.store_id === storeo.store_id)
+      }));
+
+    console.log(JSON.stringify(mergedData, null, 2)); 
 
     return (
         <div className="stores">
@@ -53,56 +89,37 @@ const Store = () => {
                 <p>등록된 스토어에서 판매되는 아이템들을 소개합니다.</p>
                 <div className="storetabs">
                     <ul className="flex">
-                        <li><button>카페 스토어</button></li>
-                        <li><button>패션 스토어</button></li>
-                        <li><button>여행거리 스토어</button></li>
+                       {
+                        mergedData?.map((md,idxx)=>(<li><button className={`${tabs.tabson && tabs.tabsidx === idxx ? 'storeon': ''}`} onClick={()=>{settabs({tabson: true, tabsidx: idxx})}}>{md.store_type}</button></li>))
+                       }
                     </ul>
                 </div>
                 <div className="storecon">
-                    <Swiper slidesPerView={4} spaceBetween={30} navigation={true} id="cafeswiper">
-                        {
-                            Cafe.map((cafes,cafeidx)=>(
-                                <SwiperSlide>
-                                    <button>
-                                    <div className="numbers">{cafeidx+1}</div>
-                                    <div className="imgpart"><img src={cafes.product_path} alt="cafe" /></div>
-                                    <div className="textpart">
-                                        <div className="cafename">{cafes.product_name}</div>
-                                        <div className="price">
-                                            <div>{Intl.NumberFormat().format(cafes.product_isSale ? cafes.product_sale : cafes.product_price)}원</div>
-                                            {cafes.product_isSale && <div>{Math.floor((cafes.product_price - cafes.product_sale )/ (cafes.product_price) * 100)}%</div>}
-                                        </div>
-                                    </div>
-                                    </button>
-                                </SwiperSlide>
-                            ))
-                        }
-                    </Swiper>
-                    <Swiper id="fassionswiper" slidesPerView={4} spaceBetween={30}>
-                        {
-                            Fassion.map((fassion)=>(
-                                <SwiperSlide>
-                                    <button>
+                    {
+                        mergedData?.map((mdd,idx)=>(<Swiper className={`${tabs.tabson && tabs.tabsidx === idx ? 'swiperon': ''}`} slidesPerView={4} spaceBetween={35}>
+                            {
+                                mdd.store_detail?.map((sd)=>(
+                                    <SwiperSlide>
                                         <div className="imgpart">
                                             {
-                                                fassion.fassion_path.substring(1,fassion.fassion_path.length - 1).split(',').map((splls)=>(
-                                                    <img src={splls} alt="two"></img>
+                                                sd.store_product_path?.substring(1,sd.store_product_path.length - 1 ).split(',').map((path)=>(
+                                                    <img src={path} alt={`${path}imgg`}/>
                                                 ))
                                             }
                                         </div>
-                                        <div className="textpart">
-                                            <div className="fassionname">{fassion.fassion_name}</div>
-                                            <div className="price">
-                                                <div>{Intl.NumberFormat().format(fassion.fassion_isSale ? fassion.fassion_sale : fassion.fassion_price)} 원</div>
-                                                <div>{Math.floor((fassion.fassion_price - fassion.fassion_sale )/ (fassion.fassion_price) * 100)}%</div>
+                                        <div className="textwrap">
+                                            <div className="storeproduct">{sd.store_product_name}</div>
+                                            <div className="prices flex">
+                                               <div>{sd.store_product_issale ? Intl.NumberFormat().format(parseInt(sd.store_product_sales)) : Intl.NumberFormat().format(parseInt(sd.store_product_price))}원</div>
+                                               {sd.store_product_issale ? <div>{Math.floor((parseInt(sd.store_product_price) - parseInt(sd.store_product_sales))/parseInt(sd.store_product_price)*100)}%</div> : null }
                                             </div>
                                         </div>
-                                    </button>
-                                </SwiperSlide>
-                            ))
-                        }
-                    </Swiper>
-                </div>
+                                    </SwiperSlide>
+                                ))
+                            }
+                        </Swiper>))
+                    }
+                </div>    
             </div>
         </div>
     );

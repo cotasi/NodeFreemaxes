@@ -1,6 +1,8 @@
 import axios from 'axios';
 
+
 export const serverapi = async (tablenminfo, data = null) => {
+
 
   const crudinfoarr = tablenminfo.split('/');
   const tablenm = crudinfoarr[0]; //테이블이름
@@ -21,14 +23,12 @@ export const serverapi = async (tablenminfo, data = null) => {
     if (data) {
       //글삽입과 글 수정 모두 data가 있음
            
-      axios.post(`/api/${crudinfoarr}`, 
+      axios.post(`/api/${tablenm}`, 
       { headers: { "Content-Type": "application/json", }, 
         body: data })
       .then((response)=>{
-        console.log(response);
-        response.json().then((responseData)=>{
-            return responseData;
-        }); 
+        console.log('응답',response);
+        return response;
        })
        .catch((err) =>{
         console.log("글쓰기가 성공못했거나 응답이 이상하거나")
@@ -47,7 +47,6 @@ export const serverapi = async (tablenminfo, data = null) => {
         return await axios.get(`/api/${crudinfoarr}`);
       }
       
-
       
     }
 

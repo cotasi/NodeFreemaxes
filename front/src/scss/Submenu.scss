@@ -1,0 +1,24 @@
+.subsmenu { background-color: #f5f4f4; }
+.subsmenu .subwrap > ul > li > a { display: inline-block; padding: 1.2rem; border-left: 1px solid rgba(0,0,0,.2); border-right: 1px solid rgba(0,0,0,.2); }
+.subsmenu .subwrap > ul > li > a:hover {background-color: #12416b}
+.subsmenu .subwrap > ul > li > a:hover svg path { fill:#fff; }
+.subsmenu .subwrap > ul > li > button { padding: 1.2rem; min-width: 200px; border-right: 1px solid rgba(0,0,0,.2); }
+.subsmenu .subwrap > ul > li > button:hover { background-color: #12416b;}
+.subsmenu .subwrap > ul > li > button:hover span { color: white;}
+.subsmenu .subwrap > ul > li > button:hover svg path { fill:#fff;}
+.subsmenu .subwrap > ul > li .main_sub { left: 0; right: 0; z-index: 90; height: 0; overflow: hidden;}
+.subsmenu .subwrap > ul > li .main_sub.open { height: 300px;}
+.subsmenu .subwrap > ul > li .main_sub li a { color: white; padding: 1.2rem;display: block; background-color: #12416b;}
+.subsmenu .subwrap > ul > li .main_sub li a:hover { background-color: white; color: #12416b;}
+
+.substab { background-color: white; height: 100px;}
+.substab > div { height: 100%;}
+.substab > div > ul { height: 100%;}
+.substab > div > ul > li { height: 100%;}
+.substab > div > ul > li { display: flex; align-items: center;}
+.substab > div > ul > li { margin-right: 7rem;}
+.substab > div > ul > li:last-child { margin: 0; }
+.substab > div > ul > li a { font-size: 1.15rem; color: black; padding: 1rem 0; }
+.substab > div > ul > li a.active { color: #12416b; border-bottom: 2px solid #12416b; }
+
+.subtit { padding-top : 3rem; font-size: 2.05rem; letter-spacing: -1px; font-weight: 600 !important; color: #12416b; }

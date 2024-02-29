@@ -1,6 +1,6 @@
 const express = require("express");
 const mysql = require("mysql");
-const mydbinfo = require("../data/dbconfig.json")
+const mydbinfo = require("../data/dbconfig.json");
 
 const mysqlapi = express.Router();
 
@@ -52,10 +52,9 @@ mysqlapi.post('/:tablenm', (req, res) => {
     const columns = Object.keys(req.body.body).join(', ');
     const values = Object.values(req.body.body).map(value => `'${value}'`).join(', ');
   
-  
     myconnection.getConnection((err, connect) => {
         if (err) throw console.log("Post DB접속정보확인 " + err)
-        connect.query(`INSERT INTO ${tablenm}  (${columns})
+        connect.query(`INSERT INTO ${tablenm}(${columns})
         VALUES (${values})`, (error, result) => {
             if (error) throw console.log("글수정 혹은 글삽입 쿼리문 오류")
             res.send(result)
@@ -75,7 +74,7 @@ mysqlapi.post('/:tablenm/:id/m', (req, res) => {
   
     myconnection.getConnection((err, connect) => {
         if (err) throw console.log("Post DB접속정보확인 " + err)
-        connect.query(`UPDATE ${tablenm} SET  ${setClause} WHERE id = ${pk}`, (error, result) => {
+        connect.query(`UPDATE ${tablenm} SET ${setClause} WHERE id = ${pk}`, (error, result) => {
             if (error) throw console.log("글수정 혹은 글삽입 쿼리문 오류")
             res.send(result)
         })

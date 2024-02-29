@@ -9,6 +9,7 @@ import Store from './Store';
 import Business from './Business';
 import Modal from './Modal';
 import Contact from './ContactForm';
+import Study from './Study';
 
 
 
@@ -27,6 +28,7 @@ const Main = () => {
             <Store />
             <Business />
             <Contact />
+            <Study />
         </main>
     );
 };

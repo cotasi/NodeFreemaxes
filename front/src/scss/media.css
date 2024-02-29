@@ -1,0 +1,58 @@
+@media (max-width: 1280px) {
+    .regionshows li {
+        width: 26% !important;
+    }
+    .infoshow li .bustype {
+        display: none !important; 
+    }
+    .infoshow li {
+        justify-content: center;
+    }
+    .infoshow li .busr {
+        text-align: center;
+    }
+    .mapwrap {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .resbus {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(0);
+    }
+    .resbus_wrap { 
+        border-radius: 0 !important;
+    }
+    .bustab button::after {
+        top: 86%;
+        transform: rotate(180deg);
+        z-index: 30 !important;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .br_768 {
+        display: block;
+        line-height: 1.1;
+    }
+    .zdown {
+        z-index: -1;
+    }
+    .resbus_wrap{
+        background-color: black !important;
+    }
+    .resbus_wrap form {
+        flex-direction: column;
+        justify-content: center !important;
+        gap: 45px;
+    }
+    .resbus_wrap form h2 {
+        margin: 0 !important;
+        color: white !important;
+    }
+}

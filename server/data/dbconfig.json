@@ -1,7 +1,7 @@
  {
-    "host": "127.0.0.1",
+    "host": "nodejs-007.cafe24.com",
     "user": "haruka135",
     "password": "gkfpa135@",
-    "database": "haruka",
+    "database": "haruka135",
     "connectionLimit": 10
  }

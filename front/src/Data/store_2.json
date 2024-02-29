@@ -1,0 +1,134 @@
+[
+  {
+    "store_id": 1,
+    "store_new_id": 1,
+    "store_product_path": "[https://i.imgur.com/RRAsaC5.png,https://i.imgur.com/xLh46lB.png]",
+    "store_product_name": "[HOT] 하트뿅! 레몬 셔벗 쇼콜라",
+    "store_product_price": 8500,
+    "store_product_sales": 6500,
+    "store_product_issale": 1,
+    "stores_type": "과일류",
+    "theme_img": "https://i.imgur.com/5p12pmP.png"
+  },
+  {
+    "store_id": 1,
+    "store_new_id": 2,
+    "store_product_path": "[https://i.imgur.com/ZdiKN0z.png,https://i.imgur.com/KNsC1zN.png]",
+    "store_product_name": "[HOT] 코코넛 커피 스무디",
+    "store_product_price": 8000,
+    "store_product_sales": 6300,
+    "store_product_issale": 1,
+    "stores_type": "냉동 커피",
+    "theme_img": "https://i.imgur.com/MBBtznj.png"
+  },
+  {
+    "store_id": 1,
+    "store_new_id": 3,
+    "store_product_path": "[https://i.imgur.com/7KA100b.png,https://i.imgur.com/O5raZQ3.png]",
+    "store_product_name": "[HOT] 생딸기 주스",
+    "store_product_price": 8000,
+    "store_product_sales": 7000,
+    "store_product_issale": 1,
+    "stores_type": "과일류",
+    "theme_img": "https://i.imgur.com/5p12pmP.png"
+  },
+  {
+    "store_id": 1,
+    "store_new_id": 4,
+    "store_product_path": "[https://i.imgur.com/CrdGyTp.png,https://i.ibb.co/G2srQx8/2.png]",
+    "store_product_name": "[HOT] 아포가토 디카페인",
+    "store_product_price": 10500,
+    "store_product_sales": null,
+    "store_product_issale": 0,
+    "stores_type": "냉동 커피",
+    "theme_img": "https://i.imgur.com/MBBtznj.png"
+  },
+  {
+    "store_id": 1,
+    "store_new_id": 5,
+    "store_product_path": "[https://i.imgur.com/uX2OWp6.png,https://i.ibb.co/D9NXhQw/2.jpg]",
+    "store_product_name": "[HOT] 바닐라 밀크 쉐이크",
+    "store_product_price": 5900,
+    "store_product_sales": null,
+    "store_product_issale": 0,
+    "stores_type": "냉동 음료",
+    "theme_img": "https://i.imgur.com/nlyiEqj.png"
+  },
+  {
+    "store_id": 1,
+    "store_new_id": 6,
+    "store_product_path": "[https://i.imgur.com/o9EKxUC.png,https://i.ibb.co/6XPdDTq/2.png]",
+    "store_product_name": "[HOT] 딸기 슈크림 라떼",
+    "store_product_price": 6900,
+    "store_product_sales": null,
+    "store_product_issale": 0,
+    "stores_type": "과일류",
+    "theme_img": "https://i.imgur.com/5p12pmP.png"
+  },
+  {
+    "store_id": 2,
+    "store_new_id": 7,
+    "store_product_path": "[https://i.imgur.com/kftJKSO.png,https://i.imgur.com/I1mZQyZ.jpg]",
+    "store_product_name": "[NEW] 파라슈트 팬츠",
+    "store_product_price": 139000,
+    "store_product_sales": 128000,
+    "store_product_issale": 1,
+    "stores_type": "바지류",
+    "theme_img": "https://i.imgur.com/u1CTP0M.png"
+  },
+  {
+    "store_id": 2,
+    "store_new_id": 8,
+    "store_product_path": "[https://i.imgur.com/xHFdtsU.png,https://i.imgur.com/gLrplI9.png]",
+    "store_product_name": "[NEW] 캡슐로고 아노락",
+    "store_product_price": 159000,
+    "store_product_sales": 138000,
+    "store_product_issale": 1,
+    "stores_type": "상의류",
+    "theme_img": "https://i.imgur.com/A7W2nZ5.png"
+  },
+  {
+    "store_id": 2,
+    "store_new_id": 9,
+    "store_product_path": "[https://i.imgur.com/mmxGUVZ.png,https://i.imgur.com/fyIGBHv.jpg]",
+    "store_product_name": "[NEW] 릴렉스 팬츠",
+    "store_product_price": 169000,
+    "store_product_sales": 148000,
+    "store_product_issale": 1,
+    "stores_type": "바지류",
+    "theme_img": "https://i.imgur.com/u1CTP0M.png"
+  },
+  {
+    "store_id": 2,
+    "store_new_id": 10,
+    "store_product_path": "[https://i.imgur.com/tSm0mnI.png,https://i.imgur.com/CI5K0ZD.jpg]",
+    "store_product_name": "[NEW] 여성 판다와 윈드 브레이커",
+    "store_product_price": 149000,
+    "store_product_sales": 128000,
+    "store_product_issale": 1,
+    "stores_type": "바지류",
+    "theme_img": "https://i.imgur.com/u1CTP0M.png"
+  },
+  {
+    "store_id": 2,
+    "store_new_id": 11,
+    "store_product_path": "[https://i.imgur.com/CM6Tosa.png,https://i.imgur.com/UJkZVKV.jpg]",
+    "store_product_name": "[NEW] 롱 슬리브 티셔츠",
+    "store_product_price": 199000,
+    "store_product_sales": 168000,
+    "store_product_issale": 1,
+    "stores_type": "상의류",
+    "theme_img": "https://i.imgur.com/A7W2nZ5.png"
+  },
+  {
+    "store_id": 3,
+    "store_new_id": 12,
+    "store_product_path": "[https://i.ibb.co/ggx7Wd4/1.jpg,https://i.ibb.co/x70Hdjb/2.jpg]",
+    "store_product_name": "[NEW] 다우니 섬유유연제",
+    "store_product_price": 2500,
+    "store_product_sales": null,
+    "store_product_issale": 0,
+    "stores_type": "샴푸류",
+    "theme_img": "https://i.imgur.com/FnJViqr.png"
+  }
+]

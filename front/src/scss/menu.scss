@@ -1,4 +1,4 @@
-.first-menu { padding: 35px 0; border-bottom: 1px solid rgba(0,0,0,.2);}
+.first-menu { padding: 35px 0; border-bottom: 1px solid rgba(0,0,0,.2); position: relative; z-index: 70;}
 .sns li a { display: flex; justify-content: center; align-items: center; background-color: rgba(18,65,107,.5); width: 30px; height: 30px; margin-right: 12px; border-radius: 50%;}
 .sns li a svg { display: block;}
 .sns li a:hover { background-color: white; }
@@ -7,20 +7,45 @@
 .sns li:first-child a svg { margin-right: 1px;}
 .logo { left: 50%; transform: translateX(-50%);}
 .logo a { display: block; padding: 40px 0;}
-.icons li a { display: flex; width: 40px; height: 40px; background-color: #fbfcfc; justify-content: center; align-items:center; border-radius: 50%; margin-right: 16px;}
-.icons li a svg { display: block;}
-.icons li a:hover { background-color: #12416b;}
-.icons li a:hover svg path { fill: white; }
-.icons li form { margin-right: 12px; position: relative;}
-.icons li form input { display: block; width: 185px; height: 30px; background-color: #f4f6f8; border-radius: 20px; padding: 10px 20px; font-family: 'Pretendard' !important; font-size: 13px; font-weight: 200 !important;}
-.icons li form input:focus { outline: none; }
-.icons li form input::placeholder { font-family: 'Pretendard' !important; font-size: 12px; color: rgba(18,65,107,.5); font-weight: 300 !important; letter-spacing: -0.84px;}
-.icons li form button { position: absolute; width: 28px; height: 28px; background-color: #12416b; border-radius: 50%; right: 5px; top: 50%; transform: translateY(-50%);}
-.icons li form button span { display: block; text-indent: -9999em; width: 0; height: 0;}
-.icons li form button svg { width: 16px; height: 16px;}
-.icons li form button svg path { fill: white;}
-.hambtn button { margin-right: 1rem;}
-.hambtn button span {width: 1.5rem; height: 3px; background-color: #12416b; display: block; margin-bottom: .3rem; }
+.icons_wrapper > ul > li a,
+.icons_wrapper > ul > li button { display: flex; width: 40px; height: 40px; background-color: #fbfcfc; justify-content: center; align-items:center; border-radius: 50%; margin-right: 16px;}
+.icons_wrapper > ul > li a svg { display: block;}
+.icons_wrapper > ul > li a svg path { fill: #12416b;}
+.icons_wrapper > ul > li a:hover,
+.icons_wrapper > ul > li button:hover { background-color: #12416b;}
+.icons_wrapper > ul > li a:hover svg path,
+.icons_wrapper > ul > li button:hover svg path { fill: white; }
+.icons_wrapper > ul > li .small_icons { z-index: 93; top: 100%; display: none;}
+.icons_wrapper > ul > li .small_icons li { margin-top: 1.2rem; }
+.icons_wrapper > ul > li form { margin-right: 12px; position: relative;}
+.icons_wrapper > ul > li form input { display: block; width: 185px; height: 30px; background-color: #f4f6f8; border-radius: 20px; padding: 10px 20px; font-family: 'Pretendard' !important; font-size: 13px; font-weight: 200 !important;}
+.icons_wrapper > ul > li form input:focus { outline: none; }
+.icons_wrapper > ul > li form input::placeholder { font-family: 'Pretendard' !important; font-size: 12px; color: rgba(18,65,107,.5); font-weight: 300 !important; letter-spacing: -0.84px;}
+.icons_wrapper > ul > li form button { position: absolute; width: 28px; height: 28px; background-color: #12416b; border-radius: 50%; right: 5px; top: 50%; transform: translateY(-50%);}
+.icons_wrapper > ul > li form button span { display: block; text-indent: -9999em; width: 0; height: 0;}
+.icons_wrapper > ul > li form button svg { width: 16px; height: 16px;}
+.icons_wrapper > ul > li form button svg path { fill: white;}
+.ham_btn button { margin-right: 2rem; }
+.ham_btn button.hamchn { transform: translateY(6px); }
+.ham_btn button.hamchn span:first-child { transform: rotate(45deg); transform-origin: center;}
+.ham_btn button.hamchn span:last-child { transform: rotate(-45deg) translateY(-6px) translateX(6px); margin-bottom: 0.3rem; transform-origin: center; }
+.ham_btn button.hamchn span:nth-child(2) { display: none; }
+.ham_btn button span {display: block; width: 1.9rem; height: 4px; background-color: #5297d3; margin-bottom: 0.3rem; transition: all .4s; }
+.ham_btn button span:last-child { margin: 0; }
+.mobile_menu { top: calc(100% + 1.8rem); left: 0; right: 0; background-color: white; z-index: 95; font-family: 'Pretendard' !important; height: 0; overflow: hidden; transition: all ease-in-out .6s; box-shadow: 0 4px 4px 0 rgba(0,0,0,.25);}
+.mobile_menu.mobileon { height: calc(100vh - 171px); overflow-y: scroll; }
+.mobile_menu .mobile_menu_wrap { margin: 2rem 1.8rem; }
+.mobile_menu .mobile_menu_wrap li { margin-bottom: 2rem; }
+.mobile_menu .mobile_menu_wrap button { font-size: 2rem; font-weight: 700 !important; letter-spacing: -1px; margin-bottom: 2rem; }
+.mobile_menu .mobile_menu_wrap .mobile_sub { max-height: 0; overflow: hidden; transition: max-height ease0in-out .6s;} 
+.mobile_menu .mobile_menu_wrap .mobile_sub.subon { max-height: 285px; }
+.mobile_menu .mobile_menu_wrap .mobile_sub li a { padding:1.2rem 2.1rem; display: block; font-size: 1.25rem; color: white; background-color: #12416b; border-radius: 20px; }
+.mobile_menu .mobile_menu_wrap .mobile_sub li a:hover { background-color: transparent; border: 1px solid #12416b; color: #12416b; box-sizing: border-box;}
+.mobile_menu .icon_wraps li button { width: 50px; height: 50px; background-color: #12416b; border-radius: 50%;}
+.mobile_menu .icon_wraps li a {width: 50px; height: 50px; background-color: #12416b; border-radius: 50%; display: inline-flex; justify-content: center; align-items: center;}
+.mobile_menu .icon_wraps li { margin-right: 1.1rem; }
+.mobile_menu .icon_wraps li button svg path,
+.mobile_menu .icon_wraps li a svg path { fill: #fff;}
 .second-menu { position: relative; z-index: 30;}
 .second-menu { box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25); background-color: white; display: flex; justify-content: center;}
 .second-menu > ul { display: inline-flex !important; }
