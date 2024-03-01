@@ -77,7 +77,7 @@ useEffect(()=>{
 
     return (
         <div className="contact">
-            <div className="mx-auto max-w-screen-xl">
+            <div className="mx-auto xl:max-w-screen-xl lg:max-w-screen-lg sm:max-w-screen-sm max-w-screen-ssm max-w-screen-xssm max-w-screen-xxssm max-w-screen-xxxssm">
                 <h2>Contact us</h2>
                 <p>문의사항은 아래 양식으로 보내주세요.</p>
                 <div className="contactcon flex">
@@ -86,7 +86,7 @@ useEffect(()=>{
                         <div className="forms relative">
                             <form>
                                 <input type="text" placeholder="검색어를 입력해주세요." className={`${submitdata !== '' && algo ? 'inputon': ''}`} value={submitdata} onChange={(e)=>{setsubmitdata(e.target.value); setalgo(true); submitdata == '' ? setalgo(false): setalgo(true)}} />
-                                <button type="submit" onClick={(e)=>{e.preventDefault();}} onSubmit={(e)=>{submiteffect(e)}} ><span className="sr_only">검색하기</span><SearchIcon /></button>
+                                <button type="submit" className="xl:static absolute" onClick={(e)=>{e.preventDefault();}} onSubmit={(e)=>{submiteffect(e)}} ><span className="sr_only">검색하기</span><SearchIcon /></button>
                             </form>
                             <div className={`search_algorithm absolute top-full ${submitdata !== '' && algo ? 'algoon': ''}`}>
                             {

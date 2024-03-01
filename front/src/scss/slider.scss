@@ -4,7 +4,7 @@
 .Allslider #mainslide { height: 100%; }
 .Allslider #mainslide .swiper-slide { background-color: #0f0f10; position: relative;}
 .Allslider #mainslide .swiper-slide .imgwrap img { max-width: 650px; width: 100%; height: auto; }
-.Allslider #mainslide .swiper-slide .imgwrap{ display: inline-block; position: absolute; bottom: 0; left: 0; animation: pingpong 2s ease-in-out alternate infinite;}
+.Allslider #mainslide .swiper-slide .imgwrap{ display: inline-block; position: absolute; bottom: 0; left: 0; animation: pingpong 2s ease-in-out alternate infinite; z-index: 80;}
 .Allslider #mainslide .swiper-slide .textwraps { position: absolute; left: 50%; top: 30%; z-index: 50; }
 .Allslider #mainslide .swiper-slide .textwraps .buttons { padding-bottom: 10%;}
 .Allslider #mainslide .swiper-slide .textwraps .buttons button {display: flex; align-items: center;}

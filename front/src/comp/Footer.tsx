@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 import '../scss/Footer.scss';
+import '../scss/media.css';
 import Menu from '../Data/menuback.json';
 
 

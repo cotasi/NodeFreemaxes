@@ -14,13 +14,13 @@ import Study from './Study';
 
 
 const Main = () => {
-/*     useEffect(()=>{
+    useEffect(()=>{
         document.body.classList.add('dimmed');
-    }) */
+    })
     
     return (
         <main>
-            {/* <Modal /> */}
+            <Modal />
             <Slider />
             <Bestbus />
             <Distribtion />

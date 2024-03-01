@@ -53,7 +53,7 @@ const Business = () => {
 
     return (
         <div className="business">
-            <div className="mx-auto max-w-screen-xl">
+            <div className="mx-auto xl:max-w-screen-xl lg:max-w-screen-lg sm:max-w-screen-sm max-w-screen-ssm max-w-screen-xssm max-w-screen-xxssm max-w-screen-xxxssm">
                 <h2>사업 영역</h2>
                 <p>프리맥스에서 제공하는 컨텐츠들입니다.</p>
                 <div className="businesscon">

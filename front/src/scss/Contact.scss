@@ -25,3 +25,5 @@
 .contact .contactcon .realform textarea { background-color: rgba(0,0,0,.03); width: 100%; resize: none !important; height: 150px !important;  display: block; border-radius: 1.1rem; padding: 5% 10%; margin-bottom: 2rem; }
 .contact .contactcon .realform button { width: 30%; height: 60px; background-color: #c4996c; color: white; border-radius: 1.1rem; }
 .contact .contactcon .realform textarea:focus { outline: none; }
+#map > div:nth-child(2), #map > div:nth-child(3) { z-index: 10 !important; }
+ 

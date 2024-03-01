@@ -1,4 +1,9 @@
 @charset "utf-8";
+@media (max-width: 1410px) {
+    .footer .right_side .mainmenu > ul > li > a {
+        padding: .9rem 2.1rem !important;
+    }
+}
 @media (max-width: 1280px) {
     header {
         height: 105.6px;
@@ -39,7 +44,11 @@
     .rolldown .smallmenu li::before { content: '선택'; display: inline-block; height: 24px; width: 88px; background-color: white; border: 1px solid black; text-align: center; line-height: 24px; opacity: .4; }
     .rolldown .smallmenu li.truetrue::before { background-color: black; opacity: 1; border: none; color: white;}
     .rolldown .smallmenu li button { padding: .4rem 0 !important; color: black !important; font-size: .95rem !important; text-align: right; opacity: .4; }
-    
+    .footer .right_side .mainmenu > ul > li > a { padding: .9rem 1.6rem !important; }
+}
+@media (max-width: 1110px) {
+    .footer .right_side .mainmenu > ul > li > a { padding: .9rem 1.3rem !important; }
+    .footer .right_side .mainmenu > ul > li .smallmenu a { font-size: .7rem !important; }
 }
 
 @media (max-width: 1024px) {
@@ -77,6 +86,36 @@
     .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgpart .textregion { font-size: .75rem !important; padding-top: 10px !important;}
     .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgpart .textadd { font-size: .55rem !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .rolldown .smallmenu li:before { width: 40px !important; height: 17px !important; line-height: 17px !important; font-size: 10px !important; }
+    .contact .contactcon .realform button { width: 100% !important; }
+    .contact .contactcon .mapwrap .forms { left: 3% !important; }
+    .contact .contactcon .mapwrap .forms button[type="submit"] { right: 17px !important; }
+    .contact .contactcon { flex-direction: column !important; }
+    .mapwrap { height: 320px !important; width: 100% !important;}
+    .realform { width: 100% !important; margin-top: 3rem; }
+    .right_side { width: 90% !important; }
+    .businesscon > ul { flex-wrap: wrap; }
+    .businesscon > ul > li { width: 40% !important; margin-bottom: 3rem; }
+    .business .businesscon ul li.btnover { width: 41% !important; }
+    .modal { display: flex !important; width: 70% !important; height: 80% !important; }
+    .hidden { display: none !important; }
+    .modal .img { height: 100% !important; width: 95% !important; }
+    .modal .btns { flex-direction: column; justify-content: space-between; align-items: center; height: 100% !important;}
+    .modal .btns button { font-size: 14px !important; margin-top: 30px; width: 80px; }
+    .modal .btns button:last-child { position: static !important; padding: 0 !important; }
+
+}
+
+@media (max-width: 990px) {
+    .footer .right_side .mainmenu > ul > li > a { font-size: .75rem !important; }
+}
+
+@media (max-width: 920px) {
+    .footer .left_side { width: 22% !important; }
+    .footer .left_side .telwrap { font-size: .6rem !important; }
+}
+
+@media (max-width: 780px) {
+    .footer .right_side .mainmenu > ul > li > a { padding:.9rem !important; }
 }
 
 @media (max-width: 768px) {
@@ -95,7 +134,7 @@
     .zdown {
         z-index: -1;
     }
-    .resbustab {position: fixed !important; bottom: 50px !important;left: 85% !important;transform: translateX(-50%) !important; z-index: 60 !important;}
+    .resbustab {position: fixed !important; bottom: 50px !important;left: 85% !important;transform: translateX(-50%) !important; z-index: 50 !important;}
     .resbustab button { border-radius: 50% !important; }
     .resbustab button svg { margin: 0 !important;}
     .resbustab.oo { left: 50% !important; bottom: 500px !important;}
@@ -113,10 +152,28 @@
     }
     .resbus .resbus_wrap .select { width: 100% !important; margin-right:0 }
     .resbus .resbus_wrap button[type="submit"] { width: 100% !important; }
+    .Allslider #mainslide .swiper-slide:last-child .imgwrap img { max-width: 200px !important;}
     .bestbus h2 { padding-top: 5rem !important;}
+    .contact .contactcon .mapwrap .forms input[type="text"] { width: 200px !important; }
+    .search_algorithm { width: 200px !important;}
+    .footer .left_side .telwrap > div > span:first-child { margin-right: .5rem !important; }
+    .districon { flex-direction: column; }
+    .shows { width: 100% !important; }
+    .busr { width: 100% !important; display: flex !important;}
+    .busr > div { display: inline-block !important; width: 33.3%; text-align: left !important;}
+    .map > svg {transform: translateY(-20%) scale(.7) !important;}
+    .businesscon > ul > li { width: 70% !important; margin-bottom: 3rem; }
+    .business .businesscon ul li.btnover { width: 71% !important; }
     .max-w-screen-ssm {
         max-width: 660px;
     }
+}
+@media (max-width: 680px) {
+    .footer .right_side .mainmenu > ul > li .smallmenu a { font-size: .5rem !important; }
+    .footer .right_side .mainmenu > ul > li > a { font-size: .55rem !important; }
+    .footer { flex-direction: column; align-items: center; height: 450px;}
+    .mainmenu > ul { justify-content: center !important;}
+
 }
 
 @media (max-width: 640px) {
@@ -129,10 +186,22 @@
     .gbus .gbuscon .bustab .tabone li button { flex-direction: column; }
     .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-wrapper { animation: none !important; }
     .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgpart .textregion { overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    .map svg { transform: translateY(-10%) scale(.7) !important; }
     .max-w-screen-xssm {
         max-width: 460px;
     }
 }
+
+@media (max-width: 540px) {
+    .footer { padding: 1rem !important; }
+    .right_side { width: 100% !important; }
+    .footer .right_side .mainmenu > ul > li > a { font-size: .75rem !important; }
+}
+
+@media (max-width: 510px) {
+    .footer .right_side .mainmenu > ul > li > a { font-size: .6rem !important; }
+}
+
 
 @media (max-width: 460px) {
     .gbus .gbuscon .bustab .tabone li { width: 15% !important; margin-right: 1rem !important; }
@@ -146,9 +215,22 @@
     .infoshow { border: none !important; }
     .infoshow li { border: none !important; }
     .map { overflow: hidden; }
-    .map svg { width: 154% !important; transform: translateX(-26%); }
-    .resbustab { left: 75% !important; }
+    .map svg { width: 154% !important; transform: translateY(-10%) translateX(-20%) scale(.7) !important; }
+    .resbustab { left: 75% !important; z-index: 30 !important;}
+    .busr > div:nth-child(3) { width: 60% !important; }
+    .busr > div:nth-child(2) { display: none !important;}
+    .storetabs > ul { flex-direction: column; justify-content: center; }
+    .storetabs > ul > li { display: flex; justify-content: center; }
+    .storetabs > ul > li > button { width: 110px; }
     .max-w-screen-xxssm {
         max-width: 300px;
     }
+}
+
+@media (max-width: 440px) {
+    .footer .right_side .mainmenu > ul > li > a { font-size: .5rem !important; }
+}
+
+@media (max-width: 400px) {
+    .footer .right_side .mainmenu > ul > li > a { font-size: .4rem !important; }
 }

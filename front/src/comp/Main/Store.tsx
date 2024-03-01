@@ -83,14 +83,22 @@ const Store: React.FC<Props> = () => {
     console.log(JSON.stringify(mergedData, null, 2)); 
 
     const storebreak = {
-        768: {
-            slidsPerView: 2,
-            spaceBetween: 15
+        1560: {
+            spaceBetween: 60,
+            slidesPerView: 4
         },
         1024: {
-            slidesPerView: 4,
-            spaceBetween: 35
-        }
+            spaceBetween: 50,
+            slidesPerView: 3
+        },
+        768: {
+            spaceBetween: 30,
+            slidesPerView: 2
+        },
+        640: {
+            spaceBetween: 20,
+            slidesPerView: 1
+        },
     }
 
     return (
@@ -107,7 +115,7 @@ const Store: React.FC<Props> = () => {
                 </div>
                 <div className="storecon">
                     {
-                        mergedData?.map((mdd,idx)=>(<Swiper className={`${tabs.tabson && tabs.tabsidx === idx ? 'swiperon': ''}`} breakpoints={storebreak}>
+                        mergedData?.map((mdd,idx)=>(<Swiper className={`${tabs.tabson && tabs.tabsidx === idx ? 'swiperon': ''}`} breakpoints={storebreak} slidesPerView={1} spaceBetween={20}>
                             {
                                 mdd.store_detail?.map((sd)=>(
                                     <SwiperSlide>

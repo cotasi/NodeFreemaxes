@@ -29,7 +29,7 @@ header.scrolled .mobile__header span:first-child div { background-color: black; 
 .mobile__allmenu .topimg img { position: absolute; z-index: 100; top: 50%; left: 50%; transform: translate(-50%,-50%); }
 .mobile__allmenu .topimg button { position: absolute; z-index: 100; top: 8%; right: 8%; }
 .mobile__allmenu .topimg button svg path { fill: #fff; }
-.mobile__allmenu .mobile__menu { position: absolute; left: 0; right: 0; top:400px; padding: 1.5rem; height: calc(100vh - 400px);}
+.mobile__allmenu .mobile__menu { position: absolute; background-color: white; z-index: 60; overflow-y: scroll; left: 0; right: 0; top:400px; padding: 1.5rem; height: calc(100vh - 400px);}
 .mobile__allmenu .mobile__menu .mx-auto > ul {display: inline-flex; flex-direction: column; position: relative;}
 .mobile__allmenu .mobile__menu .mx-auto > ul > li { display: inline-block;  }
 .mobile__allmenu .mobile__menu .mx-auto > ul > li > button { font-size: 2.5rem; padding-bottom: 2rem; font-family: 'Poppins' !important; display: inline-block; color: #b9b9b9; font-weight: 400 !important; letter-spacing: -3px; }
