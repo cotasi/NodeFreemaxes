@@ -35,7 +35,7 @@ const Distribtion = () => {
 
     return (
         <div className="distri">
-            <div className="mx-auto xl:max-w-screen-xl lg:max-w-screen-lg max-w-screen-sm">
+            <div className="mx-auto xl:max-w-screen-xl lg:max-w-screen-lg sm:max-w-screen-sm max-w-screen-ssm max-w-screen-xssm max-w-screen-xxssm max-w-screen-xxxssm">
                 <h2>수도권 버스 분포도 살펴보기</h2>
                 <p>실제 서울 지역을 예시로 어떤 버스들이 구성되어 있는지 살펴보았습니다.</p>
                 <div className="districon flex">

@@ -14,6 +14,10 @@ const Pointer = styled.div`
     border-radius: 4px;
     border: 1px solid rgba(0,0,0,.2);
     margin-right: 3rem;
+    @media (max-width: 1024px) {
+        width: 20% !important;
+        margin-right: 1rem;
+    }
     @media (max-width: 768px) {
         margin: 0;
         width: 100% !important;
@@ -63,10 +67,14 @@ const Subpointer = styled.div`
     left: 0; right: 0;
     border: 1px solid rgba(0,0,0,.15);
     border: none;
-    z-index: 70;
+    z-index: 80;
     transition: all .4s;
     @media (max-width: 1280px) {
         right: -20px;
+    }
+    @media (max-width: 1024px) {
+        top: unset !important;
+        bottom: 100% !important;
     }
 
     &.pointeron { height: 330px; overflow-y:scroll; border: 1px solid rgba(0,0,0,.15); }
@@ -99,11 +107,19 @@ const Subpointer = styled.div`
 const Resbus = () => {
 
     const [Bustabon,setbustabon] = useState(false);
+    const [selecton,setselecton] = useState({
+        on: false,
+        idd: -1
+    });
     const [starton,setstarton] = useState({
         startons: false,
         startidx: -1,
         startcon: '출발지 선택'
     });
+
+    useEffect(()=>{
+        setselecton({on: true, idd:0});
+    },[])
 
     return (
     <div className="resbusall">
@@ -112,6 +128,10 @@ const Resbus = () => {
                 <div className="resbus_wrap">
                     <form className="flex items-center justify-around">
                         <h2>궁금한 버스 찾기</h2>
+                        <div className="select flex items-center">
+                            <button onClick={(e)=>{e.preventDefault(); setselecton({on:true,idd:0}); }} className={`${selecton.on && selecton.idd == 0 ? 'ons': ''}`}>지선/간선</button>
+                            <button onClick={(e)=>{e.preventDefault(); setselecton({on:true,idd:1}); }} className={`${selecton.on && selecton.idd == 1 ? 'ons': ''}`}>광역/직행</button>
+                        </div>
                         <Pointer className={`flex relative pointer1 ${starton.startons ? 'pointeronon': ''}`}>
                             <h2>출발지</h2>
                             <button onClick={(e)=>{e.preventDefault(); const updatedStarton = { ...starton, startons: !starton.startons }; setstarton(updatedStarton); }}><div><span>{starton.startcon}</span></div></button>
@@ -141,9 +161,9 @@ const Resbus = () => {
                 </div>
             </div>
         </div>
-        <div className="resbustab">
+        <div className={`resbustab ${Bustabon ? 'oo': ''}`}>
             <div className="mx-auto max-w-screen-1280">
-                <ul className="bustab flex j-center">
+                <ul className={`bustab flex j-center `}>
                     <li><button onClick={()=>{setbustabon(!Bustabon);}} className={`${Bustabon ? 'btnon': ''}`}>
                            <div className="svgwrap">
                              <img src="/images/busicon_1_off.svg" alt="svgoff" />

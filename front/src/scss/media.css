@@ -2,6 +2,11 @@
     header {
         height: 105.6px;
     }
+    .Allslider #mainslide .swiper-slide .imgwrap img { max-width: 500px !important; }
+    .texteng { font-size: 50px !important; }
+    .textkor { font-size: 40px !important; }
+    .resbus .resbus_wrap .select { width: 30% !important; margin-right: 16px; }
+    .resbus .resbus_wrap button[type="submit"] { width: 15% !important; }
     .regionshows {
         height: 20%;
     }
@@ -28,10 +33,10 @@
     }
 
     .rolldown > button { display: none; }
-    .rolldown .smallmenu { border: 1px solid #000; margin-top: 1rem; height: 200px !important; padding: 0 1rem !important; overflow-y: auto !important; background-color: transparent !important;}
+    .rolldown .smallmenu { border: 1px solid #000; margin-top: 1rem; height: 400px !important; padding: 0 1rem !important; overflow-y: auto !important; background-color: transparent !important;}
     .rolldown .smallmenu li {text-align: right; display: flex; justify-content: space-between; align-items: center;}
-    .rolldown .smallmenu li::before { content: ''; display: inline-block; height: 19px; width: 19px; background-color: white; border: 1px solid black; border-radius: 50%; opacity: .4; }
-    .rolldown .smallmenu li.truetrue::before { background-color: black; opacity: 1; border: none;}
+    .rolldown .smallmenu li::before { content: '선택'; display: inline-block; height: 24px; width: 88px; background-color: white; border: 1px solid black; text-align: center; line-height: 24px; opacity: .4; }
+    .rolldown .smallmenu li.truetrue::before { background-color: black; opacity: 1; border: none; color: white;}
     .rolldown .smallmenu li button { padding: .4rem 0 !important; color: black !important; font-size: .95rem !important; text-align: right; opacity: .4; }
     
 }
@@ -41,14 +46,20 @@
         height: 70px;
     }
 
-    .mobile__allmenu .mobile__menu .mx-auto > ul > li > a { font-size: 2.1rem; }
+    .mobile__allmenu .mobile__menu .mx-auto > ul > li > button { font-size: 2.1rem; }
+
+    .Allslider #mainslide .swiper-slide .imgwrap img { max-width: 450px !important; }
+
+    .texteng { font-size: 40px !important; }
+    .textkor { font-size: 30px !important; }
+    .Allslider #mainslide .swiper-slide .textwraps { left: 60% !important; }
 
     .resbus {
-        position: fixed;
+        position: fixed !important;
         bottom: 0;
         left: 0;
         right: 0;
-        transform: translateY(-33%);
+        transform: translateY(0) !important;
     }
    
     .resbus_wrap { 
@@ -60,10 +71,21 @@
         z-index: 30 !important;
         
     }
+    .gbus .gbuscon .bustab .tabone li button { border-radius: 0 !important; font-size: .75rem !important; padding: .15rem .6rem !important; width: 107px !important; }
+    .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgpart .imgwrap { width: 100% !important; height: 80px !important; margin-bottom: 0 !important;}
+    .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgpart .textregion { font-size: .75rem !important; padding-top: 10px !important;}
+    .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgpart .textadd { font-size: .55rem !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .rolldown .smallmenu li:before { width: 40px !important; height: 17px !important; line-height: 17px !important; font-size: 10px !important; }
 }
 
 @media (max-width: 768px) {
-    .mobile__allmenu .mobile__menu .mx-auto > ul > li > a { font-size: 1.8rem; }
+    .mobile__allmenu .mobile__menu .mx-auto > ul > li > button { font-size: 1.8rem; }
+
+    .Allslider #mainslide .swiper-slide .imgwrap img { max-width: 400px !important; }
+
+    .Allslider #mainslide .swiper-slide .imgwrap  { left: unset !important; right: 0; }
+
+    .Allslider #mainslide .swiper-slide .textwraps { left: 10% !important; }
 
     .br_768 {
         display: block;
@@ -72,6 +94,10 @@
     .zdown {
         z-index: -1;
     }
+    .resbustab {position: fixed !important; bottom: 50px !important;left: 85% !important;transform: translateX(-50%) !important; z-index: 60 !important;}
+    .resbustab button { border-radius: 50% !important; }
+    .resbustab button svg { margin: 0 !important;}
+    .resbustab.oo { left: 50% !important; bottom: 500px !important;}
     .resbus_wrap{
         background-color: black !important;
     }
@@ -84,25 +110,44 @@
         margin: 0 !important;
         color: white !important;
     }
+    .resbus .resbus_wrap .select { width: 100% !important; margin-right:0 }
+    .resbus .resbus_wrap button[type="submit"] { width: 100% !important; }
+    .bestbus h2 { padding-top: 5rem !important;}
     .max-w-screen-ssm {
         max-width: 660px;
     }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 640px) {
+    .mobile__allmenu .mobile__menu .mx-auto > ul > li > button { font-size: 1.5rem; }
+    .mobile__allmenu .mobile__menu .mx-auto > ul > li > button + .mobile__sub a { font-size: 1.5rem; }
+    .Allslider #mainslide .swiper-slide .textwraps { top: 20%; }
+    .gbus .gbuscon .regioncheck .rolldown .smallmenu { right: -50px !important;}
+    .gbus .gbuscon .bustab { transform: translateX(50px); }
+    .gbus .gbuscon .bustab .tabone li { width: 19% !important;}
+    .gbus .gbuscon .bustab .tabone li button { flex-direction: column; }
+    .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-wrapper { animation: none !important; }
+    .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgpart .textregion { overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
     .max-w-screen-xssm {
         max-width: 460px;
     }
 }
 
 @media (max-width: 460px) {
+    .gbus .gbuscon .bustab .tabone li { width: 15% !important; margin-right: 1rem !important; }
+    .gbus .gbuscon .bustab .tabone li button { border: none !important; display: flex !important; justify-content: center !important; align-items: center; padding: 0 !important;}
+    .gbus .gbuscon .bustab .tabone li button span:first-child { display: none;}
+    .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide { margin-right: 15px !important; }
+    .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgwrap::after { content: none !important; }
+    .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgwrap::before { content: none !important; }
+    .rolldown .smallmenu li:before { content: none !important; }
+    .rolldown .smallmenu li button { font-size: .95rem !important; }
+    .infoshow { border: none !important; }
+    .infoshow li { border: none !important; }
+    .map { overflow: hidden; }
+    .map svg { width: 154% !important; transform: translateX(-26%); }
+    .resbustab { left: 75% !important; }
     .max-w-screen-xxssm {
-        max-width: 360px;
-    }
-}
-
-@media (max-width: 360px) {
-    .max-w-screen-xxxssm {
-        max-width: 240px;
+        max-width: 300px;
     }
 }

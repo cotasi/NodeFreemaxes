@@ -82,9 +82,20 @@ const Store: React.FC<Props> = () => {
 
     console.log(JSON.stringify(mergedData, null, 2)); 
 
+    const storebreak = {
+        768: {
+            slidsPerView: 2,
+            spaceBetween: 15
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 35
+        }
+    }
+
     return (
         <div className="stores">
-            <div className="mx-auto max-w-screen-xl">
+            <div className="mx-auto xl:max-w-screen-xl lg:max-w-screen-lg sm:max-w-screen-sm max-w-screen-ssm max-w-screen-xssm max-w-screen-xxssm max-w-screen-xxxssm">
                 <h2>스토어 아이템들</h2>
                 <p>등록된 스토어에서 판매되는 아이템들을 소개합니다.</p>
                 <div className="storetabs">
@@ -96,7 +107,7 @@ const Store: React.FC<Props> = () => {
                 </div>
                 <div className="storecon">
                     {
-                        mergedData?.map((mdd,idx)=>(<Swiper className={`${tabs.tabson && tabs.tabsidx === idx ? 'swiperon': ''}`} slidesPerView={4} spaceBetween={35}>
+                        mergedData?.map((mdd,idx)=>(<Swiper className={`${tabs.tabson && tabs.tabsidx === idx ? 'swiperon': ''}`} breakpoints={storebreak}>
                             {
                                 mdd.store_detail?.map((sd)=>(
                                     <SwiperSlide>

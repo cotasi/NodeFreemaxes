@@ -1,16 +1,14 @@
-.resbus { position: relative; transform: translateY(-130%); z-index: 70; opacity: 0; overflow: hidden; height: 0; }
+.resbus { position: relative; transform: translateY(-130%); z-index: 40; opacity: 0; overflow: hidden; height: 0; }
 .resbus.formon { opacity: 1; height: auto; overflow: visible; }
 .resbus .resbus_wrap { background-color: white; padding: 0.85rem 3.7rem; box-shadow: 0 4px 4px 0 rgba(0,0,0,.25); border-radius: 60px; }
-.resbus .resbus_wrap > form > h2 { font-size: 1.1rem; margin-right: 4rem; letter-spacing: -1px; font-weight: 500 !important; }
-.resbus .resbus_wrap > form .checks { width: 15%; border-radius: 4px; border: 1px solid rgba(0,0,0,.2); overflow: hidden; margin-right: 4.8rem; }
-.resbus .resbus_wrap > form .checks > div { width: 50%; }
-.resbus .resbus_wrap > form .checks input[type="checkbox"] { display: none; }
-.resbus .resbus_wrap > form .checks input[type="checkbox"] + label { display: inline-block; width: 100%; text-align: center; font-size: 0.95rem; letter-spacing: -0.5px; padding: .5rem 0; background-color: #fafafa; }
-.resbus .resbus_wrap > form .checks input[type="checkbox"]:checked + label { background-color: black; color: white; }
-.resbus .resbus_wrap > form button[type="submit"] { background-color: #da293b; color: white; font-size: 1rem; padding: .75rem 1rem; border-radius: 4px; line-height: 1.1;}
+.resbus .resbus_wrap > form > h2 { font-size: 1.1rem; white-space: nowrap; margin-right: 4rem; letter-spacing: -1px; font-weight: 500 !important; }
+.resbus .resbus_wrap .select { width: 25%; background-color: #fafafa; border: 2px solid rgba(0,0,0,.2); border-radius: 4px; overflow: hidden; }
+.resbus .resbus_wrap .select button { padding: 8px 0; width: 50%;}
+.resbus .resbus_wrap .select button.ons { background-color: black; color: white; }
+.resbus .resbus_wrap button[type="submit"] { background-color: #DA293B;width: 9%;color: white;font-size: 16px;padding: 10px 0;border-radius: 8px; }
 
 .resbustab .bustab { margin-top: 1rem;}
-.resbustab .bustab li button { width: 125px; height: 125px; background-color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 4px 0 rgba(0,0,0,.25); margin-right: 2.3rem; border-radius: 12px; }
+.resbustab .bustab li button { width: 125px; height: 125px; background-color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 4px 4px 0 rgba(0,0,0,.25); border-radius: 12px; }
 .resbustab .bustab li button.btnon { background-color: #ff2f06; position: relative;}
 .resbustab .bustab li button.btnon .svgwrap img:first-child { display: none;}
 .resbustab .bustab li button.btnon .svgwrap img:last-child { display: inline;}

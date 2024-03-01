@@ -53,6 +53,17 @@ const Gbus = () => {
     const changearr = Busregion.filter((items)=>(items.region_name === regionbtn.regicon));
     const number1 = 1;
 
+    const swiperbreakpoint = {
+        660: {
+            slidesPerView: 4,
+            spaceBetween: 50
+        },
+        300: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        }
+    }
+
     useEffect(()=>{
         setregionbtn({
             region: false,
@@ -72,7 +83,7 @@ const Gbus = () => {
     },[])
     return (
         <div className="gbus">
-           <div className="mx-auto xl:max-w-screen-xl lg:max-w-screen-lg max-w-screen-sm">
+           <div className="mx-auto xl:max-w-screen-xl lg:max-w-screen-lg sm:max-w-screen-sm max-w-screen-ssm max-w-screen-xssm max-w-screen-xxssm max-w-screen-xxxssm">
                 <h2>경기도 버스 정보 살펴보기</h2>
                 <p>경기도에서 출퇴근 버스는 어떤 것이 있는지 알아봅니다.</p>
                 <div className="gbuscon flex">
@@ -94,7 +105,7 @@ const Gbus = () => {
                                 {
                                     changearr.map((busion,iiiii)=>(
                                         <li>
-                                            <button className={`${tabone.taboneon && tabone.taboneidx === iiiii ? 'taboneons': ''}`} onClick={()=>{settabone({taboneidx:iiiii,taboneon: !tabone.taboneon }); settabtwo({tabtwoon: !tabtwo.tabtwoon, tabtwoidx: iiiii})}}>
+                                            <button className={`${tabone.taboneon && tabone.taboneidx === iiiii ? 'taboneons': ''}`} onClick={()=>{settabone({taboneidx:iiiii,taboneon: true }); settabtwo({tabtwoon: true, tabtwoidx: iiiii})}}>
                                                 <span>{busion.bus_com}</span>
                                                 <span>{busion.bus_name}</span>
                                             </button>
@@ -106,7 +117,7 @@ const Gbus = () => {
                         <div className="tabtwo">
                             {
                                 changearr.map((carr,arridx)=>(
-                                    <Swiper slidesPerView={4} spaceBetween={50} id="tabswiper" className={`${tabtwo.tabtwoon && tabtwo.tabtwoidx === arridx ? 'blocks': ''}`}>
+                                    <Swiper slidesPerView={4} breakpoints={swiperbreakpoint} spaceBetween={50} id="tabswiper" className={`${tabtwo.tabtwoon && tabtwo.tabtwoidx === arridx ? 'blocks': ''}`}>
                                         {
                                             carr.bus_stop.split('|').map((sl,dd)=>(
                                                 <>

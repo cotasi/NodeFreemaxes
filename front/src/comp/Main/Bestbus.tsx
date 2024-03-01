@@ -106,7 +106,7 @@ const Bestbus = () => {
 
     return (
         <div className="bestbus">
-            <div className="mx-auto xl:max-w-screen-xl lg:max-w-screen-lg max-w-screen-sm ssm:max-w-screen-ssm sssm:max-w-screen-sssm">
+            <div className="mx-auto xl:max-w-screen-xl lg:max-w-screen-lg sm:max-w-screen-sm max-w-screen-ssm max-w-screen-xssm max-w-screen-xxssm max-w-screen-xxxssm">
                 <h2>베스트 이용 버스</h2>
                 <p>수도권 버스 이용자 중 가장 많이 이용된 버스들을 선정하였습니다.</p>
                 <div id="bestswiper">

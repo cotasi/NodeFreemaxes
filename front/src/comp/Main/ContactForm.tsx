@@ -20,7 +20,7 @@ const ContactForm = () => {
     const [formdata,setformdata] = useState({});
     const [resformdata,setresformdata] = useState({});
     const num = 5;
-/* 
+
 useEffect(()=>{
        // 네이버 지도 생성
         const mapOptions = {
@@ -40,7 +40,7 @@ useEffect(()=>{
         return () => {
             marker.setMap(null);
         };
-    },[centerbutton]) */
+    },[centerbutton])
 
     const result = Busregion.find((busRoute) => {
         return busRoute.bus_stop.includes(submitdata);
