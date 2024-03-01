@@ -20,7 +20,7 @@ const Main = () => {
     
     return (
         <main>
-            <Modal />
+            {/* <Modal /> */}
             <Slider />
             <Bestbus />
             <Distribtion />
