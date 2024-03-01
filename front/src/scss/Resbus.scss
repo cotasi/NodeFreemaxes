@@ -1,3 +1,4 @@
+@charset "utf-8";
 .resbus { position: relative; transform: translateY(-130%); z-index: 40; opacity: 0; overflow: hidden; height: 0; }
 .resbus.formon { opacity: 1; height: auto; overflow: visible; }
 .resbus .resbus_wrap { background-color: white; padding: 0.85rem 3.7rem; box-shadow: 0 4px 4px 0 rgba(0,0,0,.25); border-radius: 60px; }
