@@ -7,6 +7,7 @@
 .gbus .gbuscon .regioncheck .rolldown .smallmenu { top: 100%; left: 0; right: 0; text-align: center; background-color: black; height: 0; overflow: hidden; transition: all .4s; }
 .gbus .gbuscon .regioncheck .rolldown .smallmenu.smallon { height: 560px; }
 .gbus .gbuscon .regioncheck .rolldown .smallmenu li button { padding: 1rem 0; color: white; }
+.gbus .gbuscon .regioncheck .rolldown .smallmenu li button.trueindex { opacity: 1;}
 .gbus .gbuscon { height: 550px; }
 .gbus .gbuscon .bustab { width: 75%;}
 .gbus .gbuscon .bustab .tabone li { margin-right: 1rem;  width: 25%; display: flex; justify-content: center; }

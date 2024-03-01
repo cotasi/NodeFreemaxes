@@ -13,11 +13,19 @@ const Distribtion = () => {
         mapcon: string
     }
 
+    type bb = {
+        bt: boolean
+    }
+
     const [mapreg,setmapreg] = useState<maps>({
         mapon: true,
         mapidx: 1,
         mapcon: Mapinfo[1].text
     });
+
+    const [b,setb] = useState<bb>({
+        bt: false
+    })
 
     useEffect(()=>{
         setmapreg({ mapon: true,
@@ -41,11 +49,11 @@ const Distribtion = () => {
                                 ))
                             }
                             </ul>
-                            <div className="togbtn xl:hidden block relative">
-                                <button><span>{mapreg.mapcon}</span><KeyboardArrowDownIcon /></button>
-                                <ul className="togsub absolute top-full">
+                            <div className={`togbtn xl:hidden block relative ${b.bt ? 'tover': ''}`}>
+                                <button onClick={()=>{setb({bt:!b.bt})}}><span>{mapreg.mapcon}</span><KeyboardArrowDownIcon /></button>
+                                <ul className={`${b.bt ? 'ton': ''} togsub absolute top-full`}>
                                     {
-                                        Mapinfo.map((eel)=>(<li><button>{eel.text}</button></li>))
+                                        Mapinfo.map((eel,idx)=>(<li><button onClick={()=>{setb({bt:false}); setmapreg({...mapreg,mapidx:idx,mapcon: eel.text})}}>{eel.text}</button></li>))
                                     }
                                 </ul>
                             </div>
@@ -71,10 +79,10 @@ const Distribtion = () => {
                             }
                         </div>
                     </div>
-                    <div className="mapwrap" style={{width: '60%'}}>
+                    <div className="mapwrap" style={{width: '58%', height: '50%', border: '1px solid black'}}>
                         <div className="map" style={{height:'100%'}}>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox='0 0 768 800'>
-                            <g stroke="white" id="firsts">{Mapinfo.map((maps,idx)=>(<path className={`OUTLINE ${mapreg.mapon && mapreg.mapidx === idx ? 'mapcolor': ''}`} d={maps.d} onClick={()=>{setmapreg({mapon:true, mapidx:idx})}}></path>))}</g>
+                            <g stroke="white" id="firsts">{Mapinfo.map((maps,idx)=>(<path className={`OUTLINE ${mapreg.mapon && mapreg.mapidx === idx ? 'mapcolor': ''}`} d={maps.d} onClick={()=>{setmapreg({mapcon:maps.text,mapon:true, mapidx:idx})}}></path>))}</g>
                             <g id="seconds">{Mapinfo.map((maped,idxx)=>(<text className={`text ${mapreg.mapon && mapreg.mapidx === idxx ? 'textcolor': ''}`} x={maped.x} y={maped.y}>{maped.text}</text>))}</g>
                             </svg>
                         </div>

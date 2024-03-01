@@ -28,7 +28,6 @@ const Main = () => {
             <Store />
             <Business />
             <Contact />
-            <Study />
         </main>
     );
 };

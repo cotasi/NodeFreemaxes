@@ -30,7 +30,6 @@ const Kings = () => {
                     <Route path="/reser/busres" element={<Reservation one={1} two={1} />}></Route>
                 </Route>
             </Routes>
-            <Footer />
         </div>
     );
 };

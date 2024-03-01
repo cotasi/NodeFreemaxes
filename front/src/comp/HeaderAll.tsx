@@ -1,176 +1,105 @@
 import * as React from 'react';
 import {useEffect,useState} from 'react';
 import { Link } from 'react-router-dom';
-import SearchIcon from '@mui/icons-material/Search';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import LockIcon from '@mui/icons-material/Lock';
-import LockOpenIcon from '@mui/icons-material/LockOpen';
-import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
-import LocalMallIcon from '@mui/icons-material/LocalMall';
 
 import '../scss/menu.scss';
+import '../scss/media.css';
 
 import Menu from '../Data/menuback.json';
+import CloseIcon from '@mui/icons-material/Close';
+
 
 export default function HeaderAll() {
-  const [mobileon,setmobileon] = useState({
-    mobileallon: false,
-    mobilesubon: false,
-    mobilesubidx: -1
+  const [scrolly,setscrolly] = useState(0);
+  const [mmenu,setmmenu] = useState({
+    realmobileon: false,
+    mobileon: false,
+    mobileidx: 0
   })
 
+  const handlescroll = () =>{
+    setscrolly(window.scrollY);
+  }
+  React.useEffect(()=>{
+    document.querySelector('.mainmenu')?.addEventListener('mouseover',()=>{
+      document.querySelector('.logo img:first-child')?.classList.add('img1');
+      document.querySelector('.logo img:last-child')?.classList.add('img2');
+      document.querySelector('header')?.classList.add('bd');
+    });
+    document.querySelector('.mainmenu')?.addEventListener('mouseleave',()=>{
+      document.querySelector('.logo img:first-child')?.classList.remove('img1');
+      document.querySelector('.logo img:last-child')?.classList.remove('img2');
+      document.querySelector('header')?.classList.remove('bd');
+    });
+    
+  },[])
+
+  useEffect(()=>{
+    window.addEventListener('scroll',()=>{
+      handlescroll();
+      console.log(scrolly);
+      if (scrolly> 0.5) { document.querySelector('header')?.classList.add('scrolled');
+      document.querySelector('.logo img:first-child')?.classList.add('img1');
+      document.querySelector('.logo img:last-child')?.classList.add('img2'); }
+    return () => {
+     window.removeEventListener('scroll',()=>{
+      handlescroll();
+      if(scrolly <= 0) {
+      document.querySelector('header')?.classList.remove('scrolled');
+      document.querySelector('.logo img:first-child')?.classList.remove('img1');
+      document.querySelector('.logo img:last-child')?.classList.remove('img2'); 
+      }
+     })
+    }
+  })},[scrolly])
+
+  useEffect(()=>{
+    setmmenu({...mmenu,mobileon:true})
+  },[])
   return (
-    <header className="bg-white">
-      <div className="first-menu bg-white relative">
-       <nav className="mx-auto max-w-screen-1280 flex justify-between items-center relative">
-        <ul className="sns flex">
-          <li><a href="https://www.youtube.com/">
-                  <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M14.8389 4.05538C14.8701 3.14955 14.6729 2.25049 14.2656 1.44169C13.9893 1.10983 13.6059 0.885866 13.1821 0.808841C11.4291 0.649062 9.66897 0.583573 7.90908 0.612657C6.15561 0.582253 4.40177 0.645628 2.65501 0.802513C2.30966 0.865619 1.99007 1.02834 1.73523 1.27082C1.16824 1.79609 1.10524 2.69475 1.04225 3.45417C0.950843 4.81959 0.950843 6.18964 1.04225 7.55506C1.06047 7.98249 1.12383 8.40678 1.23124 8.82077C1.3072 9.1404 1.46089 9.43612 1.67853 9.68145C1.9351 9.93678 2.26214 10.1088 2.61721 10.1751C3.9754 10.3435 5.34392 10.4133 6.71211 10.3839C8.91706 10.4156 10.8511 10.3839 13.138 10.2067C13.5017 10.1445 13.838 9.97227 14.1018 9.71309C14.2782 9.53584 14.41 9.31889 14.4861 9.08024C14.7114 8.38576 14.8221 7.65892 14.8137 6.92854C14.8389 6.57414 14.8389 4.43509 14.8389 4.05538ZM6.48532 7.30825V3.39088L10.2148 5.35906C9.16905 5.94129 7.78939 6.59945 6.48532 7.30825Z" fill="white"/>
-                  </svg>
-               </a></li>
-          <li><a href="https://www.facebook.com/?locale=ko_KR">
-              <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                 <path d="M6.01509 3.14044H7.15789V1.06507C6.60458 1.0033 6.04862 0.9728 5.49232 0.973704C3.83891 0.973704 2.70827 2.05707 2.70827 4.04107V5.75096H0.842102V8.07432H2.70827V14.0263H4.94524V8.07432H6.80533L7.08495 5.75096H4.94524V4.26949C4.94524 3.58423 5.11544 3.14044 6.01509 3.14044Z" fill="white"/>
-              </svg>
-              </a></li>
-          <li><a href="https://twitter.com/">
-                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.8421 2.25553C14.2902 2.50062 13.7066 2.66264 13.1094 2.73655C13.7395 2.35122 14.2116 1.74504 14.4383 1.03044C13.8462 1.39125 13.198 1.64546 12.522 1.78203C12.0701 1.28039 11.4684 0.94648 10.8112 0.832655C10.1539 0.71883 9.47837 0.831533 8.89044 1.15309C8.30252 1.47464 7.83549 1.98686 7.56259 2.60941C7.28969 3.23196 7.22636 3.92962 7.38253 4.59298C6.18535 4.531 5.01429 4.21189 3.94544 3.65639C2.87658 3.1009 1.93384 2.32144 1.17845 1.36865C0.913502 1.84228 0.774282 2.37866 0.774635 2.92445C0.773695 3.43131 0.895205 3.93054 1.12834 4.3777C1.36148 4.82486 1.69902 5.20606 2.1109 5.48738C1.63218 5.47404 1.16368 5.34254 0.745266 5.10406V5.14164C0.748854 5.85182 0.991957 6.53892 1.43345 7.08674C1.87495 7.63455 2.48774 8.00945 3.16816 8.14801C2.90624 8.22961 2.6343 8.27263 2.36053 8.27578C2.17102 8.27352 1.98199 8.25593 1.79519 8.22317C1.98895 8.83408 2.36392 9.36796 2.86792 9.75053C3.37192 10.1331 3.97989 10.3453 4.60721 10.3577C3.5479 11.211 2.24003 11.6766 0.892109 11.6805C0.646688 11.6813 0.401462 11.6663 0.157898 11.6354C1.53412 12.545 3.13792 13.0279 4.77608 13.0258C5.90654 13.0379 7.02801 12.8192 8.07498 12.3825C9.12194 11.9459 10.0734 11.3001 10.8739 10.4828C11.6743 9.66556 12.3076 8.69321 12.7368 7.62258C13.166 6.55195 13.3825 5.4045 13.3737 4.24725C13.3737 4.11948 13.3737 3.98419 13.3737 3.84891C13.9498 3.40908 14.4467 2.8699 14.8421 2.25553Z" fill="white"/>
-                  </svg>
-
-              </a></li>
-        </ul>
-        <h1 className="logo absolute"><Link to="/"><img src="/images/logo.svg" alt="logo" /></Link></h1>
-        <div className="icons_wrapper">
-          <ul className="icons xl:flex hidden items-center">
-            <li>
-              <Link to="/">
-                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_472_32)">
-                    <path d="M12.7045 5.17734C12.7045 2.32306 10.1459 0 6.99768 0C3.85406 0 1.29552 2.32306 1.29552 5.17734V6.83847H0V16H1.30481H3.02289H10.9818H12.6998H14.0046V6.83847H12.7091V5.17734H12.7045ZM8.34428 13.7697H5.65108L6.3058 10.9702C5.7068 10.7299 5.28889 10.186 5.28889 9.55362C5.28889 8.69776 6.05506 8.00211 6.99768 8.00211C7.9403 8.00211 8.70647 8.69776 8.70647 9.55362C8.70647 10.186 8.28856 10.7299 7.68955 10.9702L8.34428 13.7697ZM10.9957 6.83847H3.00431V5.17734C3.00431 3.17892 4.79668 1.55152 6.99768 1.55152C9.19867 1.55152 10.991 3.17892 10.991 5.17734V6.83847H10.9957Z" fill="#12416B"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0_472_32">
-                    <rect width="14" height="16" fill="white"/>
-                    </clipPath>
-                    </defs>
-                </svg>
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-              <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_472_347)">
-                  <path d="M15.704 14C15.5422 14 15.4081 13.8666 15.4081 13.7056V12.0729C15.4081 10.0673 13.7667 8.43454 11.7504 8.43454H7.84014C5.82387 8.43454 4.18244 10.0673 4.18244 12.0729V13.7056C4.18244 13.8666 4.04828 14 3.88651 14C3.72473 14 3.59058 13.8666 3.59058 13.7056V12.0729C3.59058 9.74152 5.49637 7.84581 7.84014 7.84581H11.7504C14.0942 7.84581 15.9999 9.74152 15.9999 12.0729V13.7056C15.9999 13.8666 15.8697 14 15.704 14Z" fill="#12416B"/>
-                  <path d="M9.79724 6.95879C7.86777 6.95879 6.29736 5.39669 6.29736 3.47743C6.29736 1.55817 7.86777 -0.00392532 9.79724 -0.00392532C11.7267 -0.00392532 13.2971 1.55817 13.2971 3.47743C13.2932 5.39669 11.7228 6.95879 9.79724 6.95879ZM9.79724 0.58873C8.19527 0.58873 6.88922 1.88394 6.88922 3.48136C6.88922 5.07485 8.19132 6.37398 9.79724 6.37398C11.3992 6.37398 12.7053 5.07878 12.7053 3.48136C12.7013 1.88394 11.3992 0.58873 9.79724 0.58873Z" fill="#12416B"/>
-                  <path d="M2.48587 8.43061C2.3241 8.43061 2.18994 8.29717 2.18994 8.13625V3.77965C2.18994 3.61873 2.3241 3.48528 2.48587 3.48528C2.64765 3.48528 2.7818 3.61873 2.7818 3.77965V8.13625C2.7818 8.30109 2.65159 8.43061 2.48587 8.43061Z" fill="#12416B"/>
-                  <path d="M4.67571 6.25231H0.295931C0.134155 6.25231 0 6.12279 0 5.95795C0 5.79703 0.134155 5.66358 0.295931 5.66358H4.67571C4.83748 5.66358 4.97164 5.79703 4.97164 5.95795C4.97164 6.12279 4.84143 6.25231 4.67571 6.25231Z" fill="#12416B"/>
-                  </g>
-                  <defs>
-                  <clipPath id="clip0_472_347">
-                  <rect width="16" height="14" fill="white"/>
-                  </clipPath>
-                  </defs>
-              </svg>
-                </Link>
-            </li>
-            <li>
-              <form action="">
-                <input type="text" placeholder="검색어를 입력해주세요." />
-                <button type="submit"><span>검색하기</span><SearchIcon /></button>
-              </form>
-            </li>
-            <li>
-              <Link to="/">
-                <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_473_825)">
-                  <path d="M9.57264 11.449H2.3042C2.07684 11.449 1.89307 11.241 1.89307 10.9849C1.89307 10.7288 2.07684 10.5209 2.3042 10.5209H9.57264C9.8 10.5209 9.98377 10.7288 9.98377 10.9849C9.98377 11.241 9.8 11.449 9.57264 11.449Z" fill="white"/>
-                  <path d="M7.21072 17.3409C7.07407 17.3433 6.88323 17.3162 6.74423 17.1811C6.39082 16.8381 6.59462 16.0345 7.18716 15.4259L13.6275 8.83141C13.8866 8.56589 14.1517 8.46955 14.2989 8.4672C14.339 8.4672 14.3943 8.47308 14.4262 8.50362L15.2378 9.29195C15.3356 9.38711 15.2626 9.75719 14.9304 10.0979L8.49124 16.6924C8.10485 17.0871 7.61479 17.3362 7.21072 17.3409Z" fill="#12416B"/>
-                  <path d="M14.7808 8.23693C14.7808 8.23693 14.9139 8.10417 15.0753 7.94321C15.2378 7.78108 15.5571 7.83513 15.7856 8.06305C16.0142 8.29097 16.0683 8.60936 15.9058 8.77149C15.7432 8.93362 15.6113 9.0652 15.6113 9.0652" fill="#12416B"/>
-                  <path d="M6.69118 17.3362C6.63935 17.2857 6.60165 17.2258 6.57338 17.1576C6.46264 17.2657 6.19523 17.563 6.07507 18C6.53097 17.8625 6.82783 17.5677 6.91972 17.4654C6.83961 17.4419 6.75951 17.402 6.69118 17.3362Z" fill="#12416B"/>
-                  <path d="M14.9523 8.89803L12.9806 10.8644L13.3138 11.1967L15.2855 9.23032L14.9523 8.89803Z" fill="white"/>
-                  <path d="M10.1805 15.9393H12.149C12.473 15.9393 12.738 15.675 12.738 15.3519V13.2406" fill="#12416B"/>
-                  <path d="M12.738 0.587429C12.738 0.264343 12.473 0 12.149 0H0.589015C0.265057 0 0 0.264343 0 0.587429V15.3519C0 15.675 0.265057 15.9393 0.589015 15.9393H5.91842L12.738 8.90307V0.587429Z" fill="#12416B"/>
-                  <path d="M9.98374 2.51537H3.01099V3.63149H9.98374V2.51537Z" fill="white"/>
-                  <path d="M11.1618 5.74623H1.83301V6.86235H11.1618V5.74623Z" fill="white"/>
-                  <path d="M11.1618 8.93127H1.83301V10.0474H11.1618V8.93127Z" fill="white"/>
-                  <path d="M8.54071 13.2336H1.83301V12.1175H9.62214L8.54071 13.2336Z" fill="white"/>
-                  </g>
-                  <defs>
-                  <clipPath id="clip0_473_825">
-                  <rect width="16" height="18" fill="white"/>
-                  </clipPath>
-                  </defs>
-                </svg>
-
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_473_841)">
-                <path d="M16.1134 5.19966C16.1134 5.50834 15.9344 5.7598 15.7128 5.7598H15.1252C14.9049 5.7598 14.726 5.50967 14.726 5.19966V2.4069C14.726 2.09689 14.9049 1.84676 15.1252 1.84676H15.7128C15.9331 1.84676 16.1134 2.09689 16.1134 2.4069V5.19966Z" fill="#12416B"/>
-                <path d="M15.9798 14.2352C15.9798 14.492 15.7475 14.7009 15.4604 14.7009H15.3789C15.0918 14.7009 14.8595 14.492 14.8595 14.2352V5.52829C14.8595 5.2715 15.0918 5.06261 15.3789 5.06261H15.4604C15.7475 5.06261 15.9798 5.2715 15.9798 5.52829V14.2352Z" fill="#12416B"/>
-                <path d="M16.5126 5.35799C16.4391 5.35799 16.379 5.29811 16.379 5.22494V2.78477L15.897 2.40557C15.8396 2.36034 15.8289 2.27651 15.8743 2.21797C15.9197 2.16076 16.0038 2.15011 16.0626 2.19668L16.5954 2.61579C16.6274 2.64107 16.6461 2.67966 16.6461 2.7209V5.22627C16.6461 5.29811 16.5874 5.35799 16.5126 5.35799Z" fill="#474747"/>
-                <path d="M16.6662 9.45065C16.6662 9.70079 16.4632 9.90436 16.2108 9.90436H13.9782C13.7271 9.90436 13.5228 9.70079 13.5228 9.45065V7.23135C13.5228 6.98122 13.7271 6.77765 13.9782 6.77765H16.2108C16.4619 6.77765 16.6662 6.98122 16.6662 7.23135V9.45065Z" fill="white"/>
-                <path d="M16.2108 10.237H13.9781C13.5428 10.237 13.189 9.8844 13.189 9.45065V7.23135C13.189 6.79761 13.5428 6.44502 13.9781 6.44502H16.2108C16.6461 6.44502 17 6.79761 17 7.23135V9.45065C17 9.8844 16.6461 10.237 16.2108 10.237ZM13.9781 7.11028C13.9114 7.11028 13.8566 7.16483 13.8566 7.23135V9.45065C13.8566 9.51718 13.9114 9.57173 13.9781 9.57173H16.2108C16.2776 9.57173 16.3323 9.51718 16.3323 9.45065V7.23135C16.3323 7.16483 16.2776 7.11028 16.2108 7.11028H13.9781Z" fill="#12416B"/>
-                <path d="M14.3294 16.0686C14.3294 16.5809 13.9087 17 13.3946 17H0.934726C0.420627 17 0 16.5809 0 16.0686V0.931361C0 0.419112 0.420627 0 0.934726 0H13.3946C13.9087 0 14.3294 0.419112 14.3294 0.931361V16.0686Z" fill="#12416B"/>
-                <path d="M11.4063 4.84042C11.4063 5.20631 11.1058 5.50567 10.7386 5.50567H3.59064C3.22342 5.50567 2.92297 5.20631 2.92297 4.84042V3.54449C2.92297 3.1786 3.22342 2.87924 3.59064 2.87924H10.7386C11.1058 2.87924 11.4063 3.1786 11.4063 3.54449V4.84042Z" fill="white"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_473_841">
-                  <rect width="17" height="17" fill="white"/>
-                </clipPath>
-                </defs>
-              </svg>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="ham_btn xl:hidden inline-flex">
-            <button className={`${mobileon.mobileallon? 'hamchn' : ''}`}onClick={()=>{setmobileon({...mobileon,mobileallon:!mobileon.mobileallon}); document.body.classList.toggle('dimmed');}}>
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-        </div>
-        <div className={`mobile_menu absolute xl:hidden ${mobileon.mobileallon ? 'mobileon': ''}`}>
-          <ul className="icon_wraps flex itmes-center justify-center">
-            <li><button><span className="sr_only">찾기</span><SearchIcon /></button></li>
-            <li><Link to="/login"><span className="sr_only">로그인</span><LockIcon /></Link></li>
-            <li><Link to="/join"><span className="sr_only">회원가입</span><SubscriptionsIcon /></Link></li>
-            <li><button><span className="sr_only">카트 추가</span><LocalMallIcon /></button></li>
-          </ul>
-          <ul className="mobile_menu_wrap">
-            {
-              Menu.map((menueses,iiii)=>(<li><button className={`w-full flex justify-between items-center`} onClick={()=>{setmobileon({...mobileon,mobilesubon: !mobileon.mobilesubon,mobilesubidx:iiii})}}><span>{menueses.menu1}</span><KeyboardArrowDownIcon></KeyboardArrowDownIcon></button>
-                                      <ul className={`mobile_sub ${mobileon.mobileallon && mobileon.mobilesubon && mobileon.mobilesubidx === iiii ? 'subon': ''}`}>
-                                        {
-                                          menueses.menu2.map((d22)=>(<li><Link to={d22.href}>{d22.name}</Link></li>))
-                                        }
-                                      </ul>
-                                    </li>))
-            }
-          </ul>
-        </div>
-       </nav>
-      </div>
-      <div className="second-menu xl:flex hidden">
-        <ul className="mx-auto max-w-screen-1280 flex j-center items-center">
+    <header className="fixed">
+       <nav className="mx-auto xl:max-w-screen-xl lg:max-w-screen-lg sm:max-w-screen-sm max-w-screen-ssm max-w-screen-xssm max-w-screen-xxssm max-w-screen-xxxssm flex justify-between items-center h-full">
+        <h1 className="logo "><Link to="/"><img src="/images/logo_new.svg" alt="logo" />
+                                           <img src="/images/logo_new2.svg" alt="logo2"></img></Link></h1>
+        <ul className="mainmenu xl:flex hidden items-center">
           {
-            Menu.map((menues)=>(<li><Link to={menues.href1} className="relative">{menues.menu1}
-                                    <ul className="smenu absolute">
-                                      {
-                                        menues.menu2.map((menutwo)=>(<li><Link to={menutwo.href}>{menutwo.name}</Link></li>))
-                                      }
-                                    </ul>
-                                    </Link></li>))
+            Menu.map((mn)=>(<li className="relative"><Link to={mn.href1}>{mn.menu1}</Link>
+                                <ul className="smallmn absolute top-full">
+                                  {
+                                    mn.menu2.map((smn)=>(<li><Link to={smn.href}>{smn.name}</Link></li>))
+                                  }
+                                </ul>
+                            </li>))
           }
         </ul>
-      </div>
+        <div className="mobile__header xl:hidden">
+          <button className="flex justify-between items-center" onClick={()=>{setmmenu({...mmenu,realmobileon: true})}}>
+            <span><div></div><div></div><div></div><div></div></span>
+            <span>MENU</span>
+          </button>
+        </div>
+       </nav>
+       <div className={`mobile__allmenu xl:hidden block ${mmenu.realmobileon ? 'over': ''}`}>
+          <div className="topimg">
+            <img src="/images/logo_white.svg" alt="white" />
+            <button onClick={()=>{setmmenu({...mmenu,realmobileon:false})}}><span className="sr_only">엑스 버튼</span><CloseIcon /></button>
+          </div>
+          <div className="mobile__menu relative">
+            <div className="mx-auto xl:max-w-screen-xl lg:max-w-screen-lg sm:max-w-screen-sm max-w-screen-ssm max-w-screen-xssm max-w-screen-xxssm max-w-screen-xxxssm">
+            <ul>
+                {
+                  Menu.map((mm,idx)=>(<li ><button onClick={()=>{setmmenu({...mmenu,mobileon:true,mobileidx:idx})}} className={`${mmenu.mobileon && mmenu.mobileidx === idx ? 'keke': ''}`}>{mm.menuen}</button>
+                    <ul className="absolute mobile__sub">
+                      {
+                        mm.menu2.map((mm2)=>(<li><Link to={mm2.href}>{mm2.name}</Link></li>))
+                      }
+                    </ul>
+                  </li>))
+                }
+            </ul>
+            </div>
+          </div>
+       </div>
     </header>
   );
 }

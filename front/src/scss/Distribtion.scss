@@ -2,17 +2,21 @@
 .distri p { color: rgba(46, 46, 46, 0.4); padding-bottom: 2rem; }
 .distri .districon { padding-bottom: 3rem; }
 .distri .districon .shows { width: 40%;}
-.distri .districon .shows .regionshows { height: 60%; }
+.distri .districon .shows .info { height: 60%; }
+.distri .districon .shows .regionshows { height: 40%; }
 .distri .districon .shows .regionshows > ul { flex-wrap: wrap; margin-bottom: 4rem;}
 .distri .districon .shows .regionshows > ul li { margin-right: .9rem; width: 15%; margin-bottom: 1rem; }
 .distri .districon .shows .regionshows > ul li.buttoncolor button { color: #ce5567; border-bottom: 2px solid #ce5567; }
 .distri .districon .shows .regionshows > ul li button { width: 100%; border-bottom: 2px solid rgba(0,0,0,.6); color: rgba(0,0,0,.6); font-size: .8rem; padding: .5rem 0; }
-.togbtn { margin-bottom: 1.2rem; background-color: white; height: 0; overflow: hidden; }
+.togbtn { margin-bottom: 1.2rem; background-color: white; }
 .togbtn > button { width: 100%; display: flex; justify-content: space-between; padding: 1rem; border-bottom: 1px solid black;}
 .togbtn.tover { border-radius: 4px 4px 0 0; border: 1px solid black; border-bottom: none; }
-.togsub { left: 0; right: 0; }
-.togsub li button { padding: 1rem; }
-.togsub.ton { height: 120px; border-radius: 0 0 4px 4px; border: 1px solid black;}
+.togsub { left: -1px; right: -1px; height: 0; overflow: hidden; background-color: white; transition: all .6s;} 
+.togsub li  {width: 100% !important;}
+.togsub li button { padding: 1rem; width: 100%; text-align: left;}
+.togsub.ton { height: 250px; border-radius: 0 0 4px 4px; border: 1px solid black; border-top: none; overflow-y: auto;}
+.togsub li button:hover { background-color: #000; color: white;}
+.distri .districon .shows { margin-right: 2%;}
 .distri .districon .shows .info .infoshow { width: 100%; border-top: 2px solid black; display: none; }
 .distri .districon .shows .info .infoshow.showing { display: block !important;}
 .distri .districon .shows .info .infoshow li { border-bottom: 1px solid black; padding: 5%;}

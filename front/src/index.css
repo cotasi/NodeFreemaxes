@@ -70,7 +70,7 @@ body {
     z-index: auto !important;
     overflow-x: hidden;
     position: relative;
-    min-height: 260px;
+    min-width: 260px;
 }
 
 body.dimmed::after {

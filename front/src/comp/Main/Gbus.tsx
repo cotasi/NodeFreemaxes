@@ -48,6 +48,8 @@ const Gbus = () => {
         }
     )
 
+    const [lefttab,setlefttab] = useState(false);
+
     const changearr = Busregion.filter((items)=>(items.region_name === regionbtn.regicon));
     const number1 = 1;
 
@@ -70,7 +72,7 @@ const Gbus = () => {
     },[])
     return (
         <div className="gbus">
-           <div className="mx-auto max-w-screen-1280">
+           <div className="mx-auto xl:max-w-screen-xl lg:max-w-screen-lg max-w-screen-sm">
                 <h2>경기도 버스 정보 살펴보기</h2>
                 <p>경기도에서 출퇴근 버스는 어떤 것이 있는지 알아봅니다.</p>
                 <div className="gbuscon flex">
@@ -80,7 +82,7 @@ const Gbus = () => {
                             <ul className={`smallmenu absolute ${regionbtn.region ? 'smallon': ''}`}>
                                 {
                                     Busregion.map((regi,iiii)=>(
-                                        <li><button onClick={()=>{setregionbtn({region:false,regiidx:iiii,regicon:regi.region_name})}}>{regi.region_name}</button></li>
+                                        <li className={`${regionbtn.regiidx === iiii && lefttab ? 'truetrue': ''}`} onClick={()=>{setregionbtn({region:false,regiidx:iiii,regicon:regi.region_name}); setlefttab(true);}}><button className={`${regionbtn.regiidx === iiii && lefttab ? 'trueindex': ''}`} onClick={()=>{setregionbtn({region:false,regiidx:iiii,regicon:regi.region_name}); setlefttab(true);}}>{regi.region_name}</button></li>
                                     ))
                                 }
                             </ul>
