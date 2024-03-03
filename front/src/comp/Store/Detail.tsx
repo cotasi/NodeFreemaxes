@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Store1 from '../../Data/store_1.json';
 import Store2 from '../../Data/store_2.json';
+import '../../scss/detail.scss';
 
 type Nu = {
     il:number

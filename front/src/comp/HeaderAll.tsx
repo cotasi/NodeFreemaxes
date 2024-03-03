@@ -39,13 +39,18 @@ export default function HeaderAll() {
       handlescroll();
       console.log(scrolly);
       if (scrolly> 0.5) { document.querySelector('header')?.classList.add('scrolled');
+      document.querySelector('header')?.classList.add('fixed');
+      document.querySelector('header')?.classList.remove('absolute');
       document.querySelector('.logo img:first-child')?.classList.add('img1');
-      document.querySelector('.logo img:last-child')?.classList.add('img2'); }
+      document.querySelector('.logo img:last-child')?.classList.add('img2');
+     }
     return () => {
      window.removeEventListener('scroll',()=>{
       handlescroll();
-      if(scrolly <= 0) {
+      if(scrolly <= 0.5) {
       document.querySelector('header')?.classList.remove('scrolled');
+      document.querySelector('header')?.classList.remove('fixed');
+      document.querySelector('header')?.classList.add('absolute');
       document.querySelector('.logo img:first-child')?.classList.remove('img1');
       document.querySelector('.logo img:last-child')?.classList.remove('img2'); 
       }
@@ -57,7 +62,7 @@ export default function HeaderAll() {
     setmmenu({...mmenu,mobileon:true})
   },[])
   return (
-    <header className="fixed">
+    <header className="absolute">
        <nav className="mx-auto xl:max-w-screen-xl lg:max-w-screen-lg sm:max-w-screen-sm max-w-screen-ssm max-w-screen-xssm max-w-screen-xxssm max-w-screen-xxxssm flex justify-between items-center h-full">
         <h1 className="logo "><Link to="/"><img src="/images/logo_new.svg" alt="logo" />
                                            <img src="/images/logo_new2.svg" alt="logo2"></img></Link></h1>

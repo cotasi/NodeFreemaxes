@@ -62,11 +62,6 @@
     "href1": "/stores",
     "menu2": [
       {
-        "submenu_id": 9,
-        "name": "스토어 등록",
-        "href": "/stores/makestore"
-      },
-      {
         "submenu_id": 10,
         "name": "커피 스토어",
         "href": "/stores/coffee"

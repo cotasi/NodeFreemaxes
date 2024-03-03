@@ -1,10 +1,12 @@
 @charset "utf-8";
+.store { position: relative; top: 90px; }
 .coffee_list button .imgwrap { padding-top: 70%; max-width: 70%; overflow: hidden; position: relative; left: 50%; transform: translateX(-50%); border-radius: 50%; border: 1px solid rgba(0,0,0,.2); background-color: #f8f8f8; }
 .coffee_list button { width: 100%;}
 .coffee_list button.storeons .imgwrap { border: 2px solid #ff0000; }
 .coffee_list button.storeons .text { color: #ff0000; text-decoration: underline;}
 .coffee_list button .imgwrap img{ position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
 .coffee_list button .text { padding-top: 1rem; font-size: 0.95rem; }
+#storetab .swiper-slide .coffee_list button .imgwrap img[src="https://i.imgur.com/MBBtznj.png"] { max-width: 65%; }
 #storetab .swiper-wrapper { justify-content: center; }
 #storetab { margin-top: 3rem; margin-bottom: 5rem; }
 .store .storecons { margin-bottom: 165px; }

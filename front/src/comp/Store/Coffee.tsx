@@ -35,7 +35,7 @@ const Coffee = () => {
         <div className="store">
             <Submenu one={2} two={1} three={0}/>
             <div className="storetab">
-                <div className="mx-auto max-w-screen-xl">
+                <div className="mx-auto xl:max-w-screen-xl lg:max-w-screen-lg sm:max-w-screen-sm max-w-screen-ssm max-w-screen-xssm max-w-screen-xxssm max-w-screen-xxxssm">
                     <Swiper id="storetab" slidesPerView={9} spaceBetween={5}>
                         {
                             storeall[0].store_detail.map((sdet,idx)=>(
@@ -52,7 +52,7 @@ const Coffee = () => {
                     </Swiper>
                 </div>
                 <div className="storecons">
-                    <div className="mx-auto max-w-screen-xl">
+                    <div className="mx-auto xl:max-w-screen-xl lg:max-w-screen-lg sm:max-w-screen-sm max-w-screen-ssm max-w-screen-xssm max-w-screen-xxssm max-w-screen-xxxssm">
                         <div className="conswrap">
                             <strong>{storeall[0].store_detail.filter((items)=>(items.stores_type === storeall[0].store_detail[storetab.storetabidx].stores_type)).length}개 가 있습니다.</strong>
                             <div className={`conlist flex flex-wrap`} >
