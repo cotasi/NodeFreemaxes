@@ -1,13 +1,13 @@
 @charset "utf-8";
+@media (max-width: 1920px) {
+    .modal .btns button:hover { background-color: #000; color: #fff; }
+}
 @media (max-width: 1410px) {
     .footer .right_side .mainmenu > ul > li > a {
         padding: .9rem 2.1rem !important;
     }
 }
 @media (max-width: 1280px) {
-    header {
-        height: 105.6px;
-    }
     .Allslider #mainslide .swiper-slide .imgwrap img { max-width: 500px !important; }
     .texteng { font-size: 50px !important; }
     .textkor { font-size: 40px !important; }
@@ -40,8 +40,9 @@
 
     .rolldown > button { display: none; }
     .rolldown .smallmenu { border: 1px solid #000; margin-top: 1rem; height: 400px !important; padding: 0 1rem !important; overflow-y: auto !important; background-color: transparent !important;}
-    .rolldown .smallmenu li {text-align: right; display: flex; justify-content: space-between; align-items: center;}
-    .rolldown .smallmenu li::before { content: '선택'; display: inline-block; height: 24px; width: 88px; background-color: white; border: 1px solid black; text-align: center; line-height: 24px; opacity: .4; }
+    .rolldown .smallmenu li {text-align: right; margin: 1rem 0 !important; display: flex; justify-content: space-between; align-items: center;}
+    .rolldown .smallmenu li::before { content: '\F633'; font-family: 'bootstrap-icons' !important; display: inline-block; width: 26px;
+        border-radius: 50%; background-color: white; border: 1px solid black; text-align: center; line-height: 24px; opacity: .4; }
     .rolldown .smallmenu li.truetrue::before { background-color: black; opacity: 1; border: none; color: white;}
     .rolldown .smallmenu li button { padding: .4rem 0 !important; color: black !important; font-size: .95rem !important; text-align: right; opacity: .4; }
     .footer .right_side .mainmenu > ul > li > a { padding: .9rem 1.6rem !important; }
@@ -81,7 +82,21 @@
         z-index: 30 !important;
         
     }
-    .gbus .gbuscon .bustab .tabone li button { border-radius: 0 !important; font-size: .75rem !important; padding: .15rem .6rem !important; width: 107px !important; }
+    .gbus .gbuscon { flex-direction: column; height: auto !important; }
+    .gbus .gbuscon .regioncheck { width: 100% !important; margin-bottom: 1rem !important; }
+    .gbus .gbuscon .regioncheck .rolldown .smallmenu {  border: none !important; border-bottom: 1px solid rgba(0,0,0,.2) !important; position: static !important; display: flex !important; height: auto !important; margin-top: 0 !important;  }
+    .gbus .gbuscon .regioncheck .rolldown { width: 100% !important; }
+    .gbus .gbuscon .regioncheck .rolldown .smallmenu > li { margin: 0 !important; flex: 1; display: flex; justify-content: center; }
+    .gbus .gbuscon .regioncheck .rolldown .smallmenu > li > button:hover { color: #e6007e !important; opacity: 1 !important;  border-bottom: 1px solid #e6007e; }
+    .gbus .gbuscon .regioncheck .rolldown .smallmenu > li:before { content: none !important;  }
+    .gbus .gbuscon .regioncheck .rolldown .smallmenu > li:nth-child(2),
+    .gbus .gbuscon .regioncheck .rolldown .smallmenu > li:nth-child(3),
+    .gbus .gbuscon .regioncheck .rolldown .smallmenu > li:nth-child(4),
+    .gbus .gbuscon .regioncheck .rolldown .smallmenu > li:nth-child(6),
+    .gbus .gbuscon .regioncheck .rolldown .smallmenu > li:nth-child(8) { display: none !important;}
+    .gbus .gbuscon .regioncheck .rolldown .smallmenu > li > button { width: 100% !important; text-align: center !important; }
+    .gbus .gbuscon .bustab .tabone li button {  border-radius: 0 !important; font-size: .75rem !important; padding: .55rem .6rem !important; width: 107px !important; }
+    .gbus .gbuscon .bustab { width: 100% !important; }
     .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgpart .imgwrap { width: 100% !important; height: 80px !important; margin-bottom: 0 !important;}
     .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgpart .textregion { font-size: .75rem !important; padding-top: 10px !important;}
     .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgpart .textadd { font-size: .55rem !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -91,17 +106,16 @@
     .contact .contactcon .mapwrap .forms button[type="submit"] { right: 17px !important; }
     .contact .contactcon { flex-direction: column !important; }
     .mapwrap { height: 320px !important; width: 100% !important;}
+    .mapwrap .map svg {transform: translateY(-35px) translateX(-15px);}
     .realform { width: 100% !important; margin-top: 3rem; }
     .right_side { width: 90% !important; }
     .businesscon > ul { flex-wrap: wrap; }
     .businesscon > ul > li { width: 40% !important; margin-bottom: 3rem; }
     .business .businesscon ul li.btnover { width: 41% !important; }
-    .modal { display: flex !important; width: 70% !important; height: 80% !important; }
     .hidden { display: none !important; }
-    .modal .img { height: 100% !important; width: 95% !important; }
-    .modal .btns { flex-direction: column; justify-content: space-between; align-items: center; height: 100% !important;}
-    .modal .btns button { font-size: 14px !important; margin-top: 30px; width: 80px; }
-    .modal .btns button:last-child { position: static !important; padding: 0 !important; }
+    .forms form input[type="text"] { width: 400px !important; }
+    .contact .contactcon .mapwrap .forms .search_algorithm { width: 400px !important; }
+    .contact .contactcon .mapwrap .forms .search_algorithm.algoon { width: 400px !important;}
 
 }
 
@@ -154,8 +168,6 @@
     .resbus .resbus_wrap button[type="submit"] { width: 100% !important; }
     .Allslider #mainslide .swiper-slide:last-child .imgwrap img { max-width: 200px !important;}
     .bestbus h2 { padding-top: 5rem !important;}
-    .contact .contactcon .mapwrap .forms input[type="text"] { width: 200px !important; }
-    .search_algorithm { width: 200px !important;}
     .footer .left_side .telwrap > div > span:first-child { margin-right: .5rem !important; }
     .districon { flex-direction: column; }
     .shows { width: 100% !important; }
@@ -164,6 +176,8 @@
     .map > svg {transform: translateY(-20%) scale(.7) !important;}
     .businesscon > ul > li { width: 70% !important; margin-bottom: 3rem; }
     .business .businesscon ul li.btnover { width: 71% !important; }
+    .modal { width: 250px !important; height: 350px !important; }
+    .modal .btns button { font-size: .7rem !important; }
     .max-w-screen-ssm {
         max-width: 660px;
     }
@@ -181,12 +195,11 @@
     .mobile__allmenu .mobile__menu .mx-auto > ul > li > button + .mobile__sub a { font-size: 1.5rem; }
     .Allslider #mainslide .swiper-slide .textwraps { top: 20%; }
     .gbus .gbuscon .regioncheck .rolldown .smallmenu { right: -50px !important;}
-    .gbus .gbuscon .bustab { transform: translateX(50px); }
     .gbus .gbuscon .bustab .tabone li { width: 19% !important;}
     .gbus .gbuscon .bustab .tabone li button { flex-direction: column; }
     .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-wrapper { animation: none !important; }
     .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgpart .textregion { overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
-    .map svg { transform: translateY(-10%) scale(.7) !important; }
+    .mapwrap .map svg { transform: translateY(-10%) translateX(-3%) scale(.8) !important; }
     .max-w-screen-xssm {
         max-width: 460px;
     }
@@ -211,17 +224,19 @@
     .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgwrap::after { content: none !important; }
     .gbus .gbuscon .bustab .tabtwo #tabswiper .swiper-slide .imgwrap::before { content: none !important; }
     .rolldown .smallmenu li:before { content: none !important; }
-    .rolldown .smallmenu li button { font-size: .95rem !important; }
+    .rolldown .smallmenu li button { font-size: .85rem !important; }
     .infoshow { border: none !important; }
     .infoshow li { border: none !important; }
-    .map { overflow: hidden; }
-    .map svg { width: 154% !important; transform: translateY(-10%) translateX(-20%) scale(.7) !important; }
+    .mapwrap .map { overflow: hidden; }
+    .mapwrap .map svg { width: 154% !important; transform: translateY(-10%) translateX(-20%) scale(.8) !important; }
     .resbustab { left: 75% !important; z-index: 30 !important;}
     .busr > div:nth-child(3) { width: 60% !important; }
     .busr > div:nth-child(2) { display: none !important;}
     .storetabs > ul { flex-direction: column; justify-content: center; }
     .storetabs > ul > li { display: flex; justify-content: center; }
     .storetabs > ul > li > button { width: 110px; }
+    .stores .storetabs ul li { padding: 0 !important; }
+    .forms form input[type="input"] { width: 250px !important;}
     .max-w-screen-xxssm {
         max-width: 300px;
     }

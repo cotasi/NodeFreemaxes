@@ -1,5 +1,5 @@
 @charset "utf-8";
-header {  z-index: 40; left: 0; right: 0;}
+header {  z-index: 40; left: 0; right: 0; height: 90px; }
 .logo a { display: block;}
 .logo a img:last-child { display: none;}
 .img1 { display: none !important; }
@@ -9,7 +9,7 @@ header.scrolled .mainmenu > li > a { color: black !important; }
 .mainmenu > li > a { padding: 2.4rem 3rem; display: block; font-family: 'Pretendard' !important; font-size: 1.2rem; color: white; }
 .mainmenu .smallmn { padding: 16px 0; padding:0; left: 0; right: 0; text-align: center; font-family: 'Pretendard' !important; font-size: 18px; max-height: 0; min-height: 0; overflow: hidden; transition: all .6s;}
 .mainmenu::after { content:''; z-index:-1; display: block; position: absolute; top: 0; left: 0; right: 0; overflow: hidden; max-height: 0; min-height: 0; background-color: white; transition: all .6s;}
-.mainmenu .smallmn a { display: block; padding-bottom: 32px;  }
+.mainmenu .smallmn a { display: block; padding-bottom: 32px; font-size: 16px;  }
 .mainmenu .smallmn li:last-child a { padding: 0; }
 .mainmenu > li:hover > a { background-color: rgba(217,217,217,.2); color: #fd382c !important; border-bottom: 3px solid #fd382c; box-sizing: border-box; }
 .mainmenu:hover::after { min-height: calc(100% + 315px);}
