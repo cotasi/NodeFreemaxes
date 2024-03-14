@@ -11,7 +11,7 @@
    https://www.figma.com/file/cfwkNyf8wRY5oO3A6Ex3fh/%ED%94%84%EB%A6%AC%EB%A7%A5%EC%8A%A4?type=design&node-id=796%3A4633&mode=design&t=VAKiqKGy8eh5NFq4-1
 
 4. 배포 주소
-   freemaxer.cafe24app.com
+   http://freemaxer.cafe24app.com
 
 5. 개발 기간
    2024.01.01 ~ 2024.03.06
